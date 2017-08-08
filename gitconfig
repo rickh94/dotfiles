@@ -1,0 +1,21 @@
+[user]
+	name = Rick Henry
+	email = fredericmhenry@gmail.com
+	signingkey = 82AC52AE33711164
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	ps = push
+	pl = pull
+	mg = merge
+	cm = commit -m
+	ca = commit -a
+	cam = commit -am
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim

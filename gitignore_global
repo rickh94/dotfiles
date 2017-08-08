@@ -1,0 +1,21 @@
+# global .gitignore
+
+# vim files
+*~
+*.un~
+*.sw*
+
+# backup files
+*.bak*
+
+# build directories and such
+build
+*.egg-info
+
+# python bytecode files
+__pycache__
+*.pyc
+*.pyx
+venv
+.cache
+.tox
