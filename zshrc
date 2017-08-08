@@ -152,5 +152,6 @@ alias -g G='| grep'
 alias -g L='| less'
 
 prevdir=$(pwd)
-cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall -c qa
+echo "Updating Dotfiles"
+cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall! -c qa
 cd $prevdir

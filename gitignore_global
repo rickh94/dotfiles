@@ -4,6 +4,7 @@
 *~
 *.un~
 *.sw*
+.vimbackup
 
 # backup files
 *.bak*
