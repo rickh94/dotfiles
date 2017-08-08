@@ -3,7 +3,6 @@
 #
 # This is the antibody init script. Has to be first.
 # Don't fucking move it.
-export TERM="xterm-256color"
 source <(antibody init)
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle olivierverdier/zsh-git-prompt
@@ -141,16 +140,15 @@ alias systemctl='sudo systemctl'
 alias ppush='git push && git push public'
 alias dd='dd status=progress'
 alias prettyjson='python -m json.tool'
+alias l='exa'
 alias ll='exa -l'
 alias lgit='exa -l --git'
 alias la='exa -a'
 alias lla='exa -la'
-alias l='exa'
 alias lless='exa -la | less'
 
 # Global aliases
 alias -g G='| grep'
 alias -g L='| less'
 
-# added by travis gem
-[ -f /home/rick/.travis/travis.sh ] && source /home/rick/.travis/travis.sh
+cd ~/Dotfiles && git pull && dotfiles -s && vim -c PluginInstall -c qa

@@ -1,12 +1,7 @@
-" When started as "evim", evim.vim will already have done these settings.
-" 
 if v:progname =~? "evim"
   finish
 endif
 
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
 
 filetype off
@@ -252,10 +247,8 @@ set encoding=utf-8
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-
 let python_highlight_all=1
 syntax on
-
 
 call togglebg#map("<F4>")
 
@@ -267,6 +260,4 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " save session info in a viminfo file
 set viminfo='1000,f1,<500,:10,/10
-
 set modeline
-
