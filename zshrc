@@ -151,4 +151,6 @@ alias lless='exa -la | less'
 alias -g G='| grep'
 alias -g L='| less'
 
-cd ~/Dotfiles && git pull && dotfiles -s && vim -c PluginInstall -c qa
+prevdir=$(pwd)
+cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall -c qa 
+cd $prevdir
