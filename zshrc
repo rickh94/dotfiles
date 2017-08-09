@@ -30,8 +30,6 @@ export PAGER='less'
 if [ -f ~/.borg_passphrase ]; then
   source ~/.borg_passphrase
 fi
-# in case zprofile wasn't sourced
-source ~/.zprofile
 
 # keychain if present
 if [ -f ~/.keychaincommand ]; then
@@ -153,6 +151,7 @@ alias -g L='| less'
 
 # update pass store
 if [[ -f ~/.passupdate ]]; then
+  echo "Updating passwords"
   source ~/.passupdate
 fi
 
@@ -161,3 +160,6 @@ prevdir=$(pwd)
 echo "Updating Dotfiles"
 cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall! -c qa
 cd $prevdir
+
+# re-source path after possibly pulling scripts
+source ~/.zprofile
