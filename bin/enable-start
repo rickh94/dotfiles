@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo systemctl enable $@
+sudo systemctl start $@
+systemctl status $@

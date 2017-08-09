@@ -1,6 +1,6 @@
 # Rick's zshrc. using antibody and some plugins
 # and stuff.
-#
+export TERM='xterm-256color'
 # This is the antibody init script. Has to be first.
 # Don't fucking move it.
 source <(antibody init)
@@ -151,6 +151,12 @@ alias lless='exa -la | less'
 alias -g G='| grep'
 alias -g L='| less'
 
+# update pass store
+if [[ -f ~/.passupdate ]]; then
+  source ~/.passupdate
+fi
+
+# update dotfiles and vim plugins
 prevdir=$(pwd)
 echo "Updating Dotfiles"
 cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall! -c qa

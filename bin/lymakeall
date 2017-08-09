@@ -1,0 +1,3 @@
+#!/bin/sh
+#  executes lilypond-file-generator main function
+/home/rick/repositories/lilypond-file-generator/main.rb

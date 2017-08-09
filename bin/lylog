@@ -1,0 +1,4 @@
+#! /bin/sh
+lilypond $1 &> "$1.log"
+wait
+less "$1.log"
