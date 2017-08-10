@@ -1,0 +1,3 @@
+#!/bin/sh
+~/.bin/pass-sync
+~/.bin/update-dotfiles

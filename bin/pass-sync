@@ -1,6 +1,4 @@
 #!/bin/sh
-pass git add ~/.password-store/*
-pass git commit -s -m "update passwords $(hostname)-$(date)"
 pass git pull
 pass git push
 
