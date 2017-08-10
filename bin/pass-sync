@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "updating passwords"
 pass git pull
 pass git push
 
