@@ -150,16 +150,11 @@ alias -g G='| grep'
 alias -g L='| less'
 
 # update pass store
-if [[ -f ~/.passupdate ]]; then
-  echo "Updating passwords"
-  source ~/.passupdate
-fi
+#if [[ -f ~/.passupdate ]]; then
+#  echo "Updating passwords"
+#  source ~/.passupdate
+#fi
 
-# update dotfiles and vim plugins
-prevdir=$(pwd)
-echo "Updating Dotfiles"
-cd ~/Dotfiles && git pull && dotfiles -s && vim -e -s -c PluginInstall! -c qa
-cd $prevdir
-
-# re-source path after possibly pulling scripts
 source ~/.zprofile
+
+# vim: se ft=sh:
