@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 # update dotfiles, passwords, and vim plugins
 prevdir=$(pwd)
 echo "Updating Dotfiles"
