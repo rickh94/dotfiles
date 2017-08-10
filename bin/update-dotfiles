@@ -6,7 +6,7 @@ cd ~/Dotfiles
 if [[ ! -z "$(git status -s)" ]]; then
   git add *
   git commit -s -m "update dotfiles $(date)
-  $(git status -s)"
+$(git status -s)"
   git pull
   git push
 else
