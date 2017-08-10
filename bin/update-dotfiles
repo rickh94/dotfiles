@@ -15,5 +15,6 @@ fi
 dotfiles -s
 vim -e -s -c PluginInstall! -c qa
 cd $prevdir
+source ~/.zshrc
 
 # vim: se ft=sh:
