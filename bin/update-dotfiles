@@ -5,7 +5,7 @@ echo "Updating Dotfiles"
 cd ~/Dotfiles
 if [[ ! -z "$(git status -s)" ]]; then
   git add *
-  git commit -s -m "update dotfiles $(date)"
+  git commit -s -m "update dotfiles $(date)\n$(git status -s)"
   git pull
   git push
 else
