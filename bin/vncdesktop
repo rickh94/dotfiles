@@ -1,8 +1,8 @@
 #!/bin/sh
-ssh -X -f beethoven -L 5902:localhost:5902 -N &>/dev/null
-ssh beethoven 'vncserver -geometry 1280x800 -alwaysshared -dpi 96 -localhost :2'
-vncviewer localhost:5902
+ssh -X -f beethoven -L 5901:localhost:5901 -N &>/dev/null
+ssh beethoven 'vncserver -geometry 1280x800 -alwaysshared -dpi 96 -localhost :1'
+vncviewer localhost:5901
 #echo "Press enter to end connection"
 #read
 kill -9 $(ps -ef|grep '[s]sh -X'|awk '{print $2}')
-ssh rick@beethoven 'vncserver -kill :2' &>/dev/null
+ssh rick@beethoven 'vncserver -kill :1' &>/dev/null
