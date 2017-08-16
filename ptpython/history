@@ -8,3 +8,48 @@
 
 # 2017-08-14 22:48:44.029215
 +quit
+
+# 2017-08-15 02:47:36.672504
++from slackperson import SlackPerson
+
+# 2017-08-15 02:48:50.760577
++test = SlackPerson('me', {'members': [ {'name': 'me', 'id': '1'}, {'name': 'notme', 'id': '2'} ] })
+
+# 2017-08-15 02:48:54.571344
++test.name
+
+# 2017-08-15 02:48:58.228561
++test.username
+
+# 2017-08-15 02:49:01.598013
++test.userid
+
+# 2017-08-15 02:49:13.392934
++test2 = SlackPerson('notme', {'members': [ {'name': 'me', 'id': '1'}, {'name': 'notme', 'id': '2'} ] })
+
+# 2017-08-15 02:49:21.062884
++assert test2.userid == '2'
+
+# 2017-08-15 02:49:34.537224
++assert test2.userid == '1'
+
+# 2017-08-15 02:49:37.127780
++assert test2.userid == '2'
+
+# 2017-08-15 02:49:43.774502
++assert test.userid =='1'
+
+# 2017-08-15 02:50:13.312372
++from .slackperson import SlackPerson
+
+# 2017-08-15 02:50:17.699962
++exit
+
+# 2017-08-15 02:50:33.486604
++from .slackperson import SlackPerson
+
+# 2017-08-15 02:50:49.125067
++from slackperson import SlackPerson
+
+# 2017-08-15 02:51:39.449459
++import slackperson
