@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /tmp
+adb backup -all && scp backup.ab brahms:mobile_backups/oneplus_5/ && \
+ssh brahms 'mv mobile_backups/oneplus_5/backup.ab "mobile_backups/oneplus_5/$(date --rfc-3339=date).ab"'

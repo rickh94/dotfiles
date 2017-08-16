@@ -8,3 +8,157 @@
 
 # 2017-08-14 22:48:44.029215
 +quit
+
+# 2017-08-15 23:07:24.419572
++import digitalocean
+
+# 2017-08-15 23:13:07.756037
++from subprocess import run
+
+# 2017-08-15 23:13:49.847742
++import subprocess
+
+# 2017-08-15 23:14:35.858859
++get_token = subprocess.run(['pass', 'show', 'digitalocean/couperin-do-token'],
++                           stdout=subprocess.PIPE)
+
+# 2017-08-15 23:14:42.309048
++get_token.stdout
+
+# 2017-08-15 23:16:45.609030
++token_ = str(get_token.stdout).strip
+
+# 2017-08-15 23:16:47.380230
++token_
+
+# 2017-08-15 23:16:52.124313
++token_ = str(get_token.stdout).strip()
+
+# 2017-08-15 23:16:53.973464
++token_
+
+# 2017-08-15 23:17:39.319161
++token_ = token_.decode('UTF-8')
+
+# 2017-08-15 23:18:07.395646
++my_token = get_token.stdout.decode('utf-8').strip()
+
+# 2017-08-15 23:18:10.359987
++my_token
+
+# 2017-08-15 23:19:33.869170
++droplet = digitalocean.Droplet(token=my_token,
++                               name='mytestdroplet',
++                               region='nyc3',
++                               image='ubuntu-14-04-x64',
++                               size_slug='512mb',
++                               )
+
+# 2017-08-15 23:19:36.680554
++droplet.create
+
+# 2017-08-15 23:19:41.364886
++droplet.create()
+
+# 2017-08-15 23:19:55.924484
++actions = droplet.get_actions()
+
+# 2017-08-15 23:20:47.617401
++for action in actions:
++    action.load()
++    print(action.status)
+
+# 2017-08-15 23:21:30.483068
++manager = digitalocean.Manager(token=my_token)
+
+# 2017-08-15 23:21:41.070800
++my_droplets = manager.get_all_droplets()
+
+# 2017-08-15 23:21:47.664382
++print(my_droplets)
+
+# 2017-08-15 23:22:49.894862
++droplet.destroy()
+
+# 2017-08-15 23:22:53.385054
++my_droplets = manager.get_all_droplets()
+
+# 2017-08-15 23:22:55.840695
++print(my_droplets)
+
+# 2017-08-15 23:24:05.235238
++from digitalocean import SSHKey
+
+# 2017-08-15 23:27:40.291855
++from crypto.PublicKey import RSA
+
+# 2017-08-15 23:27:55.877221
++from Crypto.PublicKey import RSA
+
+# 2017-08-15 23:30:23.994119
++import crypto
+
+# 2017-08-15 23:30:31.550588
++crypto.PublicKey
+
+# 2017-08-15 23:32:04.334171
++from Crypto.PublicKey import RSA
+
+# 2017-08-15 23:32:08.868480
++import digitalocean
+
+# 2017-08-15 23:32:25.439306
++key = RSA.generate(4096)
+
+# 2017-08-15 23:32:27.292305
++key
+
+# 2017-08-16 00:05:04.470745
++from Crypto.PublicKey import RSA
+
+# 2017-08-16 00:06:29.081106
++key = RSA.generate(4096)
+
+# 2017-08-16 00:06:30.265298
++key
+
+# 2017-08-16 00:06:37.919392
++key.exportKey('PEM')
+
+# 2017-08-16 00:07:11.594624
++with open('testkey', 'w') as f:
++    f.write(key.exportKey('PEM'))
+
+# 2017-08-16 00:07:24.176351
++with open('testkey', 'wb') as f:
++    f.write(key.exportKey('PEM'))
+
+# 2017-08-16 00:08:06.908418
++pubkey = key.publickey()
+
+# 2017-08-16 00:08:11.669777
++pubkey
+
+# 2017-08-16 00:08:23.206205
++print(pubkey.exportKey('OpenSSH'))
+
+# 2017-08-16 00:08:42.575201
++pubkey.exportKey('OpenSSH')
+
+# 2017-08-16 00:39:59.556944
++import os
+
+# 2017-08-16 00:40:03.213381
++import digitalocean
+
+# 2017-08-16 00:40:29.268633
++access_token = os.environ['DO_KEY']
+
+# 2017-08-16 00:40:49.914126
++manager = digitalocean.Manager(token=access_token)
+
+# 2017-08-16 00:41:21.241540
++keys = manager.get_all_sshkeys()
+
+# 2017-08-16 00:41:23.156506
++keys

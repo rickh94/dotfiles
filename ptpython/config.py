@@ -17,7 +17,7 @@ def configure(repl):
     Configuration method.
     """
     # show function signature (bool)
-    repl.show_signature = True
+    repl.show_signature = False
 
     # Show docstring (bool)
     repl.show_docstring = False
