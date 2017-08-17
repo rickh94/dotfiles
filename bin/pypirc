@@ -1,0 +1,18 @@
+#!/bin/bash
+cat > ~/.pypirc << EOF
+[distutils]
+index-servers =
+  pypi
+  testpypi
+
+[pypi]
+username=rickh94
+password=$(pass show pypi/live)
+
+[testpypi]
+repository=https://test.pypi.org/legacy/
+username=rickh94
+password=$(pass show pypi/testing)
+
+# vim: se ft=dosini:
+EOF
