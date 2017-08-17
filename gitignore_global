@@ -10,6 +10,7 @@
 *.bak*
 
 # build directories and such
+dist
 build
 *.egg-info
 

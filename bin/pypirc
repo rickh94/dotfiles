@@ -1,0 +1,17 @@
+#!/bin/bash
+cat > ~/.pypirc << EOF
+[distutils]
+index-servers =
+  pypi
+  pypitest
+
+[pypi]
+repository=https://pypi.python.org/pypirc
+username=rickh94
+password=$(pass show pypi/live)
+
+[pypitest]
+repository=https://testpypi.python.org/pypi
+username=rickh94
+password=$(pass show pypi/testing)
+EOF
