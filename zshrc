@@ -76,12 +76,9 @@ export GITHOME=git@github.com:rickh94
 # share history, ignore duplicates
 HISTFILE=$HOME/.zhistory
 setopt append_history share_history append_history hist_expire_dups_first
-HISTSIZE=1200
+HISTSIZE=2000
 SAVEHIST=1000
 setopt extended_history
-
-# automatically cd from just dir
-setopt autocd
 
 # some quick replacement in file names
 autoload -U zmv

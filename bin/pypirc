@@ -3,15 +3,16 @@ cat > ~/.pypirc << EOF
 [distutils]
 index-servers =
   pypi
-  pypitest
+  testpypi
 
 [pypi]
-repository=https://pypi.python.org/pypirc
 username=rickh94
 password=$(pass show pypi/live)
 
-[pypitest]
-repository=https://testpypi.python.org/pypi
+[testpypi]
+repository=https://test.pypi.org/legacy/
 username=rickh94
 password=$(pass show pypi/testing)
+
+# vim: se ft=dosini:
 EOF

@@ -92,6 +92,7 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
+  autocmd BufWritePre * %s/\s\+$//e
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby setlocal textwidth=78
@@ -101,7 +102,7 @@ if has("autocmd")
   autocmd FileType c setlocal textwidth=78
   autocmd FileType rst setlocal textwidth=78
 
-  " add abbreviations 
+  " add abbreviations
   autocmd FileType lilypond :iabbrev <buffer> bnc \barNumberCheck #
   autocmd FileType lilypond :iabbrev <buffer> rpu \repeat unfold
   autocmd FileType lilypond :iabbrev <buffer> rpv \repeat volta
@@ -111,7 +112,7 @@ if has("autocmd")
   autocmd FileType lilypond :iabbrev <buffer> clfa \clef alto
   autocmd FileType lilypond :iabbrev <buffer> clfb \clef bass
 
-  " add spellcheck 
+  " add spellcheck
   autocmd FileType markdown setlocal spell
   autocmd FileType rst setlocal spell
   autocmd FileType gitcommit setlocal spell
