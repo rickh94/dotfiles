@@ -206,3 +206,173 @@
 
 # 2017-08-15 02:51:39.449459
 +import slackperson
+
+# 2017-08-16 01:14:52.371391
++import digitalocean
+
+# 2017-08-16 01:15:04.841407
++import os
+
+# 2017-08-16 01:15:16.809737
++tok = os.environ['DO_API_TOKEN']
+
+# 2017-08-16 01:15:18.659973
++tok
+
+# 2017-08-16 01:15:30.683015
++man = digitalocean.Manager(token=tok)
+
+# 2017-08-16 01:15:53.280884
++man.get_all_sshkeys()
+
+# 2017-08-16 01:16:02.245085
++keys = man.get_all_sshkeys()
+
+# 2017-08-16 01:16:04.922580
++keys[1]
+
+# 2017-08-16 01:16:39.826347
++keys[1].__dict__
+
+# 2017-08-16 01:16:52.367873
++keys[1].id
+
+# 2017-08-16 01:17:30.784678
++for key in keys:
++    if key.name == 'fellow_keyboards_civilian_acre':
++        print(key.id)
+
+# 2017-08-16 01:17:58.128884
++for key in keys:
++    if key.name == 'fellows_keyboards_civilian_acre':
++        print(key.id)
+
+# 2017-08-16 01:27:23.427957
++import digitalocean
+
+# 2017-08-16 01:27:36.993087
++import os
+
+# 2017-08-16 01:27:47.881671
++tok = os.environ['DO_API_TOKEN']
+
+# 2017-08-16 01:27:56.130306
++manger = digitalocean.Manager(token=tok)
+
+# 2017-08-16 01:28:01.073845
++manager.get_all_droplets()
+
+# 2017-08-16 01:28:07.358890
++manager = digitalocean.Manager(token=tok)
+
+# 2017-08-16 01:28:09.721939
++manager.get_all_droplets()
+
+# 2017-08-16 01:28:27.227550
++drops = manager.get_all_droplets()
+
+# 2017-08-16 01:28:31.844606
++drops[1].__dict__
+
+# 2017-08-16 01:28:42.538961
++drops[0].__dict__
+
+# 2017-08-16 01:28:47.947648
++import json
+
+# 2017-08-16 01:29:15.218076
++print(json.dumps(drops[0].__dict__, indent=4))
+
+# 2017-08-16 01:29:24.901027
++drops[0].__dict__
+
+# 2017-08-16 01:31:59.142366
++drops[0].name
+
+# 2017-08-16 01:32:06.827682
++drops[0].networks
+
+# 2017-08-16 01:32:15.323570
++drops[0].networks['v4']
+
+# 2017-08-16 01:32:21.191987
++drops[0].networks['v4']['ip_address']
+
+# 2017-08-16 01:32:28.639766
++drops[0].networks['v4'][0]['ip_address']
+
+# 2017-08-16 01:33:16.249607
++for drop in drops:
++    if drop.name == 'testSSHdroplet':
++        print(drop.networks['v4'][0]['ip_address'])
+
+# 2017-08-16 22:47:03.046854
++from subprocess import check_output
+
+# 2017-08-16 22:47:24.948002
++check_output(['ssh-agent',name])
+
+# 2017-08-16 22:47:38.886656
++check_output(['pidof','ssh-agent'])
+
+# 2017-08-16 22:57:47.849114
++import digitalocean
+
+# 2017-08-16 22:58:03.987428
++import os
+
+# 2017-08-16 22:58:20.953876
++manager = digitalocean.manager(token=os.environ['DO_API_TOKEN'])
+
+# 2017-08-16 22:58:28.433927
++manager = digitalocean.Manager(token=os.environ['DO_API_TOKEN'])
+
+# 2017-08-16 22:58:34.398967
++manager.get_all_droplets
+
+# 2017-08-16 22:58:43.283584
++drops = manager.get_all_droplets()
+
+# 2017-08-16 22:58:44.761553
++drops
+
+# 2017-08-16 22:58:54.183511
++drops[0].networks['v4']
+
+# 2017-08-16 22:59:00.798776
++drops[0].networks['v4'][0]['ip_address']
+
+# 2017-08-16 23:00:10.777807
++drop = digitalocean.Droplet(token=os.environt['DO_API_TOKEN'],
++                            name='testdrop',
++                            region='nyc3',
++                            image='ubuntu-16-04-x64',
++                            size_slug='512mb',
++                            backups=False,
++                            )
+
+# 2017-08-16 23:00:21.825277
++drop = digitalocean.Droplet(token=os.environ['DO_API_TOKEN'],
++                            name='testdrop',
++                            region='nyc3',
++                            image='ubuntu-16-04-x64',
++                            size_slug='512mb',
++                            backups=False,
++                            )
+
+# 2017-08-16 23:00:32.461929
++drop.create()
+
+# 2017-08-16 23:00:41.693200
++drops=manager.get_all_droplets()
+
+# 2017-08-16 23:01:08.376796
++for drop in drops:
++    if drop.name == 'testdrop':
++        print(drop.networks['v4'][0]['ip_address'])
+
+# 2017-08-16 23:03:50.969397
++myvar = b'5'
+
+# 2017-08-16 23:03:54.188345
++int(myvar)
