@@ -1,8 +1,12 @@
-#!/bin/sh
-ssh -X -f beethoven -L 5902:localhost:5902 -N &>/dev/null
-ssh beethoven 'vncserver :2 -autokill -geometry 1280x800 -alwaysshared -dpi 96 -localhost'
-vncviewer localhost:5902
+#!/bin/bash
+OFFSET=${1:-1}
+START=5900
+PORT=$(($START + $OFFSET))
+DESKTOP=$OFFSET
+ssh -X -f beethoven -L "$PORT:localhost:$PORT" -N &>/dev/null
+ssh beethoven "vncserver :$DESKTOP -autokill -geometry 1280x800 -alwaysshared -dpi 96 -localhost"
+vncviewer "localhost:$PORT"
 #echo "Press enter to end connection"
 #read
 kill -9 $(ps -ef|grep '[s]sh -X'|awk '{print $2}')
-ssh rick@beethoven 'vncserver -kill :2' &>/dev/null
+ssh rick@beethoven "vncserver -kill :$DESKTOP" &>/dev/null
