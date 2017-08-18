@@ -379,3 +379,36 @@
 
 # 2017-08-17 00:07:55.624203
 +exit
+
+# 2017-08-18 00:10:53.957024
++import test_dosockstunnel
+
+# 2017-08-18 00:11:04.807728
++hi = test_dosockstunnel.FakeDroplet()
+
+# 2017-08-18 00:11:23.016818
++import test_dosockstunnel
+
+# 2017-08-18 00:11:24.325969
++hi = test_dosockstunnel.FakeDroplet()
+
+# 2017-08-18 00:11:33.062658
++import test_dosockstunnel
+
+# 2017-08-18 00:11:36.744778
++hi = test_dosockstunnel.FakeDroplet()
+
+# 2017-08-18 00:11:54.978529
++import test_dosockstunnel
+
+# 2017-08-18 00:11:55.945186
++hi = test_dosockstunnel.FakeDroplet()
+
+# 2017-08-18 00:11:57.299402
++hi
+
+# 2017-08-18 00:12:00.733710
++hi.networks
+
+# 2017-08-18 00:12:20.697734
++hi.networks['v4'][0]['ip_address']
