@@ -18,6 +18,7 @@ build
 __pycache__
 *.pyc
 *.pyx
-venv
+venv*
 .cache
 .tox
+.converage
