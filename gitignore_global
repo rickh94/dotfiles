@@ -21,4 +21,7 @@ __pycache__
 venv*
 .cache
 .tox
-.converage
+
+# coverage reports
+.coverage
+coverage.xml
