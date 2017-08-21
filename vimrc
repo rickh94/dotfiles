@@ -28,6 +28,7 @@ Plugin 'gisraptor/vim-lilypond-integrator'
 Plugin 'cespare/vim-toml'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'lepture/vim-jinja'
 
 call vundle#end()
 

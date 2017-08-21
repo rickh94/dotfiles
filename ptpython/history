@@ -412,3 +412,102 @@
 
 # 2017-08-18 00:12:20.697734
 +hi.networks['v4'][0]['ip_address']
+
+# 2017-08-18 01:23:26.632622
++from attaskcreator import main
+
+# 2017-08-18 01:25:47.699780
++import os
+
+# 2017-08-18 01:25:57.878405
++os.environt['SLACK_VER_TOKEN'] = 'foo'
+
+# 2017-08-18 01:26:02.108543
++os.environ['SLACK_VER_TOKEN'] = 'foo'
+
+# 2017-08-18 01:26:18.611813
++os.environ['SLACK_API_TOKEN'] = 'bar'
+
+# 2017-08-18 01:26:43.004052
++os.environ['TEAM_ID'] = '12345'
+
+# 2017-08-18 01:26:47.137805
++from attaskcreator import main
+
+# 2017-08-18 01:28:16.748411
++USERLIST = {"members": [
++    {
++        "color": "ffffff",
++        "id": "U00000001",
++        "name": "jbiden",
++        "profile": {
++            "email": "jbiden@whitehouse.gov",
++            "first_name": "Joe",
++            "last_name": "Biden",
++            "real_name": "Joe Biden",
++            "real_name_normalized": "Joe Biden",
++            "team": "T00000001",
++            "title": ""
++        },
++        "real_name": "Joe Biden",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++    {
++        "color": "000000",
++        "id": "U00000002",
++        "name": "bobama",
++        "profile": {
++            "email": "bobama@whitehouse.gov",
++            "first_name": "Barack",
++            "last_name": "Obama",
++            "real_name": "Barack Obama",
++            "real_name_normalized": "Barack Obama",
++            "team": "T00000001"
++        },
++        "real_name": "Barack Obama",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++],
++}
+
+# 2017-08-18 01:28:19.036501
++USERLIST
+
+# 2017-08-18 01:28:36.289055
++from attaskcreator.main import findpeople
+
+# 2017-08-18 01:28:47.895489
++os.environ['SLACK_VER_TOKEN'] = 'foo'
+
+# 2017-08-18 01:28:51.716406
++import os
+
+# 2017-08-18 01:28:52.949515
++os.environ['SLACK_VER_TOKEN'] = 'foo'
+
+# 2017-08-18 01:29:00.084924
++os.environ['SLACK_API_TOKEN'] = 'bar'
+
+# 2017-08-18 01:29:08.615523
++os.environ['TEAM_ID'] = '12345'
+
+# 2017-08-18 01:29:11.415974
++from attaskcreator.main import findpeople
+
+# 2017-08-18 01:29:47.521707
++people = findpeople(['bobama', 'jbiden'], USERLIST)
+
+# 2017-08-18 01:30:15.057388
++people = findpeople('hey @bobama how is @jbiden', USERLIST)
+
+# 2017-08-18 01:30:38.109668
++from attaskcreator.main import findpeople
+
+# 2017-08-18 01:30:40.680465
++people = findpeople('hey @bobama how is @jbiden', USERLIST)

@@ -25,3 +25,4 @@ venv
 # coverage reports
 .coverage
 coverage.xml
+htmlcov

@@ -155,3 +155,4 @@ alias -g L='| less'
 source ~/.zprofile
 
 # vim: se ft=sh:
+source /usr/share/autoenv/activate.sh
