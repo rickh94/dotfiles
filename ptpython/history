@@ -584,3 +584,190 @@
 
 # 2017-08-21 23:00:01.726366
 +myteam
+# 2017-08-21 23:23:20.885126
++silent = True
+
+# 2017-08-21 23:23:37.709851
++try:
++    raise Exception
++except:
++    if not silent:
++        raise
+
+# 2017-08-21 23:23:42.255881
++silent = Flase
+
+# 2017-08-21 23:23:46.066133
++silent = False
+
+# 2017-08-21 23:23:47.873180
++try:
++    raise Exception
++except:
++    if not silent:
++        raise
+
+# 2017-08-21 23:51:18.970127
++USERLIST = {"members": [
++    {
++        "color": "ffffff",
++        "id": "U00000001",
++        "name": "jbiden",
++        "profile": {
++            "email": "jbiden@whitehouse.gov",
++            "first_name": "Joe",
++            "last_name": "Biden",
++            "real_name": "Joe Biden",
++            "real_name_normalized": "Joe Biden",
++            "team": "T00000001",
++            "title": ""
++        },
++        "real_name": "Joe Biden",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++    {
++        "color": "000000",
++        "id": "U00000002",
++        "name": "bobama",
++        "profile": {
++            "email": "bobama@whitehouse.gov",
++            "first_name": "Barack",
++            "last_name": "Obama",
++            "real_name": "Barack Obama",
++            "real_name_normalized": "Barack Obama",
++            "team": "T00000001"
++        },
++        "real_name": "Barack Obama",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++],
++}
+
+# 2017-08-21 23:51:23.757995
++import slackmentions
+
+# 2017-08-21 23:51:49.150878
++slackmentions.findpeople('hey @jbiden', USERLIST)
+
+# 2017-08-21 23:54:30.891974
++USERLIST = {"members": [
++    {
++        "color": "ffffff",
++        "id": "U00000001",
++        "name": "jbiden",
++        "profile": {
++            "email": "jbiden@whitehouse.gov",
++            "first_name": "Joe",
++            "last_name": "Biden",
++            "real_name": "Joe Biden",
++            "real_name_normalized": "Joe Biden",
++            "team": "T00000001",
++            "title": ""
++        },
++        "real_name": "Joe Biden",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++    {
++        "color": "000000",
++        "id": "U00000002",
++        "name": "bobama",
++        "profile": {
++            "email": "bobama@whitehouse.gov",
++            "first_name": "Barack",
++            "last_name": "Obama",
++            "real_name": "Barack Obama",
++            "real_name_normalized": "Barack Obama",
++            "team": "T00000001"
++        },
++        "real_name": "Barack Obama",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++],
++}
+
+# 2017-08-21 23:54:35.255959
++import slackmentions
+
+# 2017-08-21 23:55:01.757272
++slackmentions.findpeople('@bobama hi', USERLIST)
+
+# 2017-08-21 23:55:08.136378
++slackmentions.findpeople('@bobama hi @jbiden', USERLIST)
+
+# 2017-08-21 23:55:20.384546
++slackmentions.findpeople('@jbiden hi @bobama', USERLIST)
+
+# 2017-08-21 23:56:41.240739
++import slackmentions
+
+# 2017-08-21 23:56:42.668327
++slackmentions.findpeople('@jbiden hi @bobama', USERLIST)
+
+# 2017-08-21 23:56:46.438674
++USERLIST = {"members": [
++    {
++        "color": "ffffff",
++        "id": "U00000001",
++        "name": "jbiden",
++        "profile": {
++            "email": "jbiden@whitehouse.gov",
++            "first_name": "Joe",
++            "last_name": "Biden",
++            "real_name": "Joe Biden",
++            "real_name_normalized": "Joe Biden",
++            "team": "T00000001",
++            "title": ""
++        },
++        "real_name": "Joe Biden",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++    {
++        "color": "000000",
++        "id": "U00000002",
++        "name": "bobama",
++        "profile": {
++            "email": "bobama@whitehouse.gov",
++            "first_name": "Barack",
++            "last_name": "Obama",
++            "real_name": "Barack Obama",
++            "real_name_normalized": "Barack Obama",
++            "team": "T00000001"
++        },
++        "real_name": "Barack Obama",
++        "team_id": "T00000001",
++        "tz": "America/New_York",
++        "tz_label": "Eastern Daylight Time",
++        "tz_offset": -14400,
++    },
++],
++}
+
+# 2017-08-21 23:57:03.486946
++import re
+
+# 2017-08-21 23:57:52.241120
++usernames = re.findall('@([a-zA-A0-9._]*)', "hey @jbiden, what's up? - @bobama")
+
+# 2017-08-21 23:57:53.789291
++usernames
+
+# 2017-08-21 23:57:59.186614
++usernames.group()
+
+# 2017-08-21 23:58:00.878961
++usernames

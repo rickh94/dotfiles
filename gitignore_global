@@ -22,6 +22,8 @@ venv*
 .cache
 .tox
 
+# environment
+.env
 # coverage reports
 .coverage
 coverage.xml
