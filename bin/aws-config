@@ -1,0 +1,8 @@
+#!/bin/bash
+cat > ~/.aws/credentials.new << EOF
+[default]
+aws_access_key_id = $(pass show aws/primary/ID)
+aws_secret_access_key = $(pass show aws/primary/secret)
+
+# vim: se ft=dosini:
+EOF
