@@ -771,3 +771,141 @@
 
 # 2017-08-21 23:58:00.878961
 +usernames
+
+# 2017-08-22 12:37:12.213810
++import re
+
+# 2017-08-22 12:37:35.614453
++text = 'hi, Can you please find this text?\ndh'
+
+# 2017-08-22 12:39:19.203574
++truncate = re.compile(r'^(.+?){}'.format('\ndh'))
+
+# 2017-08-22 12:39:41.105572
++text_trunc = truncate.search(text)
+
+# 2017-08-22 12:39:44.463197
++text_trunc
+
+# 2017-08-22 12:40:01.157976
++text_trunc.group(0)
+
+# 2017-08-22 12:40:03.615452
++text_trunc.group(1)
+
+# 2017-08-22 12:42:47.580737
++truncate.search('not in here')
+
+# 2017-08-22 12:42:51.696355
++truncate.group()
+
+# 2017-08-22 12:42:59.223105
++test = truncate.search('not in here')
+
+# 2017-08-22 12:43:00.191730
++test
+
+# 2017-08-22 12:43:02.424793
++test.group
+
+# 2017-08-22 12:45:04.164691
++test.group(1)
+
+# 2017-08-22 12:54:11.404097
++truncate = re.compile(r'(.*){}'.format('?'))
+
+# 2017-08-22 12:54:26.838255
++search_text = truncate.search('Can you please return this?')
+
+# 2017-08-22 12:54:29.278561
++search_text
+
+# 2017-08-22 12:54:34.838025
++search_text.group(1)
+
+# 2017-08-22 12:54:47.892829
++truncate = re.compile(r'^(.*){}'.format('?'))
+
+# 2017-08-22 12:54:51.030055
++search_text = truncate.search('Can you please return this?')
+
+# 2017-08-22 12:54:53.137331
++search_text.group(1)
+
+# 2017-08-22 12:54:56.675847
++search_text.group(0)
+
+# 2017-08-22 12:55:00.134212
++search_text.group(2)
+
+# 2017-08-22 12:55:20.457711
++search_text = truncate.findall('Can you please return this?')
+
+# 2017-08-22 12:55:24.337219
++search_text
+
+# 2017-08-22 12:55:29.445306
++search_text.group(1)
+
+# 2017-08-22 12:55:48.356652
++truncate = re.compile(r'^(.+?)({})'.format('?'))
+
+# 2017-08-22 12:56:03.183793
++truncate = re.compile(r'^(.+?){}'.format(re.escape('?')))
+
+# 2017-08-22 12:56:07.129225
++search_text = truncate.findall('Can you please return this?')
+
+# 2017-08-22 12:56:10.153004
++search_text
+
+# 2017-08-22 12:56:16.160217
++search_text.group(1)
+
+# 2017-08-22 12:56:24.817271
++search_text = truncate.search('Can you please return this?')
+
+# 2017-08-22 12:56:29.945590
++search_text.group(1)
+
+# 2017-08-22 12:56:32.705908
++search_text.group(2)
+
+# 2017-08-22 13:05:39.511371
++import re
+
+# 2017-08-22 13:05:47.840028
++text = 'Can you please return this?'
+
+# 2017-08-22 13:06:15.920422
++truncate = re.compile(r'^(.*){}'.format(re.escape('?')))
+
+# 2017-08-22 13:06:37.213689
++search_text = truncate.search(search_text, re.DOTALL)
+
+# 2017-08-22 13:06:46.045177
++search_text = truncate.search(text, re.DOTALL)
+
+# 2017-08-22 13:06:48.857795
++search_text
+
+# 2017-08-22 13:06:59.196650
++search_text = truncate.search(search_text)
+
+# 2017-08-22 13:07:09.025156
++search_text = truncate.search(text)
+
+# 2017-08-22 13:07:11.376875
++search_text
+
+# 2017-08-22 13:07:17.925778
++search_text.group(1)
+
+# 2017-08-22 13:07:30.402899
++truncate = re.compile(r'^(.*){}'.format(re.escape('?')), re.DOTALL)
+
+# 2017-08-22 13:07:33.304885
++search_text = truncate.search(text)
+
+# 2017-08-22 13:07:35.667132
++search_text.group(1)
