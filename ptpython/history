@@ -526,3 +526,61 @@
 
 # 2017-08-18 01:30:40.680465
 +people = findpeople('hey @bobama how is @jbiden', USERLIST)
+
+# 2017-08-21 22:55:11.884035
++from slackperson import SlackPerson
+
+# 2017-08-21 22:55:18.284442
++from test_slackperson import USERLIST
+
+# 2017-08-21 22:55:23.184038
++USERLIST
+
+# 2017-08-21 22:55:40.390847
++SlackPerson('dtrump', USERLIST)
+
+# 2017-08-21 22:56:03.361985
++from slackperson import SlackDataError
+
+# 2017-08-21 22:56:40.555609
++try:
++    SlackPerson('dtrump', USERLIST)
++except SlackDataError:
++    print('error handled')
+
+# 2017-08-21 22:57:27.052135
++try:
++    [SlackPerson(user, USERLIST) for user in ['bobama', 'dtrump', 'jbiden']]
++except SlackDataError:
++    print('error handled')
+
+# 2017-08-21 22:57:41.465965
++try:
++    myobjects = [SlackPerson(user, USERLIST) for user in ['bobama', 'dtrump', 'jbiden']]
++except SlackDataError:
++    print('error handled')
+
+# 2017-08-21 22:57:43.861881
++myobjects
+
+# 2017-08-21 22:57:58.311425
++try:
++    myobjects = [SlackPerson(user, USERLIST) for user in ['bobama', 'dtrump', 'jbiden']]
++except SlackDataError:
++    pass
+
+# 2017-08-21 22:58:00.900462
++myobjects
+
+# 2017-08-21 22:58:32.113654
++myteam = []
+
+# 2017-08-21 22:59:58.861437
++for user in ['bobama', 'dtrump', 'jbiden']:
++    try:
++        myteam.append(SlackPerson(user, USERLIST))
++    except SlackDataError:
++        pass
+
+# 2017-08-21 23:00:01.726366
++myteam
