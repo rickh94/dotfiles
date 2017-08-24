@@ -909,3 +909,246 @@
 
 # 2017-08-22 13:07:35.667132
 +search_text.group(1)
+
+# 2017-08-22 13:12:26.934763
++import configparser
+
+# 2017-08-22 13:12:32.182282
++test = configparser.ConfigParser()
+
+# 2017-08-22 13:12:37.595704
++test.read(testconfig.conf)
+
+# 2017-08-22 13:12:43.120761
++test.read('testconfig.conf')
+
+# 2017-08-22 13:12:49.194162
++test['parse']
+
+# 2017-08-22 13:12:54.057673
++test['Parse']
+
+# 2017-08-22 13:12:55.556711
++test
+
+# 2017-08-22 13:13:05.666582
++test['Parse']['termination character']
+
+# 2017-08-22 13:13:41.509666
++'{}'.format(test['Parse']['termination character'])
+
+# 2017-08-22 13:13:52.307089
++print('{}'.format(test['Parse']['termination character']))
+
+# 2017-08-22 13:14:27.402639
++test.read('testconfig.conf')
+
+# 2017-08-22 13:14:40.841545
++test['Parse']['termination character']
+
+# 2017-08-22 13:14:51.030069
++import re
+
+# 2017-08-22 13:15:38.704452
++test_search = re.search('{}'.format(test['Parse']['termination character']), 'hi\ndh')
+
+# 2017-08-22 13:15:40.773872
++test_search
+
+# 2017-08-22 13:15:53.199500
++test_search = re.search('{}'.format(re.escape(test['Parse']['termination character'])), 'hi\ndh')
+
+# 2017-08-22 13:15:57.022407
++test_search
+
+# 2017-08-22 13:16:41.822464
++char = test['Parse']['termination character'].decode('string_escape')
+
+# 2017-08-22 13:17:07.717100
++import ast
+
+# 2017-08-22 13:17:26.851811
++ast.literal_eval(test['Parse']['termination character'])
+
+# 2017-08-22 13:17:45.951054
++char = ast.literal_eval(test['Parse']['termination character'])
+
+# 2017-08-22 13:17:47.683531
++char
+
+# 2017-08-22 13:17:56.707710
++test_search = re.search('{}'.format(re.escape(char)), 'hi\ndh')
+
+# 2017-08-22 13:17:58.895779
++test_search
+
+# 2017-08-22 13:18:05.490750
++test_search.group()
+
+# 2017-08-22 14:05:48.434674
++import re
+
+# 2017-08-22 14:05:51.490606
++test = '\n'
+
+# 2017-08-22 14:05:59.500016
++escape = re.escape(test)
+
+# 2017-08-22 14:06:01.059308
++escape
+
+# 2017-08-22 14:41:09.506448
++import attaskcreator
+
+# 2017-08-22 14:41:56.966994
++with open('./tests/testeml', 'rb') as f:
++    testmsg = f.read()
+
+# 2017-08-22 14:42:12.346884
++msg = attaskcreator.retrievemail.get_msg_text(testmsg)
+
+# 2017-08-22 14:42:20.294448
++from attaskcreator import retrievemail
+
+# 2017-08-22 14:42:31.740652
++msg = retrievemail.get_msg_text(testmsg)
+
+# 2017-08-22 14:42:45.859679
++with open('./tests/testeml', 'r') as f:
++    testmsg = f.read()
+
+# 2017-08-22 14:42:49.006148
++msg = retrievemail.get_msg_text(testmsg)
+
+# 2017-08-22 14:43:12.805098
++import email
+
+# 2017-08-22 14:43:43.182477
++with open('./tests/testeml', 'br') as f:
++    testmsg = email.message_from_bytes(f.read())
+
+# 2017-08-22 14:43:47.124663
++msg = retrievemail.get_msg_text(testmsg)
+
+# 2017-08-22 14:43:48.693012
++msg
+
+# 2017-08-22 14:44:12.375035
++from attaskcreator import config
+
+# 2017-08-22 14:44:22.144390
++settings = config.Settings()
+
+# 2017-08-22 14:44:27.602015
++settings.setup_eml()
+
+# 2017-08-22 14:45:12.860579
++mail = retrievemail.FetchMail(settings.eml_imap_server)
+
+# 2017-08-22 14:45:32.340585
++messages = mail.fetch_unread_messages(settings.eml_username, settings.eml_pwd)
+
+# 2017-08-22 14:45:35.296910
++messages
+
+# 2017-08-22 14:45:50.522454
++data = retrievemail.read_msg_info(messages[0])
+
+# 2017-08-22 14:46:14.633864
++import beautifulsoup
+
+# 2017-08-22 14:46:32.667555
++from attaskcreator import config
+
+# 2017-08-22 14:46:40.746703
++from attaskcreator import retrievemail
+
+# 2017-08-22 14:46:45.578465
++settings = config.Settings()
+
+# 2017-08-22 14:46:50.238232
++settings.setup_eml()
+
+# 2017-08-22 14:46:53.773879
++messages = mail.fetch_unread_messages(settings.eml_username, settings.eml_pwd)
+
+# 2017-08-22 14:46:58.787327
++mail = retrievemail.FetchMail(settings.eml_imap_server)
+
+# 2017-08-22 14:47:00.924493
++messages = mail.fetch_unread_messages(settings.eml_username, settings.eml_pwd)
+
+# 2017-08-22 14:47:20.399329
++mail = retrievemail.FetchMail(settings.eml_imap_server)
+
+# 2017-08-22 14:47:23.184248
++messages = mail.fetch_unread_messages(settings.eml_username, settings.eml_pwd)
+
+# 2017-08-22 14:47:41.422315
++data = retrievemail.read_msg_info(messages[0])
+
+# 2017-08-22 14:47:44.347896
++data
+
+# 2017-08-22 14:48:57.054133
++body_plain = retrievemail.get_msg_text(messages[0])
+
+# 2017-08-22 14:49:01.337481
++body_plain
+
+# 2017-08-22 14:49:07.026975
++import beautifulsoup
+
+# 2017-08-22 14:49:08.406870
++import beautifulsoup4
+
+# 2017-08-22 14:49:11.697078
++import bs4
+
+# 2017-08-22 14:49:40.940677
++test = bs4.BeautifulSoup(body_plain)
+
+# 2017-08-22 14:50:00.866567
++test = bs4.BeautifulSoup(body_plain, 'html.parser')
+
+# 2017-08-22 14:50:02.151545
++test
+
+# 2017-08-22 14:50:10.847883
++'\ndh' in test
+
+# 2017-08-22 14:50:44.298755
++test.replace('\r', '')
+
+# 2017-08-22 14:50:48.407191
++test
+
+# 2017-08-22 14:50:58.264372
++test.__dict__
+
+# 2017-08-22 14:51:35.337878
++tag = test.b
+
+# 2017-08-22 14:51:36.160633
++tag
+
+# 2017-08-22 14:51:48.450034
++tag['id']
+
+# 2017-08-22 14:51:51.520561
++test
+
+# 2017-08-22 14:52:04.769081
++test.get_text()
+
+# 2017-08-22 14:52:22.625345
++thetext = test.get_text()
+
+# 2017-08-22 14:52:32.973070
++cleantext = thetext.replace('\r', '')
+
+# 2017-08-22 14:52:35.526384
++cleantext
+
+# 2017-08-22 14:52:44.398178
++'\ndh' in cleantext
