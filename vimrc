@@ -188,7 +188,7 @@ let g:synstastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_checkers = ["pycodestyle", "pydocstyle"]
 let g:syntastic_loc_list_height = 5
@@ -218,6 +218,7 @@ command Wly w | !lilypond %:r
 command Wpy w | !python3 %
 command Spell set filetype=text | setlocal spell spelllang=en_us
 command Wr w | !rustc %
+command Pl SyntasticCheck pylint
 
 
 " Use control + standard movement key to change section of window

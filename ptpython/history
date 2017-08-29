@@ -1152,3 +1152,385 @@
 
 # 2017-08-22 14:52:44.398178
 +'\ndh' in cleantext
+
+# 2017-08-28 23:36:24.033598
++from tinydb import TinyDB, Query
+
+# 2017-08-28 23:36:34.085199
++db = TinyDB('db.json')
+
+# 2017-08-28 23:36:47.248597
++db.insert({'type': 'apple', 'count': 7})
+
+# 2017-08-28 23:37:04.294342
++db.insert({'type': 'peach', 'count': 3})
+
+# 2017-08-28 23:37:08.795450
++db.all()
+
+# 2017-08-28 23:37:33.880574
++for item in db:
++    print(item)
+
+# 2017-08-28 23:37:41.584869
++Fruit = Query()
+
+# 2017-08-28 23:37:51.962438
++db.search(Fruit.type == 'peach')
+
+# 2017-08-28 23:38:08.467829
++db.search(Fruit.count > 5)
+
+# 2017-08-28 23:38:26.952693
++db.update({'count': 10}, Fruit.type == 'apple')
+
+# 2017-08-28 23:38:30.812075
++db.all()
+
+# 2017-08-28 23:38:40.845829
++db.remove(Fruit.count < 5)
+
+# 2017-08-28 23:38:46.414550
++db.purge()
+
+# 2017-08-28 23:38:49.112768
++db.all()
+
+# 2017-08-29 01:25:45.064138
++from lyskel import lynames
+
+# 2017-08-29 01:25:48.136457
++exit
+
+# 2017-08-29 01:26:32.938264
++from lyskel import lynames
+
+# 2017-08-29 01:27:10.590090
++from tinydb import TinyDB, Query
+
+# 2017-08-29 01:27:16.225064
++from lyskel import lynames
+
+# 2017-08-29 01:27:42.099624
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 01:27:49.964016
++table = db.table('instruments')
+
+# 2017-08-29 01:27:52.058846
++table
+
+# 2017-08-29 01:27:56.351085
++table.all()
+
+# 2017-08-29 01:28:26.963609
++test = lynames.Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:28:45.124184
++from tinydb import TinyDB, Query
+
+# 2017-08-29 01:28:49.505995
++from lyskel import lynames
+
+# 2017-08-29 01:28:54.917134
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 01:28:57.418616
++table = db.table('instruments')
+
+# 2017-08-29 01:29:04.198492
++test = lynames.Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:29:05.735503
++test
+
+# 2017-08-29 01:29:12.135041
++test.__dict__
+
+# 2017-08-29 01:29:50.010820
++test.asdict()
+
+# 2017-08-29 01:29:57.772309
++import attrs
+
+# 2017-08-29 01:30:08.899198
++import attr
+
+# 2017-08-29 01:30:15.362883
++attr.asdict(test)
+
+# 2017-08-29 01:30:57.097787
++test.__dict__
+
+# 2017-08-29 01:35:04.515281
++from lyskel import lynames
+
+# 2017-08-29 01:35:11.644627
++from tinydb import TinyDB, Query
+
+# 2017-08-29 01:35:22.365908
++test = lynames.Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:35:29.987094
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 01:35:35.569427
++table = db.table('instruments')
+
+# 2017-08-29 01:35:37.741308
++test = lynames.Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:35:39.309841
++tet
+
+# 2017-08-29 01:35:40.470325
++test
+
+# 2017-08-29 01:35:52.600221
++import attr
+
+# 2017-08-29 01:35:58.451917
++attr.asdict(test)
+
+# 2017-08-29 01:36:14.064553
++test.__dict__
+
+# 2017-08-29 01:38:22.200586
++from lyskel import lynames
+
+# 2017-08-29 01:38:26.833838
++from tinydb import TinyDB, Query
+
+# 2017-08-29 01:38:32.742316
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 01:38:37.078679
++table = db.table('instruments')
+
+# 2017-08-29 01:38:41.957384
++test = lynames.Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:38:44.392674
++test
+
+# 2017-08-29 01:38:54.852378
++test.__dict__
+
+# 2017-08-29 01:39:01.371901
++attr.asdict(test)
+
+# 2017-08-29 01:39:04.984107
++import attr
+
+# 2017-08-29 01:39:05.935408
++attr.asdict(test)
+
+# 2017-08-29 01:39:43.639460
++from lyskel.lynames import Instrument
+
+# 2017-08-29 01:40:06.497495
++Instrument('violin', abbr='vln', clef='treble')
+
+# 2017-08-29 01:40:34.315755
++from lyskel.lynames import Instrument
+
+# 2017-08-29 01:40:35.804304
++Instrument('violin', abbr='vln', clef='treble')
+
+# 2017-08-29 01:40:44.324588
++_
+
+# 2017-08-29 01:41:35.637515
++test = Instrument('violin')
+
+# 2017-08-29 01:41:37.143055
++test
+
+# 2017-08-29 01:45:53.274944
++from lyskel.lynames import Instrument
+
+# 2017-08-29 01:45:58.156511
++Instrument('violin', abbr='vln', clef='treble')
+
+# 2017-08-29 01:48:01.015657
++exit
+
+# 2017-08-29 01:48:06.537222
++from lyskel.lynames import Instrument
+
+# 2017-08-29 01:48:08.446604
++Instrument('violin', abbr='vln', clef='treble')
+
+# 2017-08-29 01:48:19.928998
++Instrument('violin', abbr='vln', clef='treble', number=1)
+
+# 2017-08-29 01:48:26.494173
++import attr
+
+# 2017-08-29 01:48:33.799160
++attr.asdict(_)
+
+# 2017-08-29 01:52:38.410401
++from tinydb import TinyDB, Query
+
+# 2017-08-29 01:52:42.066292
++from lyskel.lynames import Instrument
+
+# 2017-08-29 01:52:50.477378
++test = Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:53:00.428880
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 01:53:10.617998
++table = db.table('instruments')
+
+# 2017-08-29 01:53:12.471574
++test = Instrument.load_from_db('violin', table, number=1)
+
+# 2017-08-29 01:53:13.741445
++test
+
+# 2017-08-29 01:53:31.025486
++import attr
+
+# 2017-08-29 01:53:39.938140
++attr.asdict(test)
+
+# 2017-08-29 01:56:14.068419
++viola = Instrument(name='viola', abbr='Vla.', clef='alto', midi='viola')
+
+# 2017-08-29 01:56:15.752595
++viola
+
+# 2017-08-29 01:56:29.949363
++attr.asdict(viola)
+
+# 2017-08-29 01:57:59.773776
++attr.asdict(viola, filter=attr.filters.exclude(attr.fields(Instrument)._roman, attr.fields(Instrument).number, attr.fields(Instrument)._numword))
+
+# 2017-08-29 01:58:32.385144
++table.insert(_)
+
+# 2017-08-29 01:58:35.635465
++table.all()
+
+# 2017-08-29 12:45:17.215035
++from lynames import LyName
+
+# 2017-08-29 12:45:22.843981
++from lyskel.lynames import LyName
+
+# 2017-08-29 12:45:30.045556
++test = LyName('test')
+
+# 2017-08-29 12:45:31.133865
++test
+
+# 2017-08-29 12:45:35.859895
++test.number = 1
+
+# 2017-08-29 12:45:36.881435
++test
+
+# 2017-08-29 12:45:43.804641
++test.file_name(1)
+
+# 2017-08-29 12:45:58.488345
++test._movement(1, form='num')
+
+# 2017-08-29 12:46:04.961164
++test._movement(1, form='ord')
+
+# 2017-08-29 12:46:36.301672
++from lyskel.lynames import Instrument
+
+# 2017-08-29 12:46:54.875915
++test = Instrument.numbered_name('test', number=1)
+
+# 2017-08-29 12:46:55.998315
++test
+
+# 2017-08-29 12:47:03.183886
++test.file_name
+
+# 2017-08-29 12:47:09.592290
++test.file_name()
+
+# 2017-08-29 12:47:12.975856
++test.file_name(1)
+
+# 2017-08-29 12:47:21.535750
++test.var_name(1)
+
+# 2017-08-29 12:47:35.515822
++test.number
+
+# 2017-08-29 13:01:12.368441
++from lyskel.lynames import Instrument
+
+# 2017-08-29 13:01:22.993063
++from tinydb import TinyDB, Query
+
+# 2017-08-29 13:02:40.030662
++violoncello = Instrument.numbered_name('violoncello', number=2, abbr='Vc.', clef='bass', midi='cello')
+
+# 2017-08-29 13:03:03.484709
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 13:03:05.598279
++db.all()
+
+# 2017-08-29 13:03:15.624338
++db.table('instrument').all()
+
+# 2017-08-29 13:03:19.649774
++db.table('instruments').all()
+
+# 2017-08-29 13:03:30.913968
++violoncello.add_to_db(db)
+
+# 2017-08-29 13:03:33.728282
++db.table('instruments').all()
+
+# 2017-08-29 13:27:13.092980
++test = None
+
+# 2017-08-29 13:27:16.529927
++test + 'hi'
+
+# 2017-08-29 15:17:30.168101
++from tinydb import TinyDB, Query
+
+# 2017-08-29 15:17:35.007186
++Ins = Query()
+
+# 2017-08-29 15:17:40.234227
++db = TinyDB('/tmp/tmptestdb.json')
+
+# 2017-08-29 15:17:55.418316
++instable = db.table('instruments')
+
+# 2017-08-29 15:18:00.721644
++instable.get('flute')
+
+# 2017-08-29 15:18:10.399493
++instable.get(Ins.name == 'flute')
+
+# 2017-08-29 15:18:13.447805
++_
+
+# 2017-08-29 15:18:25.449621
++flute = instable.get(Ins.name == 'flute')
+
+# 2017-08-29 15:18:26.904883
++flute
+
+# 2017-08-29 15:18:31.034372
++print(flute)
+
+# 2017-08-29 15:19:10.980990
++db
+
+# 2017-08-29 15:19:17.687852
++db.__dict__
