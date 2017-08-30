@@ -219,6 +219,7 @@ command Wpy w | !python3 %
 command Spell set filetype=text | setlocal spell spelllang=en_us
 command Wr w | !rustc %
 command Pl SyntasticCheck pylint
+command JSON r !python -m json.tool %
 
 
 " Use control + standard movement key to change section of window
