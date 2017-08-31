@@ -50,7 +50,7 @@ confidence=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
-disable=parameter-unpacking,unpacking-in-except,raw-checker-failed,nonzero-method,cmp-method,input-builtin,round-builtin,intern-builtin,unichr-builtin,map-builtin-not-iterating,eq-without-hash,div-method,idiv-method,rdiv-method,exception-message-attribute,bad-continuation,invalid-name
+disable=parameter-unpacking,unpacking-in-except,raw-checker-failed,nonzero-method,cmp-method,input-builtin,round-builtin,intern-builtin,unichr-builtin,map-builtin-not-iterating,eq-without-hash,div-method,idiv-method,rdiv-method,exception-message-attribute,bad-continuation,invalid-name,too-many-arguments
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -423,3 +423,5 @@ valid-metaclass-classmethod-first-arg=mcs
 # Exceptions that will emit a warning when being caught. Defaults to
 # "Exception"
 overgeneral-exceptions=Exception
+
+# vim: se wrap:

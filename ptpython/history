@@ -1624,3 +1624,910 @@
 
 # 2017-08-29 20:08:08.497218
 +ins.all()
+
+# 2017-08-29 20:18:25.950569
++test = {'item1', 'item2'}
+
+# 2017-08-29 20:18:30.119609
++list(test)
+
+# 2017-08-29 20:42:44.450746
++from pathlib import Path
+
+# 2017-08-29 20:43:15.868270
++mydir = Paht('myfiles', 'docs')
+
+# 2017-08-29 20:43:20.190597
++mydir = Path('myfiles', 'docs')
+
+# 2017-08-29 20:43:21.515319
++mydir
+
+# 2017-08-29 20:43:29.758955
++Path.root
+
+# 2017-08-29 20:51:51.062031
++import os
+
+# 2017-08-29 20:51:54.759389
++os.path(__file__)
+
+# 2017-08-29 20:52:05.632761
++os.path(os.getcwd)
+
+# 2017-08-29 20:52:10.169076
++os.getcwd()
+
+# 2017-08-29 20:52:18.438454
++base = _
+
+# 2017-08-29 20:52:19.210319
++base
+
+# 2017-08-29 20:52:25.486987
++os.dirname(base)
+
+# 2017-08-29 20:52:30.374263
++os.path.dirname(base)
+
+# 2017-08-29 20:52:55.105470
++file = os.path.join(base, 'test_db_interface.py')
+
+# 2017-08-29 20:52:56.407595
++file
+
+# 2017-08-29 20:53:02.266856
++os.path.dirname(file)
+
+# 2017-08-29 20:53:08.618118
++os.path.dirname(_)
+
+# 2017-08-29 20:53:55.722649
++from pathlib import PATH
+
+# 2017-08-29 20:53:57.967483
++from pathlib import Path
+
+# 2017-08-29 20:54:08.767434
++path = Path(file)
+
+# 2017-08-29 20:54:09.729037
++path
+
+# 2017-08-29 20:54:15.129639
++path.parents[0]
+
+# 2017-08-29 20:54:28.907648
++str(path)
+
+# 2017-08-29 20:54:38.109378
++path.parents[2]
+
+# 2017-08-29 20:54:41.660713
++path.parents[1]
+
+# 2017-08-29 20:58:12.085649
++from pathlib import Path
+
+# 2017-08-29 20:58:24.884967
++test = Path('/tmp/hi')
+
+# 2017-08-29 20:58:25.937985
++test
+
+# 2017-08-29 20:58:30.588045
++import os
+
+# 2017-08-29 20:58:36.614784
++os.makedirs(test)
+
+# 2017-08-29 20:58:46.944796
++os.listdir('/tmp')
+
+# 2017-08-29 21:00:20.992184
++from pathlib import Path
+
+# 2017-08-29 21:00:25.087542
++Path('~')
+
+# 2017-08-29 21:00:26.750037
++_
+
+# 2017-08-29 21:01:53.062798
++from tinydb import TinyDB
+
+# 2017-08-29 21:01:57.432592
++from pathlib import Path
+
+# 2017-08-29 21:02:06.928307
++test = Path('/tmp/test/dir.json')
+
+# 2017-08-29 21:02:11.764683
++TinyDB(test)
+
+# 2017-08-29 21:02:50.987053
++test = Path('../lyskel/tmptestdb.json')
+
+# 2017-08-29 21:02:52.209386
++test
+
+# 2017-08-29 21:03:00.411714
++TinyDB(test)
+
+# 2017-08-29 21:03:05.912739
++_.tables()
+
+# 2017-08-29 21:09:25.009093
++from pathlib import Path
+
+# 2017-08-29 21:09:29.047261
++test = '/tmp'
+
+# 2017-08-29 21:09:35.150366
++testpath = Path(test)
+
+# 2017-08-29 21:09:36.748974
++testpath
+
+# 2017-08-29 21:09:39.808458
++Path(testpath)
+
+# 2017-08-29 21:09:42.973493
++_
+
+# 2017-08-29 21:19:17.600326
++from tinydb import TinyDB
+
+# 2017-08-29 21:19:26.710571
++test = TinyDB('tmptestdb.json')
+
+# 2017-08-29 21:19:30.810792
++test.tables()
+
+# 2017-08-29 21:19:39.807321
++ins = test.table('instruments')
+
+# 2017-08-29 21:19:53.786409
++for item in ins.all():
++    print(item['name'])
+
+# 2017-08-29 21:20:08.423330
++test = TinyDB('temptestdb.json')
+
+# 2017-08-29 21:21:04.358170
++ins = test.table('instruments')
+
+# 2017-08-29 21:21:07.168657
++for item in ins.all():
++    print(item['name'])
+
+# 2017-08-29 21:26:07.397015
++def test(hi=1):
++    pass
+
+# 2017-08-29 21:26:12.980666
++test(lo=2)
+
+# 2017-08-30 02:48:59.299327
++from tinydb import TinyDB
+
+# 2017-08-30 02:49:04.088522
++TinyDB()
+
+# 2017-08-30 02:56:28.434946
++from tinydb import TinyDB
+
+# 2017-08-30 02:56:39.699793
++test = TinyDB('test.json')
+
+# 2017-08-30 03:03:18.943138
++from tinydb import TinyDB
+
+# 2017-08-30 03:03:28.063991
++from pathlib import Path
+
+# 2017-08-30 03:03:54.856583
++Path('lyskel', 'default_db.json')
+
+# 2017-08-30 03:04:03.454409
++db = TinyDB(_)
+
+# 2017-08-30 03:04:04.486043
++db
+
+# 2017-08-30 03:04:07.838228
++db.all()
+
+# 2017-08-30 03:04:10.374521
++db.tables()
+
+# 2017-08-30 03:04:23.525692
++ins = db.table('instruments')
+
+# 2017-08-30 03:04:29.877697
++Search = Query()
+
+# 2017-08-30 03:04:36.553564
++from tinydb import Query
+
+# 2017-08-30 03:04:37.913327
++Search = Query()
+
+# 2017-08-30 03:04:56.270253
++items = table.search('vio' in Search['name'])
+
+# 2017-08-30 03:05:02.528128
++items = ins.search('vio' in Search['name'])
+
+# 2017-08-30 03:05:30.046935
++items = ins.search(Search['name'] == 'vio')
+
+# 2017-08-30 03:05:32.549204
++items
+
+# 2017-08-30 03:06:57.080338
++testfunc = lambda s: 'vio' in s
+
+# 2017-08-30 03:07:17.081514
++ins.search(Search['name'].test(testfunc))
+
+# 2017-08-30 03:19:12.291006
++from tinydb import Query
+
+# 2017-08-30 03:19:18.894042
++from pathlib import Path
+
+# 2017-08-30 03:19:25.586846
++from tinydb import TinyDB
+
+# 2017-08-30 03:19:32.651852
++Path('lyskel', 'default_db.json')
+
+# 2017-08-30 03:19:41.906272
++db = TinyDB(_)
+
+# 2017-08-30 03:19:51.536500
++tab = db.table('instruments')
+
+# 2017-08-30 03:19:53.641504
++db.all()
+
+# 2017-08-30 03:19:57.141310
++tab.all()
+
+# 2017-08-30 17:48:09.667258
++assert {1, 2, 3} in {1, 2, 3, 4, 5}
+
+# 2017-08-30 17:48:28.236119
++assert {1, 2, 3}.issubset({1, 2, 3, 4, 5})
+
+# 2017-08-30 23:23:09.913003
++from tinydb import TinyDB
+
+# 2017-08-30 23:23:24.289731
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-08-30 23:23:25.381828
++db
+
+# 2017-08-30 23:23:29.796027
++db.__dict__
+
+# 2017-08-30 23:23:41.106237
++db.tables()
+
+# 2017-08-30 23:23:49.285927
++ins = db.table('instruments')
+
+# 2017-08-30 23:23:50.498855
++ins
+
+# 2017-08-30 23:23:54.116120
++ins.__dict__
+
+# 2017-08-30 23:39:55.423789
++from tinydb import TinyDB
+
+# 2017-08-30 23:43:01.536430
++from pathlib import Path
+
+# 2017-08-30 23:43:16.570472
++list = [Path('.')]
+
+# 2017-08-30 23:43:22.270420
++Path('.') in list
+
+# 2017-08-30 23:48:11.000952
++count = 5
+
+# 2017-08-30 23:48:48.173202
++for i in range(1, (count + 1)):
++    print(i)
++    
+
+# 2017-08-30 23:55:40.930829
++from lyskel import lynames
+
+# 2017-08-30 23:57:19.199255
++quartet = lynames.Ensemble('String Quartet')
+
+# 2017-08-30 23:57:21.587843
++quartet
+
+# 2017-08-30 23:58:26.333220
++from lyskel import lynames
+
+# 2017-08-30 23:58:32.655727
++from tinydb import TinyDB
+
+# 2017-08-30 23:58:38.146972
++import shutil
+
+# 2017-08-30 23:59:06.010672
++shutil.copy2('lyskel/default_db.json', 'lyskel/default_db.json.new')
+
+# 2017-08-30 23:59:19.015248
++db = TinyDB('lyskel/default_db.json.new')
+
+# 2017-08-30 23:59:19.913812
++db
+
+# 2017-08-30 23:59:22.683083
++db.tables()
+
+# 2017-08-30 23:59:50.200861
++sting_quartet = Ensemble('String Quartet')
+
+# 2017-08-30 23:59:57.340576
++sting_quartet = lynames.Ensemble('String Quartet')
+
+# 2017-08-31 00:00:01.794007
++string_quaret
+
+# 2017-08-31 00:00:04.382750
++string_quartet
+
+# 2017-08-31 00:00:11.493062
++string_quartet = lynames.Ensemble('String Quartet')
+
+# 2017-08-31 00:00:13.559772
++string_quartet
+
+# 2017-08-31 00:00:56.736106
++string_quartet.add_instrument('violin', 1)
+
+# 2017-08-31 00:05:10.664385
++from lyskel import lynames
+
+# 2017-08-31 00:05:15.062288
++from tinydb import TinyDB
+
+# 2017-08-31 00:05:20.050382
++db = TinyDB('lyskel/default_db.json.new')
+
+# 2017-08-31 00:05:26.488307
++sting_quartet = lynames.Ensemble('String Quartet')
+
+# 2017-08-31 00:05:38.189672
++string_quartet = sting_quartet
+
+# 2017-08-31 00:05:41.831483
++string_quartet
+
+# 2017-08-31 00:05:48.497504
++sting_quartet
+
+# 2017-08-31 00:05:59.621905
++string_quartet.add_instrument('violin', 1)
+
+# 2017-08-31 00:06:22.366488
++string_quartet.add_instrument(name='violin', db=db, number=1)
+
+# 2017-08-31 00:06:29.196212
++string_quartet.add_instrument(ins_name='violin', db=db, number=1)
+
+# 2017-08-31 00:06:56.697777
++from lyskel import lynames
+
+# 2017-08-31 00:06:59.516756
++from tinydb import TinyDB
+
+# 2017-08-31 00:07:12.920304
++string_quartet = lynames.Ensemble('String Quartet')
+
+# 2017-08-31 00:08:11.366028
++string_quarete.add_instrument(ins_name='violin', db=db, number=1)
+
+# 2017-08-31 00:08:16.618433
++string_quartet.add_instrument(ins_name='violin', db=db, number=1)
+
+# 2017-08-31 00:08:24.939584
++db = TinyDB('lyskel/default_db.json.new')
+
+# 2017-08-31 00:08:26.413323
++string_quartet.add_instrument(ins_name='violin', db=db, number=1)
+
+# 2017-08-31 00:08:30.866052
++string_quartet
+
+# 2017-08-31 00:08:39.019933
++string_quartet.add_instrument(ins_name='violin', db=db, number=2)
+
+# 2017-08-31 00:08:45.429441
++string_quartet.add_instrument(ins_name='viola', db=db)
+
+# 2017-08-31 00:08:51.247968
++string_quartet.add_instrument(ins_name='violoncello', db=db)
+
+# 2017-08-31 00:09:00.002885
++string_quartet.add_to_db(db)
+
+# 2017-08-31 00:09:05.634447
++db.tables()
+
+# 2017-08-31 00:09:13.936244
++ens = db.table('ensembles')
+
+# 2017-08-31 00:09:15.186885
++ens
+
+# 2017-08-31 00:09:18.012898
++ens.all()
+
+# 2017-08-31 00:09:34.520971
++from lyskel import lynames
+
+# 2017-08-31 00:09:39.448538
++from tinydb import TinyDB
+
+# 2017-08-31 00:09:44.568865
++db = TinyDB('lyskel/default_db.json.new')
+
+# 2017-08-31 00:11:04.098880
++string_quartet = lynames.Ensemble.load_from_db('string_quartet')
+
+# 2017-08-31 00:11:10.972946
++string_quartet = lynames.Ensemble.load_from_db('string_quartet', db=db)
+
+# 2017-08-31 00:11:29.737130
++string_quartet = lynames.Ensemble.load_from_db(name='string_quartet', db=db)
+
+# 2017-08-31 00:12:14.284939
++from lyskel import lynames
+
+# 2017-08-31 00:12:20.656825
++from tinydb import TinyDB
+
+# 2017-08-31 00:12:26.150911
++db = TinyDB('lyskel/default_db.json.new')
+
+# 2017-08-31 00:12:39.674665
++string_quartet = lynames.Ensemble.load_from_db(name='String Quartet', db=db)
+
+# 2017-08-31 00:12:43.004394
++string_quartet
+
+# 2017-08-31 00:13:45.201826
++for ins in string_quartet.instruments:
++    print('{instrument} uses the {clef} clef'.format(instrument=ins.name, clef=ins.clef))
+
+# 2017-08-31 00:14:06.314198
++for ins in string_quartet.instruments:
++    print('{instrument} {num} uses the {clef} clef'.format(instrument=ins.name, num=instrument.number, clef=ins.clef))
+
+# 2017-08-31 00:14:17.978387
++for ins in string_quartet.instruments:
++    print('{instrument} {num} uses the {clef} clef'.format(instrument=ins.name, num=ins.number, clef=ins.clef))
+
+# 2017-08-31 00:14:44.270789
++for ins in string_quartet.instruments:
++    print(ins.part_name)
+
+# 2017-08-31 00:14:51.884176
++for ins in string_quartet.instruments:
++    print(ins.part_name())
+
+# 2017-08-31 00:14:58.528145
++for ins in string_quartet.instruments:
++    print(ins.file_name())
+
+# 2017-08-31 00:15:07.620331
++for ins in string_quartet.instruments:
++    print(ins.file_name(), 1)
+
+# 2017-08-31 00:15:14.274573
++for ins in string_quartet.instruments:
++    print(ins.file_name(1))
+
+# 2017-08-31 00:23:51.316978
++from tinydb import TinyDB
+
+# 2017-08-31 00:23:56.536367
++from lyskel import lynames
+
+# 2017-08-31 00:24:11.971233
++from shutil import copy2
+
+# 2017-08-31 00:24:22.446677
++copy2('default_db.json', 'default_db.json.new')
+
+# 2017-08-31 00:24:31.249319
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:24:32.192386
++db
+
+# 2017-08-31 00:24:35.370080
++db.tables()
+
+# 2017-08-31 00:24:54.204360
++string_quartet = lynames.Ensemble('string_quartet')
+
+# 2017-08-31 00:28:38.246252
++from tinydb import TinyDB
+
+# 2017-08-31 00:28:52.378200
++from lynames import Ensemble, Instrument
+
+# 2017-08-31 00:28:58.129396
++from .lynames import Ensemble, Instrument
+
+# 2017-08-31 00:29:10.793334
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:29:23.606673
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:31:39.377505
++string_quartet = Ensemble.load_from_db('stringQuartet', db)
+
+# 2017-08-31 00:31:52.732723
++string_quartet = Ensemble.load_from_db('string_quartet', db)
+
+# 2017-08-31 00:32:53.695860
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:32:59.958649
++from tinydb import TinyDB
+
+# 2017-08-31 00:33:20.891607
++string_quartet = Ensemble('String Quartet')
+
+# 2017-08-31 00:33:49.412672
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:33:53.333354
++db.tables()
+
+# 2017-08-31 00:34:02.575817
++ens = db.table('ensembles')
+
+# 2017-08-31 00:34:05.184545
++ens.all()
+
+# 2017-08-31 00:34:18.014519
++string_quartet = Ensemble('string_quartet')
+
+# 2017-08-31 00:34:29.383099
++string_quartet.add_instrument('violin', db=db, number=1)
+
+# 2017-08-31 00:34:32.534585
++string_quartet.add_instrument('violin', db=db, number=2)
+
+# 2017-08-31 00:34:38.545897
++string_quartet.add_instrument('viola', db=db)
+
+# 2017-08-31 00:34:44.578035
++string_quartet.add_instrument('violoncello', db=db)
+
+# 2017-08-31 00:34:51.069436
++string_quartet.instruments()
+
+# 2017-08-31 00:34:52.717905
++string_quartet.instruments
+
+# 2017-08-31 00:35:23.653121
++ins = db.table('instruments')
+
+# 2017-08-31 00:35:25.820605
++ins
+
+# 2017-08-31 00:35:27.874189
++ins.all()
+
+# 2017-08-31 00:38:27.773327
++from tinydb import TinyDB
+
+# 2017-08-31 00:38:32.841795
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:38:37.136106
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:38:41.567613
++string_quartet = Ensemble('string_quartet')
+
+# 2017-08-31 00:38:47.331146
++string_quartet.add_instrument('violin', db=db, number=1)
+
+# 2017-08-31 00:38:52.142687
++string_quartet.add_instrument('violin', db=db, number=2)
+
+# 2017-08-31 00:38:58.265155
++string_quartet.instruments
+
+# 2017-08-31 00:39:24.219322
++from tinydb import TinyDB
+
+# 2017-08-31 00:39:33.741255
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:39:41.734755
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:39:52.709358
++string_quartet = Ensemble('string_quartet')
+
+# 2017-08-31 00:40:07.193164
++string_quartet.add_instrument('violin', db=db, number=1)
+
+# 2017-08-31 00:40:29.528963
++from tinydb import TinyDB
+
+# 2017-08-31 00:40:37.217867
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:40:45.184335
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:40:56.846623
++string_quartet = Ensemble('string_quartet')
+
+# 2017-08-31 00:41:12.302403
++string_quartet.add_instrument('violin', db=db, number=1)
+
+# 2017-08-31 00:41:18.368428
++string_quartet.instruments
+
+# 2017-08-31 00:42:05.393798
++from tinydb import TinyDB
+
+# 2017-08-31 00:42:16.685565
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:42:23.058763
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:42:33.874386
++string_quartet = Ensemble('string_quartet')
+
+# 2017-08-31 00:42:37.139797
++string_quartet.add_instrument('violin', db=db, number=1)
+
+# 2017-08-31 00:42:42.515823
++string_quartet.instruments
+
+# 2017-08-31 00:42:45.890216
++string_quartet.add_instrument('violin', db=db, number=2)
+
+# 2017-08-31 00:42:54.245418
++string_quartet.add_instrument('viola', db=db)
+
+# 2017-08-31 00:42:59.483617
++string_quartet.add_instrument('violoncello', db=db)
+
+# 2017-08-31 00:43:03.701170
++string_quartet.instruments
+
+# 2017-08-31 00:43:16.852351
++string_quartet.add_to_db(db)
+
+# 2017-08-31 00:43:24.832522
++db.table('ensembles').all()
+
+# 2017-08-31 00:43:54.829935
++string_quartet2 = Ensemble.load_from_db(name='string quartet', db=db)
+
+# 2017-08-31 00:43:58.246739
++string_quartet2
+
+# 2017-08-31 00:45:04.752323
++piano_trio = Ensemble('Piano Trio')
+
+# 2017-08-31 00:46:13.451323
++piano_trio.add_instrument('violin', db=db)
+
+# 2017-08-31 00:46:17.428372
++piano_trio.instruments
+
+# 2017-08-31 00:46:52.574522
++string_quartet.instruments
+
+# 2017-08-31 00:47:34.502794
++assert piano_trio is string_quartet
+
+# 2017-08-31 00:47:44.316658
++assert piano_trio == string_quartet
+
+# 2017-08-31 00:47:53.703430
++assert piano_trio.instruments == string_quartet.instruments
+
+# 2017-08-31 00:49:00.038218
++piano_trio
+
+# 2017-08-31 00:49:13.174615
++piano_trio = Ensemble()
+
+# 2017-08-31 00:49:25.205345
++piano_trio = Ensemble('piano trio')
+
+# 2017-08-31 00:49:28.715443
++piano_trio
+
+# 2017-08-31 00:50:05.430125
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:50:27.705090
++from tinydb import TinyDB
+
+# 2017-08-31 00:50:33.234724
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:50:43.987819
++violin = Instrument.load_from_db('violin', db, number=1)
+
+# 2017-08-31 00:50:45.236636
++violin
+
+# 2017-08-31 00:51:06.457676
++violin2 = Instrument.load_from_db('violin', db)
+
+# 2017-08-31 00:51:08.046881
++violin2
+
+# 2017-08-31 00:51:19.771892
++violin3 = Instrument('violin')
+
+# 2017-08-31 00:51:22.085430
++violin2
+
+# 2017-08-31 00:51:23.887726
++violin3
+
+# 2017-08-31 00:51:43.219079
++piano = Instrument.numbered_name('piano', 1)
+
+# 2017-08-31 00:51:48.237868
++piano._roman
+
+# 2017-08-31 00:51:59.475856
++clarinet = Instrument('clarinet')
+
+# 2017-08-31 00:52:02.710052
++clarinet._roman
+
+# 2017-08-31 00:53:11.626937
++string_quartet = Ensemble.load_from_db('string quartet', db)
+
+# 2017-08-31 00:53:14.516647
++string_quartet
+
+# 2017-08-31 00:53:26.051923
++piano_trio = Ensemble('piano trio')
+
+# 2017-08-31 00:53:29.920922
++piano_trio
+
+# 2017-08-31 00:56:08.936318
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:56:13.191363
++from tinydb import TinyDB
+
+# 2017-08-31 00:56:17.162051
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:56:20.764667
++string_quartet = Ensemble.load_from_db('string quartet', db)
+
+# 2017-08-31 00:56:33.403309
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:56:37.400318
++string_quartet = Ensemble.load_from_db('string quartet', db)
+
+# 2017-08-31 00:57:06.354917
++from lyskel.lynames import Ensemble, Instrument
+
+# 2017-08-31 00:57:08.799511
++from tinydb import TinyDB
+
+# 2017-08-31 00:57:11.386266
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 00:57:13.605312
++string_quartet = Ensemble.load_from_db('string quartet', db)
+
+# 2017-08-31 00:57:16.813925
++string_quartet
+
+# 2017-08-31 00:57:27.873404
++piano_trio = Ensemble('piano trio')
+
+# 2017-08-31 00:57:30.894377
++piano_trio
+
+# 2017-08-31 00:58:20.388973
++piano_trio.add_instrument('piano', abbr='Pno.', clef=('treble', 'bass'), keyboard=True, midi='grand piano', family='keyboards')
+
+# 2017-08-31 00:58:26.129996
++piano_trio.instruments
+
+# 2017-08-31 00:58:31.321774
++string_quartet.instruments
+
+# 2017-08-31 00:58:47.864797
++piano_trio.add_instrument('violin', db=db)
+
+# 2017-08-31 00:58:56.817464
++piano_trio.add_instrument('violoncello', db=db)
+
+# 2017-08-31 00:59:00.700049
++piano_trio
+
+# 2017-08-31 00:59:06.587776
++piano_trio.add_to_db(db)
+
+# 2017-08-31 00:59:19.968547
++test = Ensemble.load_from_db('piano trio', db)
+
+# 2017-08-31 00:59:21.452532
++test
+
+# 2017-08-31 00:59:25.354278
++test.instruments
+
+# 2017-08-31 00:59:38.518264
++db.table('instruments').all()
+
+# 2017-08-31 01:02:14.053573
++from tinydb import TinyDB
+
+# 2017-08-31 01:02:21.405657
++db = TinyDB('default_db.json.new')
+
+# 2017-08-31 01:02:23.656778
++db.tables()
+
+# 2017-08-31 01:02:30.755395
++db.table('ensembles').all()
+
+# 2017-08-31 01:02:45.100036
++from lyskel.lynames import Ensemble
+
+# 2017-08-31 01:02:59.669516
++test = Ensemble.load_from_db('piano trio', db)
+
+# 2017-08-31 01:03:00.788170
++test
+
+# 2017-08-31 03:16:30.816311
++raise KeyError()
+
+# 2017-08-31 03:16:37.086729
++raise KeyError('hi')
+
+# 2017-08-31 03:17:27.522148
++try:
++    raise KeyError('hi')
++except KeyError as err:
++    print(err.__dict__)
+
+# 2017-08-31 03:17:35.921359
++try:
++    raise KeyError('hi')
++except KeyError as err:
++    print(err)
+
+# 2017-08-31 03:18:01.341846
++pytest
