@@ -2531,3 +2531,1172 @@
 
 # 2017-08-31 03:18:01.341846
 +pytest
+
+# 2017-08-31 21:41:55.809628
++di = { {'name': 'flute', 'number': None}, {'name': 'oboe', 'number': None}}
+
+# 2017-08-31 21:42:01.518077
++di = {{'name': 'flute', 'number': None}, {'name': 'oboe', 'number': None}}
+
+# 2017-09-01 00:34:36.976074
++import requests
+
+# 2017-09-01 00:34:41.452457
++from bs4 import BeautifulSoup
+
+# 2017-09-01 00:35:13.255093
++page = requests.get('http://www.mutopiaproject.org/contribute.html')
+
+# 2017-09-01 00:35:28.297186
++page
+
+# 2017-09-01 00:35:37.120048
++page.__dict__
+
+# 2017-09-01 00:35:50.362017
++parsed = BeautifulSoup(page, 'html.parser')
+
+# 2017-09-01 00:36:05.160059
++parsed = BeautifulSoup(page.content, 'html.parser')
+
+# 2017-09-01 00:36:07.124585
++parsed
+
+# 2017-09-01 00:37:04.617429
++table = parsed.find('table', attrs={'class': 'table-bordered table-striped'})
+
+# 2017-09-01 00:37:14.791921
++table
+
+# 2017-09-01 00:38:47.608268
++parsed.children
+
+# 2017-09-01 00:38:49.811690
++parsed.children()
+
+# 2017-09-01 00:39:24.237533
++parsed.find('mutopiacomposer')
+
+# 2017-09-01 00:39:26.566419
++_
+
+# 2017-09-01 00:39:39.047364
++parsed.find('table')
+
+# 2017-09-01 00:40:05.861413
++_.contents()
+
+# 2017-09-01 00:40:08.226590
++_.contents
+
+# 2017-09-01 00:40:23.195671
++_.children
+
+# 2017-09-01 00:40:32.571102
++table = parsed.find('table')
+
+# 2017-09-01 00:40:35.994774
++table.children
+
+# 2017-09-01 00:40:44.120333
++list(table.children)
+
+# 2017-09-01 00:42:03.619351
++parsed.table
+
+# 2017-09-01 00:42:08.948463
++parsed.table.tr
+
+# 2017-09-01 00:42:26.354288
++parsed.table.findall('td')
+
+# 2017-09-01 00:42:42.426492
++parsed.table.find_all('td')
+
+# 2017-09-01 00:42:57.715006
++'mutopiacomposer' in parsed.table.find_all('td')
+
+# 2017-09-01 00:44:21.045333
++import re
+
+# 2017-09-01 00:44:57.660802
++tabledata = parsed.table.find_all('td')
+
+# 2017-09-01 00:51:20.552790
++for index, item in enumerate(tabledata):
++    if re.match(r'.*mutopiacomposer.*', item):
++        print(tabledata[index + 1])
+
+# 2017-09-01 00:51:38.867767
++for index, item in enumerate(tabledata):
++    if re.match(r'.*mutopiacomposer.*', item):
++        ret = tabledata[index + 1]
+
+# 2017-09-01 00:51:51.724929
++type(tabledata[0])
+
+# 2017-09-01 00:52:09.279939
++test = tabledata[0]
+
+# 2017-09-01 00:52:30.717892
++test.next
+
+# 2017-09-01 00:52:55.689327
++for index, item in enumerate(tabledata):
++    if re.match(r'.*mutopiacomposer.*', str(item)):
++        ret = item.next
+
+# 2017-09-01 00:52:57.080923
++ret
+
+# 2017-09-01 00:53:08.764011
++for index, item in enumerate(tabledata):
++    if re.match(r'.*mutopiacomposer.*', str(item)):
++        ret = item.next.next
+
+# 2017-09-01 00:53:10.417468
++ret
+
+# 2017-09-01 00:53:25.024807
++for index, item in enumerate(tabledata):
++    if re.match(r'.*mutopiacomposer.*', str(item)):
++        ret = tabledata[index + 1]
+
+# 2017-09-01 00:53:26.229729
++ret
+
+# 2017-09-01 00:53:42.013838
++ret.split('<br/>')
+
+# 2017-09-01 00:53:47.575860
++ret
+
+# 2017-09-01 00:53:55.980178
++composers = str(ret)
+
+# 2017-09-01 00:53:57.748121
++composers
+
+# 2017-09-01 00:54:11.830833
++composers.split('<br/>')
+
+# 2017-09-01 00:54:28.910701
++complist = composers.split('<br/>')
+
+# 2017-09-01 00:54:37.345923
++complist[1].strip()
+
+# 2017-09-01 00:54:54.251542
++comps = complist.split(', ')
+
+# 2017-09-01 00:55:08.287159
++comps = complist[1].strip().split(', ')
+
+# 2017-09-01 00:55:10.553804
++comps
+
+# 2017-09-01 00:55:42.606926
++comps[-1] = comps[-1].replace('</td>', '').strip()
+
+# 2017-09-01 00:55:46.293885
++comps[-1]
+
+# 2017-09-01 00:55:48.453413
++comps
+
+# 2017-09-01 00:56:11.083180
++ret.get_text()
+
+# 2017-09-01 00:56:44.087816
++comps
+
+# 2017-09-01 00:59:47.347418
++text = ret.get_text()
+
+# 2017-09-01 00:59:49.257679
++text
+
+# 2017-09-01 01:00:11.218670
++splittext = text.split('as follows:\n')
+
+# 2017-09-01 01:00:13.564482
++splittext
+
+# 2017-09-01 01:03:29.818484
++for index, item in enumerate(tabledata):
++    if 'mutopiacomposer' in item.gettext():
++        ret = tabledata[index + 1]
+
+# 2017-09-01 01:04:25.306210
++for index, item in enumerate(tabledata):
++    if 'mutopiacomposer' in str(item):
++        ret = tabledata[index + 1]
+
+# 2017-09-01 01:04:26.410348
++ret
+
+# 2017-09-01 01:04:46.318603
++ret.get_text()
+
+# 2017-09-01 01:07:38.584267
++assert ''
+
+# 2017-09-01 01:07:41.510567
++assert 'hi'
+
+# 2017-09-01 01:08:32.691416
++for index, item in enumerate(tabledata):
++    if 'mutopiacomposer' in item.get_text():
++        ret = tabledata[index + 1]
+
+# 2017-09-01 01:08:34.808948
++ret
+
+# 2017-09-01 01:11:19.745863
++for index, item in enumerate(tabledata):
++    if 'style' in item.get_text():
++        ret = tabledata[index + 1]
+
+# 2017-09-01 01:11:21.335793
++ret
+
+# 2017-09-01 01:12:04.006105
++for index, item in enumerate(tabledata):
++    if 'style' in item.get_text():
++        ret = tabledata[index + 1]
++        break
+
+# 2017-09-01 01:12:05.985801
++ret
+
+# 2017-09-01 01:12:23.062137
++assert 'Baroque' in ret.get_text()
+
+# 2017-09-01 01:12:28.774775
++assert 'Baroquejireopaoh' in ret.get_text()
+
+# 2017-09-01 01:14:51.858245
++for index, item in enumerate(tabledata):
++    if 'license' in item.get_text():
++        ret = tabledata[index + 1]
++        break
+
+# 2017-09-01 01:14:53.084864
++ret
+
+# 2017-09-01 01:15:15.984647
++ret.find_all('li')
+
+# 2017-09-01 01:15:27.939533
++licenses = _
+
+# 2017-09-01 01:15:50.488155
++licenselist = [item.get_text() for item in licenses]
+
+# 2017-09-01 01:15:55.408458
++licenselist
+
+# 2017-09-01 01:30:03.816565
++from lyskel import mutopia
+
+# 2017-09-01 01:31:16.452913
++mutopia.SITE
+
+# 2017-09-01 01:31:40.047516
++html = mutopia._scrape_mutopia()
+
+# 2017-09-01 01:32:06.864877
++from lyskel import mutopia
+
+# 2017-09-01 01:32:08.749923
++mutopia.SITE
+
+# 2017-09-01 01:32:14.554356
++html = mutopia._scrape_mutopia()
+
+# 2017-09-01 01:32:48.902925
++from lyskel import mutopia
+
+# 2017-09-01 01:33:15.340928
++mutopia.SITE
+
+# 2017-09-01 01:33:22.917443
++mutopia._scrape_mutopia
+
+# 2017-09-01 01:33:25.162160
++mutopia._scrape_mutopia()
+
+# 2017-09-01 01:33:42.017994
++from lyskel import mutopia
+
+# 2017-09-01 01:33:45.074355
++mutopia._scrape_mutopia()
+
+# 2017-09-01 01:35:18.307730
++from lyskel import mutopia
+
+# 2017-09-01 01:35:20.408322
++mutopia._scrape_mutopia()
+
+# 2017-09-01 01:35:35.063862
++from lyskel import mutopia
+
+# 2017-09-01 01:35:59.228030
++mutopia.SITE
+
+# 2017-09-01 01:36:04.214323
++mutopia._scrape_mutopia()
+
+# 2017-09-01 01:36:20.061321
++from lyskel import mutopia
+
+# 2017-09-01 01:36:28.045519
++html = mutopia._scrape_mutopia()
+
+# 2017-09-01 01:36:29.857814
++html
+
+# 2017-09-01 01:36:36.877509
++mutopia.SITE
+
+# 2017-09-01 01:36:56.505121
++test = mutopia.SITE
+
+# 2017-09-01 01:37:16.773941
++text = mutopia._get_mutopia_table_data('style')
+
+# 2017-09-01 01:38:04.882885
++from lyskel import mutopia
+
+# 2017-09-01 01:38:07.988377
++mutopia.SITE
+
+# 2017-09-01 01:38:14.913142
++test1 =mutopia.SITE
+
+# 2017-09-01 01:38:25.662634
++html = mutopia._scrape_mutopia()
+
+# 2017-09-01 01:38:27.272052
++html
+
+# 2017-09-01 01:38:46.139202
++assert test1 is mutopia.SITE
+
+# 2017-09-01 01:38:55.638398
++text = mutopia._get_mutopia_table_data('style')
+
+# 2017-09-01 01:39:14.762362
++test2 = mutopia.SITE
+
+# 2017-09-01 01:39:16.543294
++text
+
+# 2017-09-01 01:39:39.783271
++licences = _get_licenses()
+
+# 2017-09-01 01:39:45.728400
++licences = mutopia._get_licenses()
+
+# 2017-09-01 01:39:52.640635
++assert test2 is mutopia.SITE
+
+# 2017-09-01 01:40:00.389081
++licenses
+
+# 2017-09-01 01:40:05.585724
++licences
+
+# 2017-09-01 01:40:32.706792
++validate_mutopia(field='composer', data='BachJS')
+
+# 2017-09-01 01:40:39.149812
++mutopia.validate_mutopia(field='composer', data='BachJS')
+
+# 2017-09-01 01:41:22.967126
++from lyskel import mutopia
+
+# 2017-09-01 01:41:27.455224
++mutopia.validate_mutopia(field='composer', data='BachJS')
+
+# 2017-09-01 01:41:32.284446
++mutopia.validate_mutopia(field='composer', data='BachJfjisofdf')
+
+# 2017-09-01 01:42:59.078526
++from lyskel import mutopia
+
+# 2017-09-01 01:43:02.645628
++mutopia.validate_mutopia(field='composer', data='BachJfjisofdf')
+
+# 2017-09-01 03:30:02.833592
++test = None
+
+# 2017-09-01 03:30:17.570022
++assert isinstance(test, (NoneType, list))
+
+# 2017-09-01 03:30:22.603834
++type(test)
+
+# 2017-09-01 03:30:48.883290
++assert isinstance(test, (None, list))
+
+# 2017-09-01 03:30:58.325189
++assert isinstance(test, (str, list))
+
+# 2017-09-01 03:31:03.370773
++test = 'hi'
+
+# 2017-09-01 03:31:05.044075
++assert isinstance(test, (str, list))
+
+# 2017-09-01 03:37:52.006618
++test = [1, 2, 3, 4, 5]
+
+# 2017-09-01 03:37:59.654626
++five = test.pop()
+
+# 2017-09-01 03:38:00.950101
++five
+
+# 2017-09-01 03:38:02.841563
++test
+
+# 2017-09-01 03:50:11.213780
++test.stupid()
+
+# 2017-09-01 03:50:15.528996
++test.stupid
+
+# 2017-09-02 17:05:51.421505
++test = 'Anonymous'
+
+# 2017-09-02 17:05:55.951427
++test.count(' ')
+
+# 2017-09-02 17:06:04.857111
++assert 0
+
+# 2017-09-02 17:18:39.289025
++name = 'Johann Sebastian Bach'
+
+# 2017-09-02 17:19:08.730991
++while name.count(' ') > 0:
++    space = name.index(' ')
++    name = name[space:]
+
+# 2017-09-02 17:19:25.217265
++while name.count(' ') > 0:
++    space = name.index(' ')
++    print(name.count(' '))
++    name = name[space:]
+
+# 2017-09-02 17:19:40.610446
++while name.count(' ') > 0:
++    space = name.index(' ')
++    name = name[space:]
++    print(name)
+
+# 2017-09-02 17:20:14.505237
++while name.count(' ') > 0:
++    print(name)
++    space = name.index(' ')
++    name = name[space:]
++    print(name)
+
+# 2017-09-02 17:21:01.192242
++name.split(' ')
+
+# 2017-09-02 17:21:08.331858
++name = 'Johann Sebastian Bach'
+
+# 2017-09-02 17:21:09.513491
++name.split(' ')
+
+# 2017-09-02 17:21:26.526078
++name[0][0]
+
+# 2017-09-02 17:21:34.499588
++len(name)
+
+# 2017-09-02 17:21:51.892060
++parts = name.split(' ')
+
+# 2017-09-02 17:22:15.974881
++lname = name.pop()
+
+# 2017-09-02 17:22:21.082972
++lname = parts.pop()
+
+# 2017-09-02 17:22:27.744545
++parts
+
+# 2017-09-02 17:22:44.297347
++for part in parts:
++    sname += part[0] + '.'
+
+# 2017-09-02 17:22:47.623197
++sname = ''
+
+# 2017-09-02 17:22:49.522695
++for part in parts:
++    sname += part[0] + '.'
+
+# 2017-09-02 17:22:54.855568
++sname += lname
+
+# 2017-09-02 17:23:01.257165
++sname
+
+# 2017-09-02 17:23:16.433328
++name = 'Anonymous'
+
+# 2017-09-02 17:23:18.950721
++name.split()
+
+# 2017-09-02 17:23:31.095732
++'Johann Sebastian Bach'.split()
+
+# 2017-09-02 17:46:34.231194
++from tinydb import TinyDB
+
+# 2017-09-02 17:46:40.866697
++from lyskel import info
+
+# 2017-09-02 17:48:27.882913
++bach = info.Composer(name="Johann Sebastian Bach")
+
+# 2017-09-02 17:48:30.766256
++bach.get_mutopia_name()
+
+# 2017-09-02 17:48:36.146926
++bach.get_mutopia_name(guess=True)
+
+# 2017-09-02 17:50:20.320549
++test = []
+
+# 2017-09-02 17:50:24.741161
++test[0][0]
+
+# 2017-09-02 17:50:50.139043
++assert '' in 'hi'
+
+# 2017-09-02 17:51:23.312886
++from lyskel import info
+
+# 2017-09-02 17:51:27.140531
++bach = info.Composer(name="Johann Sebastian Bach")
+
+# 2017-09-02 17:51:29.860021
++bach.get_mutopia_name(guess=True)
+
+# 2017-09-02 17:52:58.048169
++bach.get_short_name()
+
+# 2017-09-02 17:53:01.053218
++bach
+
+# 2017-09-02 17:53:09.577348
++from tinydb import TinyDB
+
+# 2017-09-02 17:53:20.592922
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 17:53:22.304245
++db
+
+# 2017-09-02 17:53:27.517566
++bach.add_to_db(db)
+
+# 2017-09-02 17:53:37.587297
++db.table('composers').all()
+
+# 2017-09-02 17:57:29.589484
++from tinydb import TinyDB
+
+# 2017-09-02 17:57:34.790259
++from lyskel import info
+
+# 2017-09-02 17:58:06.536895
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 17:59:50.859854
++from lyskel import info
+
+# 2017-09-02 17:59:52.099399
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:00:43.259613
++from lyskel import info
+
+# 2017-09-02 18:00:45.773845
++from tinydb import TinyDB
+
+# 2017-09-02 18:00:52.634053
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 18:01:12.067533
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:03:48.947266
++from lyskel import info
+
+# 2017-09-02 18:03:50.614687
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:04:21.450261
++from lyskel import info
+
+# 2017-09-02 18:04:27.154369
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:05:27.927756
++from lyskel import info
+
+# 2017-09-02 18:05:29.068546
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:06:21.968710
++from lyskel import info
+
+# 2017-09-02 18:06:23.023899
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:07:07.764241
++comps = 'hi'
+
+# 2017-09-02 18:07:09.849999
++list(comps)
+
+# 2017-09-02 18:07:35.524205
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:07:50.558823
++from lyskel import info
+
+# 2017-09-02 18:07:52.350887
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:08:12.194354
++from lyskel import info
+
+# 2017-09-02 18:08:17.584288
++from tinydb import TinyDB
+
+# 2017-09-02 18:08:23.499489
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 18:08:32.371949
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:08:53.066253
++from lyskel import info
+
+# 2017-09-02 18:08:56.538105
++from tinydb import TinyDB
+
+# 2017-09-02 18:09:03.967071
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 18:09:08.025306
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:09:27.488572
++from lyskel import info
+
+# 2017-09-02 18:09:29.139101
++from tinydb import TinyDB
+
+# 2017-09-02 18:09:31.272857
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 18:09:33.404685
++bach2 = info.Composer.load_from_db(name="Johann Sebastian Bach", db=db)
+
+# 2017-09-02 18:09:36.151773
++bach2
+
+# 2017-09-02 19:35:04.258095
++import requests
+
+# 2017-09-02 19:35:08.512287
++from bs4 import BeautifulSoup
+
+# 2017-09-02 19:35:38.267175
++site = requests.get('http://mutopiaproject.org/advsearch.html')
+
+# 2017-09-02 19:35:43.711734
++site = requests.get('http://www.mutopiaproject.org/advsearch.html')
+
+# 2017-09-02 19:35:46.198735
++site
+
+# 2017-09-02 19:36:03.726522
++html = BeautifulSoup(site.content, 'html.parser')
+
+# 2017-09-02 19:36:05.798683
++html
+
+# 2017-09-02 19:37:48.986851
++html.find(name="Instrument")
+
+# 2017-09-02 19:38:05.048955
++html.find(id='adv-instr-sel')
+
+# 2017-09-02 19:38:14.572535
++inst=html.find(id='adv-instr-sel')
+
+# 2017-09-02 19:38:16.183763
++inst
+
+# 2017-09-02 19:38:30.319706
++inst.find_all('option')
+
+# 2017-09-02 19:45:29.158983
++instrs = []
+
+# 2017-09-02 19:45:46.383126
++for item in inst.find_all('option'):
++    instrs.append(item.get_text)
+
+# 2017-09-02 19:45:49.077672
++instrs
+
+# 2017-09-02 19:46:14.119680
++instrs = []
+
+# 2017-09-02 19:46:22.051402
++for item in inst.find_all('option'):
++    instrs.append(item.get_text())
+
+# 2017-09-02 19:46:23.950790
++instrs
+
+# 2017-09-02 19:49:44.880255
++for item in inst.find_all('option'):
++    print(item.value)
+
+# 2017-09-02 19:50:48.917015
++for item in inst.find_all('option'):
++    print(item['value'])
+
+# 2017-09-02 19:53:37.474721
++exit90
+
+# 2017-09-02 20:18:31.429951
++from fuzzywuzzy import process
+
+# 2017-09-02 20:23:56.315039
++from lyskel import mutopia
+
+# 2017-09-02 20:24:04.131894
++comps = mutopia._get_composers()
+
+# 2017-09-02 20:24:05.115863
++comps
+
+# 2017-09-02 20:24:30.607486
++process.extractOne('Johann Sebastian Bach', comps)
+
+# 2017-09-02 20:24:43.363299
++process.extractOne('J.S. Bach')
+
+# 2017-09-02 20:24:46.770914
++process.extractOne('J.S. Bach', comps)
+
+# 2017-09-02 20:25:20.196615
++process.extractOne('Felix Mendelsohn Bartholdy', comps)
+
+# 2017-09-02 20:25:45.927261
++process.extractOne('Nicolo Paganini', comps)
+
+# 2017-09-02 20:26:07.654677
++process.extractOne('John Phillip Sousa', comps)
+
+# 2017-09-02 20:26:23.280993
++process.extractOne('Carl Phillip Emanuel Bach', comps)
+
+# 2017-09-02 20:26:34.610027
++process.extractOne('Totally Fake Composer', comps)
+
+# 2017-09-02 20:27:05.685653
++process.extractOne('Pyotr Ilyich Tchaicovsky', comps)
+
+# 2017-09-02 22:00:01.984965
++from lyskel import info
+
+# 2017-09-02 22:00:42.683156
++from lyskel import lynames
+
+# 2017-09-02 22:00:48.619984
++from tinydb import TinyDB
+
+# 2017-09-02 22:01:07.877440
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-02 22:01:35.244418
++ins = lynames.Instrument.load_from_db(db=db, name='violin')
+
+# 2017-09-02 22:01:36.995183
++ins
+
+# 2017-09-02 22:02:35.643358
++test = info.MutopiaHeaders(instrument_list=[ins],
++                           source='hi',
++                           style='Baroque',
++                           )
+
+# 2017-09-02 22:02:36.868201
++test
+
+# 2017-09-02 22:02:40.451205
++test.license
+
+# 2017-09-02 22:02:46.928966
++test.maintainer
+
+# 2017-09-02 22:02:53.298995
++test.instrument_list
+
+# 2017-09-02 23:10:07.935177
++from subprocess import run
+
+# 2017-09-02 23:10:18.408687
++run(['lilypond', '--version'])
+
+# 2017-09-02 23:10:22.477253
++import subprocess
+
+# 2017-09-02 23:10:47.286164
++lvers = run(['lilypond', '--version'], stdout=subprocess.PIPE)
+
+# 2017-09-02 23:10:49.050183
++lvers
+
+# 2017-09-02 23:10:57.624583
++lvers.stdout
+
+# 2017-09-02 23:11:10.914225
++import re
+
+# 2017-09-02 23:12:11.183736
++num = re.search(r'LilyPond ([^\n]*)', lyvers)
+
+# 2017-09-02 23:12:18.565049
++num = re.search(r'LilyPond ([^\n]*)', lvers.stdout)
+
+# 2017-09-02 23:12:31.212670
++num = re.search(r'LilyPond ([^\n]*)', lvers.stdout.decode('utf-8'))
+
+# 2017-09-02 23:12:34.698426
++num
+
+# 2017-09-02 23:12:40.304844
++num.group()
+
+# 2017-09-02 23:12:43.295700
++num.group(1)
+
+# 2017-09-02 23:23:56.033553
++import requests
+
+# 2017-09-02 23:24:00.491678
++from bs4 import BeautifulSoup
+
+# 2017-09-02 23:27:51.564524
++import subprocess
+
+# 2017-09-02 23:28:19.805802
++loc = subprocess.run(['which', 'lilypond'], stdout=subprocess.PIPE)
+
+# 2017-09-02 23:28:20.657121
++loc
+
+# 2017-09-02 23:28:23.945117
++loc.stdout
+
+# 2017-09-02 23:28:33.493188
++from pathlib import PATH
+
+# 2017-09-02 23:28:39.184244
++from pathlib import Path
+
+# 2017-09-02 23:28:43.284749
++Path(loc.stdout)
+
+# 2017-09-02 23:28:55.543491
++Path(loc.stdout.decode('utf-8'))
+
+# 2017-09-02 23:29:02.559909
++Path(loc.stdout.decode('utf-8').strip())
+
+# 2017-09-02 23:29:09.142681
++lypath = _
+
+# 2017-09-02 23:29:14.386835
++lypath.parent[0]
+
+# 2017-09-02 23:29:17.521405
++lypath.parents[0]
+
+# 2017-09-02 23:29:48.195372
++import os
+
+# 2017-09-02 23:31:30.818647
++for root, dirs, files in os.walk(lypath.parents[0]):
++    if 'default-note-names.scm' in files:
++        print(Path(root, name))
+
+# 2017-09-02 23:31:55.107120
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'default-note-names.scm' in files:
++        print(Path(root, name))
+
+# 2017-09-02 23:32:10.743868
++lypath.parents[1]
+
+# 2017-09-02 23:32:57.420374
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'lib' in dirs:
++        print(Path(root, 'lib'))
+
+# 2017-09-02 23:33:23.621499
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'default-note-names.scm' in files:
++        print(Path(root, 'default-note-names.scm'))
+
+# 2017-09-02 23:34:05.167883
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'default-note-names.scm' in files:
++        print('found')
+
+# 2017-09-02 23:34:47.093305
++with open('/usr/lib/lilypond/scm/default-note-names.scm', 'rb') as f:
++    test = f.read()
+
+# 2017-09-02 23:35:25.634594
++with open('/usr/share/lilypond/scm/default-note-names.scm', 'rb') as f:
++    test = f.read()
+
+# 2017-09-02 23:36:52.245399
++import subprocess
+
+# 2017-09-02 23:36:57.305104
++from pathlib import Path
+
+# 2017-09-02 23:51:54.359735
++import sys
+
+# 2017-09-02 23:51:58.787706
++sys.stdout.encoding
+
+# 2017-09-03 00:05:28.120095
++from pathlib import Path
+
+# 2017-09-03 00:05:40.681196
++import re
+
+# 2017-09-03 00:05:58.785874
++import subprocess
+
+# 2017-09-03 00:06:33.246635
++text = subprocess.run(['lilypond', '--version'], stdout=subprocess.PIPE)
+
+# 2017-09-03 00:07:09.839074
++num = re.search(r'LilyPond [^\n]*', text.stdout.decode('utf-8'))
+
+# 2017-09-03 00:07:10.999842
++num
+
+# 2017-09-03 00:07:15.171559
++num.group(1)
+
+# 2017-09-03 00:07:26.456854
++num = re.search(r'LilyPond ([^\n]*)', text.stdout.decode('utf-8'))
+
+# 2017-09-03 00:07:28.408320
++num
+
+# 2017-09-03 00:07:36.665392
++num.group(1)
+
+# 2017-09-03 00:08:45.317606
++langpath = Path('/usr', 'share', 'lilypond', num.group(1), 'scm', 'default-note-names.scm')
+
+# 2017-09-03 00:08:47.253571
++langpath
+
+# 2017-09-03 00:09:17.356696
++with open(langpath, 'rb') as f:
++    stuff = f.read()
+
+# 2017-09-03 00:13:46.640979
++langpath = Path('/usr', 'share', 'lilypond', num.group(1), 'scm', 'define-note-names.scm')
+
+# 2017-09-03 00:14:07.852812
++for root, dirs, files in os.walk(lypath.parents[0]):
++    if 'define-note-names.scm' in files:
++        print(Path(root, name))
+
+# 2017-09-03 00:14:11.331364
++import os
+
+# 2017-09-03 00:14:13.632159
++for root, dirs, files in os.walk(lypath.parents[0]):
++    if 'define-note-names.scm' in files:
++        print(Path(root, name))
+
+# 2017-09-03 00:14:51.707351
++run = subprocess.run(['which', 'lilypond'], stdout=subprocess.PIPE)
+
+# 2017-09-03 00:15:18.503045
++lypath = Path(run.stdout.decode('utf-8'))
+
+# 2017-09-03 00:15:19.830753
++lypath
+
+# 2017-09-03 00:15:25.359483
++lypath = Path(run.stdout.decode('utf-8').strip())
+
+# 2017-09-03 00:15:44.374449
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'define-note-names.scm' in files:
++        print(Path(root, name))
+
+# 2017-09-03 00:16:05.418321
++for root, dirs, files in os.walk(lypath.parents[1]):
++    if 'define-note-names.scm' in files:
++        print(Path(root, 'define-note-names.scm'))
+
+# 2017-09-03 00:17:59.199937
++def get_ly_langs():
++    for root, dirs, files in os.walk(lypath.parents[1]):
++        if 'lilypond' in dirs:
++            nextpath = Path(root, 'lilypond')
++            break
++    for root, dirs, files in os.walkt(newpath):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:18:04.879016
++get_ly_langs()
+
+# 2017-09-03 00:18:12.909742
++def get_ly_langs():
++    for root, dirs, files in os.walk(lypath.parents[1]):
++        if 'lilypond' in dirs:
++            nextpath = Path(root, 'lilypond')
++            break
++    for root, dirs, files in os.walk(newpath):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:18:18.647119
++get_ly_langs()
+
+# 2017-09-03 00:18:32.179051
++def get_ly_langs():
++    for root, dirs, files in os.walk(lypath.parents[1]):
++        if 'lilypond' in dirs:
++            nextpath = Path(root, 'lilypond')
++            break
++    for root, dirs, files in os.walk(nextpath):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:18:37.256196
++get_ly_langs()
+
+# 2017-09-03 00:18:44.763108
++print(get_ly_langs())
+
+# 2017-09-03 00:19:11.924499
++def get_ly_langs():
++    for root, dirs, files in os.walk(lypath.parents[1]):
++        if 'lilypond' in files:
++            nextpath = Path(root, 'lilypond')
++            break
++    for root, dirs, files in os.walk(nextpath):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:21:32.519762
++def get_ly_langs():
++    nextpaths = []
++    for root, dirs, files in os.walk(lypath.parents[1]):
++        if 'lilypond' in dirs:
++            nextpaths.append(Path(root, 'lilypond'))
++    for path in nextpaths:
++        for root, dirs, files in os.walk(path):
++            if 'define-note-names.scm' in files:
++                return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:21:49.464096
++print(get_ly_langs())
+
+# 2017-09-03 00:23:18.152152
++def get_ly_langs():
++    share = Path(lypath.parents[1], 'share')
++    for root, dirs, files in os.walk(path):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:23:27.170298
++def get_ly_langs():
++    share = Path(lypath.parents[1], 'share')
++    for root, dirs, files in os.walk(share):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
++            
+
+# 2017-09-03 00:23:38.894865
++print(get_ly_langs())
+
+# 2017-09-03 00:23:58.080325
++def get_ly_langs():
++    share = Path(lypath.parents[1], 'share', 'lilypond')
++    for root, dirs, files in os.walk(share):
++        if 'define-note-names.scm' in files:
++            return Path(root, 'define-note-names.scm')
+
+# 2017-09-03 00:24:02.467419
++print(get_ly_langs())
+
+# 2017-09-03 00:26:38.743865
++vers = subprocess.run(['lilypond', '--version'], stdout=subprocess.PIPE)
+
+# 2017-09-03 00:27:00.789276
++num
+
+# 2017-09-03 00:27:06.372804
++vers = num.group(1)
+
+# 2017-09-03 00:27:07.779679
++vers
+
+# 2017-09-03 00:27:35.069361
++Path('/usr', 'share', 'lilypond', vers, 'scm', 'define-note-names.scm')
+
+# 2017-09-03 00:27:39.736573
++path = _
+
+# 2017-09-03 00:27:55.086888
++with open(path) as f:
++    everything = f.read()
+
+# 2017-09-03 00:28:33.840314
++regex = re.compile(r'Language: ([^\s]*)', re.M|re.I)
+
+# 2017-09-03 00:28:35.938892
++regex
+
+# 2017-09-03 00:28:57.831996
++langs = regex.findall(everything)
+
+# 2017-09-03 00:28:58.865364
++langs
+
+# 2017-09-03 00:29:18.378244
++languages = [lang.lower() for lang in langs]
+
+# 2017-09-03 00:29:19.967758
++languages
