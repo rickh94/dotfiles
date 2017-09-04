@@ -3700,3 +3700,169 @@
 
 # 2017-09-03 00:29:19.967758
 +languages
+
+# 2017-09-03 21:29:59.586201
++import attr
+
+# 2017-09-03 21:30:28.399638
++@attr.s
++class Test():
++    name = attr.ib()
++    file = attr.ib()
+
+# 2017-09-03 21:30:38.624351
++new = Test(name='hi', file='thefile')
+
+# 2017-09-03 21:30:43.089404
++new.iteritems()
+
+# 2017-09-03 21:35:00.614299
++@attr.s
++class Test():
++    name = attr.ib()
++    file = attr.ib()
+
+# 2017-09-03 21:35:05.556529
++import attr
+
+# 2017-09-03 21:35:07.253629
++@attr.s
++class Test():
++    name = attr.ib()
++    file = attr.ib()
+
+# 2017-09-03 21:35:14.154122
++new = Test(name='hi', file='thefile')
+
+# 2017-09-03 21:35:21.294881
++dict(new).iteritems()
+
+# 2017-09-03 21:35:26.271507
++dict(new)
+
+# 2017-09-03 21:35:36.763091
++attr.asdict(Test)
+
+# 2017-09-03 21:50:18.019203
++attr.asdict(new)
+
+# 2017-09-03 22:01:39.220441
++from jinja2 import Environment, PackageLoader
+
+# 2017-09-03 22:02:34.435048
++env = Environment(
++    loader=PackageLoader('templates')
++    )
+
+# 2017-09-03 22:02:45.753864
++templage = env.get_template('defs.ly')
+
+# 2017-09-03 22:03:16.184425
++env = Environment(
++    loader=PackageLoader('.', 'templates')
++    )
+
+# 2017-09-03 22:03:29.869938
++env = Environment(
++    loader=PackageLoader('lyskel', 'templates')
++    )
+
+# 2017-09-03 22:03:31.588146
++env
+
+# 2017-09-03 22:03:41.456159
++template = env.get_template('defs.ly')
+
+# 2017-09-03 22:04:06.716954
++env = Environment(
++    loader=PackageLoader('templates')
++    )
+
+# 2017-09-03 22:04:13.428855
++env.get_template('defs.ly')
+
+# 2017-09-03 22:06:19.902958
++from jinja2 import Environment, PackageLoader
+
+# 2017-09-03 22:06:27.296006
++env = Environment(
++    loader=PackageLoader('lyskel', 'templates')
++    )
+
+# 2017-09-03 22:06:34.685358
++env.get_template('defs.ly')
+
+# 2017-09-03 22:06:43.733746
++template = _
+
+# 2017-09-03 22:06:49.538779
++from lyskel import info
+
+# 2017-09-03 22:07:55.478817
++from lyskel import lynames
+
+# 2017-09-03 22:08:00.947690
++from tinydb import TinyDB
+
+# 2017-09-03 22:08:12.989621
++db = TinyDB('lyskel/default_db.json')
+
+# 2017-09-03 22:08:13.960912
++db
+
+# 2017-09-03 22:08:34.666083
++ens = lynames.Ensemble.load_from_db('string_quartet', db=db)
+
+# 2017-09-03 22:08:35.789811
++ens
+
+# 2017-09-03 22:09:42.080342
++muheaders = info.MutopiaHeaders(instrument_list=ens, source='test', style='Classical')
+
+# 2017-09-03 22:10:39.061576
++headers = Headers(title='Test Piece', tagline='test tagline')
+
+# 2017-09-03 22:10:44.694463
++headers = info.Headers(title='Test Piece', tagline='test tagline')
+
+# 2017-09-03 22:10:57.861409
++headers.add_mutopia_headers(muheaders, guess_composer=True)
+
+# 2017-09-03 22:11:40.261384
++piece = info.Piece.init_version(name='testpiece', headers=headers, language='english')
+
+# 2017-09-03 22:12:09.569749
++print(template.render(piece=piece))
+
+# 2017-09-03 22:12:49.169554
++with open('/home/rick/tmp/testrender.ly') as outfile:
++    outfile.write(template.render(piece=piece))
+
+# 2017-09-03 22:13:00.210647
++with open('/home/rick/tmp/testrender.ly', 'wb') as outfile:
++    outfile.write(template.render(piece=piece))
+
+# 2017-09-03 22:13:06.068400
++with open('/home/rick/tmp/testrender.ly', 'w') as outfile:
++    outfile.write(template.render(piece=piece))
+
+# 2017-09-03 22:33:53.849490
++template = env.get_template('defs.ly')
+
+# 2017-09-03 22:34:04.491729
++with open('/home/rick/tmp/testrender2.ly', 'w') as outfile:
++    outfile.write(template.render(piece=piece))
+
+# 2017-09-03 22:35:49.416131
++template = env.get_template('defs.ly')
+
+# 2017-09-03 22:35:58.422994
++with open('/home/rick/tmp/testrender3.ly', 'w') as outfile:
++    outfile.write(template.render(piece=piece))
+
+# 2017-09-03 22:38:12.327032
++template = env.get_template('defs.ly')
+
+# 2017-09-03 22:38:20.783921
++with open('/home/rick/tmp/testrender4.ly', 'w') as outfile:
++    outfile.write(template.render(piece=piece))
