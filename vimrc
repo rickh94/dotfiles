@@ -112,6 +112,7 @@ if has("autocmd")
   autocmd FileType lilypond :iabbrev <buffer> clft \clef treble
   autocmd FileType lilypond :iabbrev <buffer> clfa \clef alto
   autocmd FileType lilypond :iabbrev <buffer> clfb \clef bass
+  autocmd FileType lilypond setlocal colorcolumn=79
 
   " add spellcheck
   autocmd FileType markdown setlocal spell

@@ -3866,3 +3866,21 @@
 # 2017-09-03 22:38:20.783921
 +with open('/home/rick/tmp/testrender4.ly', 'w') as outfile:
 +    outfile.write(template.render(piece=piece))
+
+# 2017-09-05 01:36:32.898348
++stuff = ('c', 'major')
+
+# 2017-09-05 01:36:41.552997
++assert isinstance(stuff, tuple)
+
+# 2017-09-05 01:36:44.927433
++stuff[0]
+
+# 2017-09-05 01:36:51.475578
++stuff[0][0]
+
+# 2017-09-05 01:37:00.933546
++stuff[0][1]
+
+# 2017-09-05 01:39:21.171489
++[a-g]
