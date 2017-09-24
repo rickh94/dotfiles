@@ -3919,3 +3919,335 @@
 
 # 2017-09-19 00:33:32.279343
 +import test
+
+# 2017-09-19 00:34:59.422556
++import airtable
+
+# 2017-09-19 00:35:00.645747
++import os
+
+# 2017-09-19 00:35:10.325840
++key = os.environ['ATKEY']
+
+# 2017-09-19 00:35:11.818686
++key
+
+# 2017-09-19 00:35:28.822008
++db = os.environ['ATDB']
+
+# 2017-09-19 00:35:48.563140
++db
+
+# 2017-09-19 00:36:39.321186
++from airtable.airtable import Airtable
+
+# 2017-09-19 00:36:56.115781
++atdb = Airtable(db, key)
+
+# 2017-09-19 00:36:57.635266
++atdb
+
+# 2017-09-19 00:37:13.125579
++atdb.get('Task')
+
+# 2017-09-19 00:37:25.860158
++taskitems = _
+
+# 2017-09-19 00:43:08.743554
++livedb = Airtable('appUh2DzWQGZgOdxu', key)
+
+# 2017-09-19 00:43:19.434306
++taskitems = livedb.get('Task')
+
+# 2017-09-19 00:43:21.395708
++taskitems
+
+# 2017-09-19 00:44:20.966299
++print(taskitems)
+
+# 2017-09-19 00:44:39.021496
++for item in taskitems:
++    print(item)
+
+# 2017-09-19 00:44:52.548366
++for item in taskitems.records:
++    print(item)
+
+# 2017-09-19 00:45:03.609061
++for item in taskitems['records']:
++    print(item)
+
+# 2017-09-19 00:45:39.922140
++for item in taskitems['records']:
++    if 'Asst editor' in item['Task']:
++        sampleitem = item
+
+# 2017-09-19 00:46:06.907996
++for item in taskitems['records']['fields']:
++    if 'Asst editor' in item['Task']:
++        sampleitem = item
+
+# 2017-09-19 00:46:25.341429
++for item in taskitems['records'][0]['fields']:
++    if 'Asst editor' in item['Task']:
++        sampleitem = item
+
+# 2017-09-19 00:46:53.044861
++print(taskitems['records'])
+
+# 2017-09-19 00:46:58.503861
++print(taskitems['records'][0])
+
+# 2017-09-19 00:47:07.729932
++print(taskitems['records'][0][2])
+
+# 2017-09-19 00:47:10.346236
++print(taskitems['records'][0][1])
+
+# 2017-09-19 00:47:20.880746
++print(taskitems['records'][0]['fields'])
+
+# 2017-09-19 00:47:45.734987
++for item in taskitems['records'][0]:
++    if 'Asst editor' in item['fields']['Task']:
++        sampleitem = item['fields']
+
+# 2017-09-19 00:48:12.193450
++for item in taskitems['records'][0]:
++    print(item)
+
+# 2017-09-19 00:48:20.612611
++for item in taskitems['records'][0]:
++    print(item['fields'])
+
+# 2017-09-19 00:48:29.801837
++for item in taskitems['records'][0]:
++    print(item)
+
+# 2017-09-19 00:48:36.891643
++for item in taskitems['records'][0]:
++    print(item.fields)
+
+# 2017-09-19 00:49:35.917748
++for item in taskitems['records']:
++    print(item['fields'])
+
+# 2017-09-19 00:50:12.479800
++for item in taskitems['records']:
++    for thing in item['fields']:
++        print(thing)
+
+# 2017-09-19 00:50:58.727472
++for item in taskitems['records']:
++    if 'Asst' in item['fields']['Task']:
++        print(item)
+
+# 2017-09-19 00:51:17.861277
++for item in taskitems['records']:
++    try:
++        if 'Asst' in item['fields']['Task']:
++            print(item)
++    except KeyError:
++        pass
+
+# 2017-09-19 00:51:52.328177
++for item in taskitems['records']:
++    try:
++        if 'asst' in item['fields']['Task'].lower():
++            print(item)
++    except KeyError:
++        pass
+
+# 2017-09-19 00:51:58.368670
++for item in taskitems['records']:
++    try:
++        if 'asst' in item['fields']['Task'].lower():
++            print(item)
++    except KeyError:
++        continue
+
+# 2017-09-19 00:52:14.546808
++for item in taskitems['records']:
++    try:
++        if 'asst' in item['fields']['Task'].lower():
++            print('found')
++    except KeyError:
++        continue
+
+# 2017-09-19 00:52:25.713066
++for item in taskitems['records']:
++    try:
++        if 'finalize' in item['fields']['Task'].lower():
++            print('found')
++    except KeyError:
++        continue
+
+# 2017-09-19 00:52:41.689875
++len(taskitems['records'])
+
+# 2017-09-19 00:53:53.900966
++taskitems = livedb.get('Task', limit=500)
+
+# 2017-09-19 00:54:06.406180
++taskitems
+
+# 2017-09-19 00:54:19.396220
++len(taskitems['records'])
+
+# 2017-09-19 00:54:26.621355
++taskitems = livedb.get('Task', limit=300)
+
+# 2017-09-19 00:54:31.870737
++taskitems = livedb.get('Task')
+
+# 2017-09-19 00:54:34.224251
++taskitems
+
+# 2017-09-19 00:54:55.495205
++newitems = []
+
+# 2017-09-19 00:55:16.338690
++offset = 0
+
+# 2017-09-19 00:56:42.263575
++while True:
++    try:
++        newitems.append(livedb.get('Task', limit=1, offset=offset))
++        offset += 1
++    except (AttributeError, HTTPError):
++        break
+
+# 2017-09-19 00:56:53.719891
++while True:
++    try:
++        newitems.append(livedb.get('Task', limit=1, offset=offset))
++        offset += 1
++    except (AttributeError):
++        break
+
+# 2017-09-19 00:57:18.728750
++offset = ''
+
+# 2017-09-19 00:57:51.085742
++newitem = livedb.get('Task', limit=1)
+
+# 2017-09-19 00:57:52.687880
++newitme
+
+# 2017-09-19 00:57:55.383974
++newitem
+
+# 2017-09-19 00:58:04.720555
++newitems.append(newitem)
+
+# 2017-09-19 00:58:07.546434
++newitems
+
+# 2017-09-19 00:58:56.300254
++while True:
++    try:
++        item = livedb.get('Task', limit=1, offset=newitems[-1])
++        newitems.append(item)
++    except AttributeError:
++        break
+
+# 2017-09-19 00:59:38.377039
++newitem
+
+# 2017-09-19 00:59:41.961985
++newitem[0]
+
+# 2017-09-19 00:59:47.872697
++newitem['records'][0]
+
+# 2017-09-19 00:59:59.431016
++newitems = [newitem['records'][0]]
+
+# 2017-09-19 01:00:11.891047
++newitems
+
+# 2017-09-19 01:00:33.999748
++newitems[-1]['id']
+
+# 2017-09-19 01:05:38.671472
++livedb.get('Task', filter_by_formula='FIND("Asst", {TASK})')
+
+# 2017-09-19 01:10:25.080657
++import arrow
+
+# 2017-09-19 01:11:58.345934
++utc = arrow.utcnow()
+
+# 2017-09-19 01:12:14.312613
++local = utc.to('US/Eastern')
+
+# 2017-09-19 01:12:15.777316
++local
+
+# 2017-09-19 01:12:21.904114
++local.shift(days=1)
+
+# 2017-09-19 01:12:26.802548
++local.format()
+
+# 2017-09-19 01:12:39.967595
++local.humanize()
+
+# 2017-09-19 01:12:58.186940
++tmr = local.shift(days=+1)
+
+# 2017-09-19 01:13:01.762703
++tmr.humanize()
+
+# 2017-09-19 01:13:12.434967
++tmr.date()
+
+# 2017-09-19 01:15:02.968251
++livedb.get('Task', filter_by_formula='FIND("becker", {TASK})')
+
+# 2017-09-19 01:15:37.825009
++tmr = local.shift(days=+1)
+
+# 2017-09-19 01:16:37.826354
++print(tmr.format(fmt='YYYY-MM-DDTHH:mm:ss'))
+
+# 2017-09-19 01:17:08.116666
++print(tmr.format(fmt='YYYY-MM-DDTHH:mm:ssZZ'))
+
+# 2017-09-19 01:17:16.260830
++print(tmr.format(fmt='YYYY-MM-DDTHH:mm:ss.00Z'))
+
+# 2017-09-19 02:46:57.659610
++import ast
+
+# 2017-09-19 02:47:20.930058
++ast.literal_eval("[('test', 'one'), ('test', 'two')]")
+
+# 2017-09-19 02:47:27.861689
++_[0][1]
+
+# 2017-09-19 02:47:52.287031
++ast.literal_eval("[('test', 'one'), ('test', 'two')]")
+
+# 2017-09-19 02:48:12.264789
++import test
+
+# 2017-09-19 02:48:13.941723
++ast.literal_eval("[('test', 'one'), ('test', 'two')]")
+
+# 2017-09-19 02:54:20.167051
++test = 'hi'
+
+# 2017-09-19 02:54:23.008049
++test2 = ''
+
+# 2017-09-19 02:55:06.828545
++if test ^ test2:
++    print('yes')
+
+# 2017-09-19 02:55:37.188020
++if (test and not test2) or (test2 and not test):
++    raise Exception
+
+# 2017-09-19 02:56:27.153595
++pytest
