@@ -1943,7 +1943,7 @@
 # 2017-08-30 23:48:48.173202
 +for i in range(1, (count + 1)):
 +    print(i)
-+    
++
 
 # 2017-08-30 23:55:40.930829
 +from lyskel import lynames
@@ -3646,7 +3646,7 @@
 +    for root, dirs, files in os.walk(share):
 +        if 'define-note-names.scm' in files:
 +            return Path(root, 'define-note-names.scm')
-+            
++
 
 # 2017-09-03 00:23:38.894865
 +print(get_ly_langs())
@@ -3905,3 +3905,17 @@
 
 # 2017-09-21 16:36:45.658735
 +exit
+# 2017-09-19 00:21:35.526958
++import airtable
+
+# 2017-09-19 00:21:36.764967
++import os
+
+# 2017-09-19 00:23:14.704879
++import airtable
+
+# 2017-09-19 00:27:21.873901
++exit
+
+# 2017-09-19 00:33:32.279343
++import test

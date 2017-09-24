@@ -62,7 +62,7 @@ def configure(repl):
     repl.paste_mode = False
 
     # Use the classic prompt. (Display '>>>' instead of 'In [1]'.)
-    repl.prompt_style = 'ipython'
+    repl.prompt_style = 'classic'
 
     # Don't insert a blank line after the output
     repl.insert_blank_line_after_output = False
@@ -95,4 +95,4 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code
-    # repl.use_code_colorscheme('pastie')
+    repl.use_code_colorscheme('pastie')
