@@ -4601,3 +4601,174 @@
 
 # 2017-09-29 00:44:39.374210
 +HumanName('wood,Travis')
+
+# 2017-10-05 02:22:27.995563
++import boto3
+
+# 2017-10-05 02:22:40.429139
++s3client = boto3.client('s3')
+
+# 2017-10-05 02:23:19.313749
++item = s3client.get(Bucket='rick-ses-email-test', Key='testemails/4ur3paou9btejh8gino92gpo678b5lhhpddchtg1')
+
+# 2017-10-05 02:23:29.818139
++item = s3client.get_object(Bucket='rick-ses-email-test', Key='testemails/4ur3paou9btejh8gino92gpo678b5lhhpddchtg1')
+
+# 2017-10-05 02:23:38.347220
++item
+
+# 2017-10-05 02:23:49.009070
++json.dumps(item)
+
+# 2017-10-05 02:23:53.951983
++import json
+
+# 2017-10-05 02:24:00.692620
++json.dumps(item)
+
+# 2017-10-05 02:24:24.543152
++newdict = {}
+
+# 2017-10-05 02:25:24.774982
++for key, value in item.items():
++    try:
++        json.dumps(value)
++        newdict[key] = value
++    except TypeError:
++        continue
+
+# 2017-10-05 02:25:27.071398
++newdict
+
+# 2017-10-05 02:25:31.231730
++json.dumps(newdict)
+
+# 2017-10-05 02:25:36.016037
++json.dumps(newdict, indent=2)
+
+# 2017-10-05 02:25:41.012278
++print(_)
+
+# 2017-10-05 02:25:50.880384
++item
+
+# 2017-10-05 02:25:57.297287
++item['Body']
+
+# 2017-10-05 02:26:05.372052
++print(item['Body'])
+
+# 2017-10-05 02:27:25.945797
++print(str(item['Body']))
+
+# 2017-10-05 02:27:58.203120
++print(item['Body'].read())
+
+# 2017-10-05 02:30:41.612570
++str(item['Body'].read())
+
+# 2017-10-05 02:31:07.236888
++data = item['Body'].read()
+
+# 2017-10-05 02:31:08.670276
++dat
+
+# 2017-10-05 02:31:10.307480
++data
+
+# 2017-10-05 02:31:20.780805
++import email
+
+# 2017-10-05 02:31:24.478514
++print(data)
+
+# 2017-10-05 02:31:29.667304
++print(item['Body'].read())
+
+# 2017-10-05 02:32:00.262113
++item = s3client.get_object(Bucket='rick-ses-email-test', Key='testemails/4ur3paou9btejh8gino92gpo678b5lhhpddchtg1')
+
+# 2017-10-05 02:32:14.977908
++s3client = boto3.client('s3')
+
+# 2017-10-05 02:32:21.574582
++item = s3client.get_object(Bucket='rick-ses-email-test', Key='testemails/4ur3paou9btejh8gino92gpo678b5lhhpddchtg1')
+
+# 2017-10-05 02:33:01.999068
++print(item['Body'].read())
+
+# 2017-10-05 02:33:11.069762
++data = item['Body'].read()
+
+# 2017-10-05 02:33:11.918374
++data
+
+# 2017-10-05 02:33:16.047309
++print(item['Body'].read())
+
+# 2017-10-05 02:33:20.773998
++s3client = boto3.client('s3')
+
+# 2017-10-05 02:33:24.294330
++item = s3client.get_object(Bucket='rick-ses-email-test', Key='testemails/4ur3paou9btejh8gino92gpo678b5lhhpddchtg1')
+
+# 2017-10-05 02:33:28.445122
++data = item['Body'].read()
+
+# 2017-10-05 02:33:29.892327
++data
+
+# 2017-10-05 02:33:55.325470
++msg = email.message_from_bytes(data)
+
+# 2017-10-05 02:33:56.791423
++msg
+
+# 2017-10-05 02:34:03.100054
++msg['from']
+
+# 2017-10-05 02:34:07.214267
++msg['to']
+
+# 2017-10-05 02:34:10.138520
++msg['bcc']
+
+# 2017-10-05 02:34:22.209786
++def get_msg_text(mess):
++    """Finds the text body of a message and returns it."""
++    if mess.is_multipart():
++        return get_msg_text(mess.get_payload(0))
++    return mess.get_payload(None, True).decode('utf-8')
+
+# 2017-10-05 02:34:34.407942
++text = get_msg_text(msg)
+
+# 2017-10-05 02:34:35.523095
++test
+
+# 2017-10-05 02:34:36.771194
++text
+
+# 2017-10-05 02:41:43.520629
++post_text = ('from: {}\n'.format(data['from']) + 'to: {}'.format(data['to'])
++                 + 'subject: {}\n'.format(data['subject']) 
++                 + 'message: {}'.format(emailtext))
+
+# 2017-10-05 02:42:09.630858
++post_text = ('from: {}\n'.format(data['from']) + 'to: {}'.format(data['to'])
++                 + 'subject: {}\n'.format(data['subject']) 
++                 + 'message: {}'.format(text))
+
+# 2017-10-05 02:42:42.559189
++post_text = ('from: {}\n'.format(msg['from']) + 'to: {}'.format(msg['to'])
++                 + 'subject: {}\n'.format(msg['subject']) 
++                 + 'message: {}'.format(text))
+
+# 2017-10-05 02:42:47.058353
++post_text
+
+# 2017-10-06 13:50:06.224632
++import slackperson
+
+# 2017-10-06 13:50:09.212067
++import slackmentions

@@ -31,10 +31,6 @@ if [ -f ~/.borg_passphrase ]; then
   source ~/.borg_passphrase
 fi
 
-# keychain if present
-if [ -f ~/.keychaincommand ]; then
-  source ~/.keychaincommand
-fi
 
 # Prompt
 #export PROMPT='%F{red}%n%f@%F{cyan}%m%f %F{yellow}$(collapsed_path -l)%f
