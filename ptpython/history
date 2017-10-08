@@ -4835,3 +4835,1216 @@
 
 # 2017-10-06 13:50:09.212067
 +import slackmentions
+
+# 2017-10-06 19:28:56.643030
++import airtable
+
+# 2017-10-06 19:29:35.776200
++import os
+
+# 2017-10-06 19:29:38.006565
++import airtable
+
+# 2017-10-06 19:29:49.923935
++ATDB = os.environ['ATDB']
+
+# 2017-10-06 19:29:59.847629
++ATKEY = os.environ['ATKEY']
+
+# 2017-10-06 19:30:16.479999
++from airtable.airtable import Airtable
+
+# 2017-10-06 19:30:38.680764
++db = Airtable(api_key=ATKEY, base_id=ATDB)
+
+# 2017-10-06 19:31:13.024426
++import time
+
+# 2017-10-06 19:31:49.059162
++import uuid
+
+# 2017-10-06 19:31:58.213568
++uuid.uuid4()
+
+# 2017-10-06 19:32:14.467677
++str(uuid.uuid4())[0:5]
+
+# 2017-10-06 19:32:17.096119
++str(uuid.uuid4())
+
+# 2017-10-06 19:34:18.602999
++data = {'Number': 0, 'UUID': str(uuid.uuid4())}
+
+# 2017-10-06 19:34:28.826337
++db.create(table='giant_table', data=data)
+
+# 2017-10-06 19:34:37.475383
++db.create('giant_table', data)
+
+# 2017-10-06 19:40:19.475434
++os.getcwd()
+
+# 2017-10-06 19:42:14.547855
++import s3interface
+
+# 2017-10-06 19:44:33.211313
++Path('~', 'tmp', 'garbagefiles')
+
+# 2017-10-06 19:44:37.822586
++from pathlib import Path
+
+# 2017-10-06 19:44:39.443828
++Path('~', 'tmp', 'garbagefiles')
+
+# 2017-10-06 19:44:57.496838
++file1 = Path(_, 'file1.txt')
+
+# 2017-10-06 19:45:35.611670
++with open(file1, 'r') as file1:
++    file1.read()
+
+# 2017-10-06 19:45:46.944741
++import os
+
+# 2017-10-06 19:45:55.706444
++os.path.expanduser('~')
+
+# 2017-10-06 19:46:08.499548
++Path(_, 'tmp', 'garbagefiles', 'file1.txt')
+
+# 2017-10-06 19:46:15.447945
++assert os.path.exists(_)
+
+# 2017-10-06 19:46:20.936871
++assert os.path.exists(file1)
+
+# 2017-10-06 19:46:29.159765
++file1 = Path(_, 'tmp', 'garbagefiles', 'file1.txt')
+
+# 2017-10-06 19:46:57.638879
++s3interface.make_url(filename=file1, bucket=ricksencryptedbucket)
+
+# 2017-10-06 19:47:03.417608
++s3interface.make_url(filename=file1, bucket='ricksencryptedbucket')
+
+# 2017-10-06 19:47:24.377286
++s3interface.make_url(filename=str(file1), bucket='ricksencryptedbucket')
+
+# 2017-10-06 19:47:51.582235
++Path('/home', 'rick', 'tmp', 'garbagefiles', 'file1.txt')
+
+# 2017-10-06 19:47:53.147441
++s3interface.make_url(filename=str(file1), bucket='ricksencryptedbucket')
+
+# 2017-10-06 19:49:06.693769
++file1 = Path('/home', 'rick', 'tmp', 'garbagefiles', 'file1.txt')
+
+# 2017-10-06 19:49:08.371247
++s3interface.make_url(filename=str(file1), bucket='ricksencryptedbucket')
+
+# 2017-10-06 19:52:01.868687
++import s3interface
+
+# 2017-10-06 19:52:05.695005
++from pathlib import Path
+
+# 2017-10-06 19:52:11.349589
++import os
+
+# 2017-10-06 19:52:15.320330
++file1 = Path('/home', 'rick', 'tmp', 'garbagefiles', 'file1.txt')
+
+# 2017-10-06 19:52:19.674784
++s3interface.make_url(filename=str(file1), bucket='ricksencryptedbucket')
+
+# 2017-10-06 19:53:26.912719
++files = Path('/home', 'rick', 'tmp', 'garbagefiles')
+
+# 2017-10-06 19:53:46.761115
++for item in os.listdir(files):
++    print(item)
+
+# 2017-10-06 19:54:11.637877
++from airtable.airtable import Airtable
+
+# 2017-10-06 19:54:37.250034
++Airtable(api_key=os.environ['ATKEY'], base_id=os.environ['ATDB'])
+
+# 2017-10-06 19:54:41.346921
++db = _
+
+# 2017-10-06 19:54:42.267063
++db
+
+# 2017-10-06 19:55:24.563301
++from uuid import uuid5
+
+# 2017-10-06 19:55:26.170279
++from uuid import uuid4
+
+# 2017-10-06 19:56:09.726487
++data = {'Number': 1, 'UUID': str(uuid4()), 'Attachments': 'https://ricksencryptedbucket.s3.amazonaws.com/garbagefiles/file1.txt?AWSAccessKeyId=AKIAI42XBJEQPM4UDUPQ&Signature=0xet1gEj3%2F%2BNeKW1Q8EsOOk0L7g%3D&Expires=1507337539'}
+
+# 2017-10-06 19:56:18.609498
++db.create('giant_table', data)
+
+# 2017-10-06 19:56:40.036124
++os.environ['ATKEY']
+
+# 2017-10-06 19:57:02.743887
++os.environ['ATDB']
+
+# 2017-10-06 19:57:18.272211
++db = Airtable(api_key=os.environ['ATKEY'], base_id=os.environ['ATDB'])
+
+# 2017-10-06 19:57:22.432126
++db.create('giant_table', data)
+
+# 2017-10-06 19:57:40.062799
++db.create('giant_table', {'Number': 2})
+
+# 2017-10-06 19:57:57.388343
++u = str(uuid4())
+
+# 2017-10-06 19:57:58.846778
++u
+
+# 2017-10-06 19:58:08.037400
++url = "https://ricksencryptedbucket.s3.amazonaws.com/garbagefiles/file1.txt?AWSAccessKeyId=AKIAI42XBJEQPM4UDUPQ&Signature=0xet1gEj3%2F%2BNeKW1Q8EsOOk0L7g%3D&Expires=1507337539"
+
+# 2017-10-06 19:58:44.917065
++data = {'Number': 2, 'UUID': u}
+
+# 2017-10-06 19:58:52.084881
++db.create('giant_table', data)
+
+# 2017-10-06 19:59:04.411314
++data['Attachments'] = url
+
+# 2017-10-06 19:59:07.107874
++data
+
+# 2017-10-06 19:59:24.425770
++db.create('giant_table', data)
+
+# 2017-10-06 19:59:55.156711
++import requests
+
+# 2017-10-06 20:00:01.521324
++requtests.get("https://ricksencryptedbucket.s3.amazonaws.com/garbagefiles/file1.txt?AWSAccessKeyId=AKIAI42XBJEQPM4UDUPQ&Signature=0xet1gEj3%2F%2BNeKW1Q8EsOOk0L7g%3D&Expires=1507337539")
+
+# 2017-10-06 20:00:14.474265
++requests.get("https://ricksencryptedbucket.s3.amazonaws.com/garbagefiles/file1.txt?AWSAccessKeyId=AKIAI42XBJEQPM4UDUPQ&Signature=0xet1gEj3%2F%2BNeKW1Q8EsOOk0L7g%3D&Expires=1507337539")
+
+# 2017-10-06 20:00:21.417508
++_
+
+# 2017-10-06 20:00:25.730518
++_.content
+
+# 2017-10-06 20:00:49.226971
++data['Attachments'] = [url]
+
+# 2017-10-06 20:00:54.460980
++db.create('giant_table', data)
+
+# 2017-10-06 20:01:45.984314
++data['Attachments'] = [{"url": url}]
+
+# 2017-10-06 20:01:49.538555
++db.create('giant_table', data)
+
+# 2017-10-06 20:29:25.324157
++import names
+
+# 2017-10-06 20:29:26.254308
++names
+
+# 2017-10-06 20:29:32.471667
++names.get_full_name()
+
+# 2017-10-06 20:31:02.979097
++names.get_first_name()
+
+# 2017-10-06 20:31:07.205760
++names.get_last_name()
+
+# 2017-10-06 20:32:40.574978
++random()
+
+# 2017-10-06 20:32:42.952237
++import random
+
+# 2017-10-06 20:32:45.621184
++random()
+
+# 2017-10-06 20:32:52.047412
++random.randint()
+
+# 2017-10-06 20:33:11.884315
++random.randrange(100,999)
+
+# 2017-10-06 20:33:17.907333
++random.randrange(000,999)
+
+# 2017-10-06 20:33:23.608627
++random.randrange(000,100)
+
+# 2017-10-06 20:34:10.449347
++a =random.randrange(0,999)
+
+# 2017-10-06 20:34:18.895572
++b = random.randrange(0,999)
+
+# 2017-10-06 20:34:26.626843
++c = random.randrange(0,9999)
+
+# 2017-10-06 20:34:59.988986
++print('{:03d}-{:03d}-{:04d}'.format(a, b, c))
+
+# 2017-10-06 20:36:09.000877
++a =random.randrange(0,100)
+
+# 2017-10-06 20:36:10.518968
++print('{:03d}-{:03d}-{:04d}'.format(a, b, c))
+
+# 2017-10-06 20:36:20.156872
++print('{03:d}-{:03d}-{:04d}'.format(a, b, c))
+
+# 2017-10-06 20:36:26.619923
++print('{d:03}-{:03d}-{:04d}'.format(a, b, c))
+
+# 2017-10-06 20:36:37.798964
++print('{3:0d}-{:03d}-{:04d}'.format(a, b, c))
+
+# 2017-10-06 20:47:06.713176
++import random
+
+# 2017-10-06 20:47:13.813939
++bool(random.randrange(0,1))
+
+# 2017-10-06 20:47:19.422468
++bool(random.randrange(0,2))
+
+# 2017-10-06 20:47:30.990277
++bool(1)
+
+# 2017-10-06 20:47:35.707997
++bool(0)
+
+# 2017-10-06 20:47:45.067880
++random.randrange(0, 2)
+
+# 2017-10-06 20:47:50.378533
++bool(_)
+
+# 2017-10-06 20:47:56.698557
++random.randrange(0, 1)
+
+# 2017-10-06 20:48:03.909724
++random.randrange(0, 2)
+
+# 2017-10-06 21:15:22.476703
++import airtable_python_wrapper
+
+# 2017-10-06 21:15:33.158602
++import airtable
+
+# 2017-10-06 21:16:40.510942
++table = airtable.Airtable(base_key=os.environ['ATDB'], api_key=os.environ['ATKEY'], table='giant_table')
+
+# 2017-10-06 21:16:43.715897
++import os
+
+# 2017-10-06 21:16:44.888492
++table = airtable.Airtable(base_key=os.environ['ATDB'], api_key=os.environ['ATKEY'], table='giant_table')
+
+# 2017-10-06 21:16:55.313453
++table = airtable.Airtable(base_key=os.environ['ATDB'], api_key=os.environ['ATKEY'], table_name='giant_table')
+
+# 2017-10-06 21:16:56.981013
++table
+
+# 2017-10-06 21:17:04.316778
++table.get_all()
+
+# 2017-10-06 21:22:35.362098
++import airtable
+
+# 2017-10-06 21:22:43.414392
++airtable.__package__
+
+# 2017-10-06 21:30:43.352737
++test = {'item': 'value1', 'item': 'value2'}
+
+# 2017-10-06 21:30:46.734925
++test['item']
+
+# 2017-10-06 21:30:53.641239
++test.get('item')
+
+# 2017-10-06 21:30:57.738110
++test
+
+# 2017-10-06 21:55:20.239564
++test1 = ['zero', 'one', 'two', 'three']
+
+# 2017-10-06 21:55:44.835239
++for i,j in test1.iteritems():
++    print('i: {}, j: {}'.format(i,j))
+
+# 2017-10-06 21:55:55.005698
++for i,j in test1.iter():
++    print('i: {}, j: {}'.format(i,j))
+
+# 2017-10-06 21:56:09.619470
++for i,j in enumerate(test1):
++    print('i: {}, j: {}'.format(i,j))
+
+# 2017-10-06 22:16:27.341268
++assert []
+
+# 2017-10-06 22:16:31.911035
++assert ['hi']
+
+# 2017-10-06 22:16:33.628588
++exit
+
+# 2017-10-06 22:22:21.572888
++import os
+
+# 2017-10-06 22:22:27.899939
++os.listdir('tmpdata')
+
+# 2017-10-06 22:42:51.101158
++import base64
+
+# 2017-10-06 22:43:09.177587
++data = base64.b64encode(b'this is a test')
+
+# 2017-10-06 22:43:10.182669
++data
+
+# 2017-10-06 22:43:21.442419
++base64.b64decode(data)
+
+# 2017-10-06 23:12:40.061642
++import base64
+
+# 2017-10-06 23:15:55.655112
++with open('bigbin.tmp', 'rb') as binfile:
++    data = binfile.read()
+
+# 2017-10-06 23:15:58.452170
++import sys
+
+# 2017-10-06 23:16:04.246084
++sys.getsizeof(data)
+
+# 2017-10-06 23:16:25.180506
++test = 'one two three four'
+
+# 2017-10-06 23:16:30.631156
++sys.getsizeof(test)
+
+# 2017-10-07 03:10:34.500946
++import urllib
+
+# 2017-10-07 03:10:46.969163
++urllib.parse.quote('Thing/Otherthing')
+
+# 2017-10-07 03:10:51.724911
++urllib.parse.quote('Thing/Otherthing', safe='')
+
+# 2017-10-07 03:12:24.817456
++exit
+
+# 2017-10-07 11:39:26.441519
++from urllib.parse import quote
+
+# 2017-10-07 11:39:35.452186
++from urllib.parse import join
+
+# 2017-10-07 11:39:49.647121
++import urllib.parse
+
+# 2017-10-07 11:40:09.828941
++quote('Test table 1')
+
+# 2017-10-07 11:40:18.628098
++quote('Test/Table 2')
+
+# 2017-10-07 11:40:59.529312
++quote('Test/Table 2', safe='')
+
+# 2017-10-07 11:41:26.869755
++quote('Another (test) table', safe='')
+
+# 2017-10-07 11:42:05.298774
++quote('A & test & table')
+
+# 2017-10-07 11:44:16.180094
++urllib.parse.urljoin('https://api.airtable.com', 'v0', quote('A & test & table', safe=''))
+
+# 2017-10-07 11:44:26.524640
++urllib.parse.urljoin('https://api.airtable.com', 'v0', str(quote('A & test & table', safe='')))
+
+# 2017-10-07 11:44:47.882284
++baseurl = urllib.parse.urljoin('https://api.airtable.com', 'v0')
+
+# 2017-10-07 11:44:49.686884
++baseulr
+
+# 2017-10-07 11:44:51.672973
++baseurl
+
+# 2017-10-07 11:45:14.944866
++urllib.parse.urljoin(baseurl, quote('A & test & table', safe=''))
+
+# 2017-10-07 11:45:47.669279
++baseurl = urllib.parse.urljoin(baseurl, 'app123456789a')
+
+# 2017-10-07 11:45:49.179795
++baseulr
+
+# 2017-10-07 11:45:51.223757
++baseurl
+
+# 2017-10-07 11:46:18.129970
++urllib.parse.urljoin(baseurl, quote('Test/table 1', safe=''))
+
+# 2017-10-07 11:48:04.129736
++quote('percentabe % table', safe='')
+
+# 2017-10-07 14:47:00.423997
++import subprocess
+
+# 2017-10-07 14:47:22.826533
++out = subprocess.run(['git', 'show-ref'], stdout=subproces.PIPE)
+
+# 2017-10-07 14:47:27.760365
++out = subprocess.run(['git', 'show-ref'], stdout=subprocess.PIPE)
+
+# 2017-10-07 14:47:29.088668
++out
+
+# 2017-10-07 14:47:31.614308
++out.stdout
+
+# 2017-10-07 14:47:43.037954
++out.stdout.decode('utf-8')[0:5]
+
+# 2017-10-07 14:47:46.129822
++out.stdout.decode('utf-8')[0:7]
+
+# 2017-10-07 18:16:15.388652
++import json
+
+# 2017-10-07 18:16:30.989568
++def gen():
++    yield 20
++    yield 30
++    yield 40
+
+# 2017-10-07 18:16:48.552328
++class StreamArray(list):
++    def __iter__(self):
++        return gen()
+
+# 2017-10-07 18:17:04.999944
++a = StreamArray()
+
+# 2017-10-07 18:17:08.448530
++json.dumps(a)
+
+# 2017-10-07 18:30:11.185344
++import pickle
+
+# 2017-10-07 18:30:16.808351
++import tempfile
+
+# 2017-10-07 18:30:35.096802
++def gen():
++    for i in range(0,20):
++        yield i
+
+# 2017-10-07 18:30:44.538716
++for item in gen():
++    print(item)
+
+# 2017-10-07 18:30:54.387156
++def gen():
++    for i in range(0,20):
++        yield {'number': i}
+
+# 2017-10-07 18:30:57.326434
++for item in gen():
++    print(item)
+
+# 2017-10-07 18:31:39.830391
++with tempfile.TemporaryFile() as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = fp.read()
+
+# 2017-10-07 18:31:40.958649
++data
+
+# 2017-10-07 18:31:55.007832
++with tempfile.TemporaryFile(mode='w') as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = fp.read()
+
+# 2017-10-07 18:32:13.645488
++with tempfile.TemporaryFile() as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = pickle.load(fp)
+
+# 2017-10-07 18:32:15.608393
++data
+
+# 2017-10-07 18:32:37.153914
++with tempfile.TemporaryFile(mode='a') as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = pickle.load(fp)
+
+# 2017-10-07 18:32:45.219518
++with tempfile.TemporaryFile(mode='ab') as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = pickle.load(fp)
+
+# 2017-10-07 18:32:58.853589
++with tempfile.TemporaryFile(mode='arb') as fp:
++    for item in gen():
++        pickle.dump(item, fp)
++    fp.seek(0)
++    data = pickle.load(fp)
+
+# 2017-10-07 18:38:35.101474
++import json
+
+# 2017-10-07 18:38:37.803805
++import tempfile
+
+# 2017-10-07 18:39:12.355706
++def gen():
++    for i in range(0, 51):
++        yield {'number': i}
+
+# 2017-10-07 18:44:58.890072
++with tempfile.TemporaryDirectory as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(tmpdir + '/file{}'.format(j), 'w') as fp:
++                fp.write(tmplist)
++            tmplist = []
++            j += 1
++    with open(tmpdir + '/file{}'.format(j), 'w') as fp:
++        fp.write(tmplist)
++    data = []
++    for k in range(0, j + 1):
++        with open(tmpdir + '/file{}'.format(k), 'r') as fr:
++            data.extend(fp.read())
+
+# 2017-10-07 18:45:19.571836
++from pathlib import Path
+
+# 2017-10-07 18:46:13.369156
++with tempfile.TemporaryDirectory as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(Path(tmpdir, 'file{}'.format(j)), 'w') as fp:
++                fp.write(tmplist)
++            tmplist = []
++            j += 1
++    with open(Path(tmpdir, 'file{}'.format(j)), 'w') as fp:
++        fp.write(tmplist)
++    data = []
++    for k in range(0, j + 1):
++        with open(Path(tmpdir, 'file{}'.format(k)), 'r') as fr:
++            data.extend(fr.read())
+
+# 2017-10-07 18:46:45.452923
++with tempfile.TemporaryDirectory() as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(Path(tmpdir, 'file{}'.format(j)), 'w') as fp:
++                fp.write(tmplist)
++            tmplist = []
++            j += 1
++    with open(Path(tmpdir, 'file{}'.format(j)), 'w') as fp:
++        fp.write(tmplist)
++    data = []
++    for k in range(0, j + 1):
++        with open(Path(tmpdir, 'file{}'.format(k)), 'r') as fr:
++            data.extend(fr.read())
+
+# 2017-10-07 18:46:54.302987
++import pickle
+
+# 2017-10-07 18:47:41.545471
++with tempfile.TemporaryDirectory() as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++                pickle.dump(fp, tmplist)
++            tmplist = []
++            j += 1
++    with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++        pickle.dump(fp, tmplist)
++    data = []
++    for k in range(0, j + 1):
++        with open(Path(tmpdir, 'file{}'.format(k)), 'r') as fr:
++            data.extend(pickle.load(fr))
+
+# 2017-10-07 18:48:30.883305
++with tempfile.TemporaryDirectory() as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++                pickle.dump(tmplist, fp)
++            tmplist = []
++            j += 1
++    with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++        pickle.dump(tmplist, fp)
++    data = []
++    for k in range(0, j + 1):
++        with open(Path(tmpdir, 'file{}'.format(k)), 'r') as fr:
++            data.extend(pickle.load(fr))
+
+# 2017-10-07 18:48:42.473675
++with tempfile.TemporaryDirectory() as tmpdir:
++    tmplist = []
++    j = 0
++    for item in gen():
++        tmplist.append(item)
++        if len(tmplist) > 10:
++            with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++                pickle.dump(tmplist, fp)
++            tmplist = []
++            j += 1
++    with open(Path(tmpdir, 'file{}'.format(j)), 'wb') as fp:
++        pickle.dump(tmplist, fp)
++    data = []
++    for k in range(0, j + 1):
++        with open(Path(tmpdir, 'file{}'.format(k)), 'rb') as fr:
++            data.extend(pickle.load(fr))
+
+# 2017-10-07 18:48:43.600520
++data
+
+# 2017-10-07 18:58:21.852958
++import lzma
+
+# 2017-10-07 18:58:42.892790
++mytext = 'This is a test of the test of the lzma compressor algorithm making sure it works'
+
+# 2017-10-07 18:58:57.336203
++compressor = lzma.LZMACompressor()
+
+# 2017-10-07 18:59:09.639518
++compressor.compress(mytext)
+
+# 2017-10-07 18:59:18.909986
++compressor.compress(mytext.encode('utf-8'))
+
+# 2017-10-07 18:59:34.960032
++compressed = compressor.flush()
+
+# 2017-10-07 18:59:36.994960
++compressed
+
+# 2017-10-07 18:59:55.455854
++decompressort = lzma.LZMADecompressor()
+
+# 2017-10-07 18:59:59.364332
++decompressor = lzma.LZMADecompressor()
+
+# 2017-10-07 19:00:06.919898
++decompressor.decompress(compressed)
+
+# 2017-10-07 19:01:19.408174
++lzma.decompress(compressed)
+
+# 2017-10-07 19:01:24.958356
++compressed
+
+# 2017-10-07 19:01:49.278776
++compressed.decode('utf-8')
+
+# 2017-10-07 19:02:24.994648
++comp = lzma.compress(mytext)
+
+# 2017-10-07 19:02:30.930601
++comp = lzma.compress(mytext.encode('utf-8'))
+
+# 2017-10-07 19:02:32.280808
++comp
+
+# 2017-10-07 19:02:41.819173
++decomp = lzma.decompress(comp)
+
+# 2017-10-07 19:02:43.814658
++decomp
+
+# 2017-10-07 19:02:57.165913
++assert mytext == decomp.decode('utf-8')
+
+# 2017-10-07 19:04:59.029254
++import base64
+
+# 2017-10-07 19:05:19.918388
++compdata = base64.b64encode('dGhpcyBpcyBmaWxlIDI4MA==')
+
+# 2017-10-07 19:05:23.784255
++compdata = base64.b64encode(b'dGhpcyBpcyBmaWxlIDI4MA==')
+
+# 2017-10-07 19:05:26.068925
++compdata
+
+# 2017-10-07 19:05:34.161173
++compdata = base64.b64decode(b'dGhpcyBpcyBmaWxlIDI4MA==')
+
+# 2017-10-07 19:05:35.889851
++compdata
+
+# 2017-10-07 19:08:32.847158
++compdata = base64.b64decode(b'/Td6WFoAAATm1rRGAgAhARYAAAB0L+WjAQAPdGhpcyBpcyBmaWxlIDIxMAC+a8m7oE8UZgABKBDlC2xgH7bzfQEAAAAABFla')
+
+# 2017-10-07 19:08:35.976947
++compdata
+
+# 2017-10-07 19:08:47.185023
++lzma.decompress(compdata)
+
+# 2017-10-07 20:00:45.858386
++import airtable
+
+# 2017-10-07 20:00:55.418961
++BASE=os.environ['ATDB']
+
+# 2017-10-07 20:00:58.566755
++import os
+
+# 2017-10-07 20:01:00.211650
++BASE=os.environ['ATDB']
+
+# 2017-10-07 20:48:42.312236
++import better_exceptions
+
+# 2017-10-07 20:48:47.257322
++raise Exception
+
+# 2017-10-07 20:49:01.959738
++assert 10 == 20
+
+# 2017-10-07 20:49:42.246555
++with open('no', 'r') as file:
++    file.read()
+
+# 2017-10-08 00:18:22.192981
++import pickle
+
+# 2017-10-08 00:18:47.790217
++with open('lots_of_fields.pickle', 'rb') as datafile:
++    data = pickle.load(datafile)
+
+# 2017-10-08 00:18:59.058031
++with open('lots_of_fields_data.pickle', 'rb') as datafile:
++    data = pickle.load(datafile)
+
+# 2017-10-08 00:19:02.540970
++data
+
+# 2017-10-08 00:19:12.576146
++names = []
+
+# 2017-10-08 00:20:11.014280
++import pickle
+
+# 2017-10-08 00:20:17.321374
++with open('lots_of_fields_data.pickle', 'rb') as datafile:
++    data = pickle.load(datafile)
+
+# 2017-10-08 00:20:23.650252
++data[0]['Name']
+
+# 2017-10-08 00:20:45.573049
++names = [item['Name'] for item in data]
+
+# 2017-10-08 00:20:46.816974
++names
+
+# 2017-10-08 00:21:11.149036
++assert len(names) == 20
+
+# 2017-10-08 00:21:22.494591
++assert 'Chad Guenther' in names
+
+# 2017-10-08 00:21:48.571509
++with open('pyhashes.pickle', 'rb') as hashfile:
++    hashes = pickle.load(hashfile)
+
+# 2017-10-08 00:21:50.335820
++hashes
+
+# 2017-10-08 00:23:54.225614
++import base64
+
+# 2017-10-08 00:25:59.454355
++for item in data:
++    attach = item['Attachments'][0]
++    filename = attach['filename']
++    rawfiledata = base64.b64decode(attach['filedata'])
++    if attach['compressed']:
++        filedata = lzma.decompress(rawfiledata)
+
+# 2017-10-08 00:26:38.228337
++for key in data[0]:
++    print(key)
+
+# 2017-10-08 00:26:49.293322
++for key in data[0]['Attachments'][0]:
++    print(key)
+
+# 2017-10-08 00:26:54.590294
++import lzma
+
+# 2017-10-08 00:26:57.379883
++import hashlib
+
+# 2017-10-08 00:28:44.051420
++for item in data:
++    attach = item['Attachments'][0]
++    filename = attach['filename']
++    rawfiledata = base64.b64decode(attach['data'])
++    if attach['compressed']:
++        filedata = lzma.decompress(rawfiledata)
++    else:
++        filedata = rawfiledata
++    filehash = haslib.md5(filedata).hexdigest()
++    assert 0
+
+# 2017-10-08 00:29:04.083061
++print(data[0]['Attachments'][0]['md5hash'])
+
+# 2017-10-08 00:30:02.595496
++for item in data:
++    assert 0
++    attach = item['Attachments'][0]
++    filename = attach['filename']
++    rawfiledata = base64.b64decode(attach['data'])
++    if attach['compressed']:
++        filedata = lzma.decompress(rawfiledata)
++    else:
++        filedata = rawfiledata
++    filehash = haslib.md5(filedata).hexdigest()
++    assert str(filehash) == attach['md5hash']
++    
+
+# 2017-10-08 00:30:07.047531
++hashes
+
+# 2017-10-08 00:30:13.982568
++readhashes = {}
+
+# 2017-10-08 00:30:44.799724
++for item in data:
++    assert 0
++    attach = item['Attachments'][0]
++    filename = attach['filename']
++    rawfiledata = base64.b64decode(attach['data'])
++    if attach['compressed']:
++        filedata = lzma.decompress(rawfiledata)
++    else:
++        filedata = rawfiledata
++    filehash = hashlib.md5(filedata).hexdigest()
++    assert str(filehash) == attach['md5hash']
++    readhashes[filename] = filehash
++    
+
+# 2017-10-08 00:31:01.141198
++for item in data:
++    attach = item['Attachments'][0]
++    filename = attach['filename']
++    rawfiledata = base64.b64decode(attach['data'])
++    if attach['compressed']:
++        filedata = lzma.decompress(rawfiledata)
++    else:
++        filedata = rawfiledata
++    filehash = hashlib.md5(filedata).hexdigest()
++    assert str(filehash) == attach['md5hash']
++    readhashes[filename] = filehash
+
+# 2017-10-08 00:31:16.224656
++readhashes
+
+# 2017-10-08 00:31:35.609773
++for key, value in readhashes:
++    assert hashes[key] == value
+
+# 2017-10-08 00:31:46.248840
++for key, value in readhashes.items():
++    assert hashes[key] == value
+
+# 2017-10-08 00:58:37.864848
++import boto3
+
+# 2017-10-08 00:58:49.025163
++s3 = boto3.resource('s3')
+
+# 2017-10-08 00:59:42.800353
++s3client = boto3.client('s3')
+
+# 2017-10-08 01:00:18.994344
++import boto3
+
+# 2017-10-08 01:00:24.810096
++s3client = boto3.client('s3')
+
+# 2017-10-08 01:00:46.212283
++import os
+
+# 2017-10-08 01:00:58.941523
++BUCKET = os.environ['CONFIG_BUCKET']
+
+# 2017-10-08 01:01:09.102490
++PREFIX = os.environt['CONFIG_PREFIX']
+
+# 2017-10-08 01:01:12.721507
++PREFIX = os.environ['CONFIG_PREFIX']
+
+# 2017-10-08 01:01:35.700475
++TABLE_KEY = PREFIX + '/tables'
+
+# 2017-10-08 01:01:48.218961
++PHRASES_KEY = PREFIX + '/phrases'
+
+# 2017-10-08 01:02:18.986446
++tables = s3client.get_object(Bucket=BUCKET, Key=TABLE_KEY)
+
+# 2017-10-08 01:02:20.476367
++tables
+
+# 2017-10-08 01:02:46.281836
++tables_obj = s3client.get_object(Bucket=BUCKET, Key=TABLE_KEY)
+
+# 2017-10-08 01:02:56.297212
++tables = table_obj['Body'].read()
+
+# 2017-10-08 01:03:01.569590
++tables = tables_obj['Body'].read()
+
+# 2017-10-08 01:03:03.225836
++tables
+
+# 2017-10-08 01:03:32.396118
++tables_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:03:40.584505
++phrases_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:04:10.976099
++phrases = [x.strip for x in phrases_obj['Body'].read().decode('utf-8')]
+
+# 2017-10-08 01:04:13.125569
++phrases
+
+# 2017-10-08 01:04:23.677773
++phrases_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:04:30.521044
++phrases = [x.strip() for x in phrases_obj['Body'].read().decode('utf-8')]
+
+# 2017-10-08 01:04:32.420119
++phrases
+
+# 2017-10-08 01:04:49.069780
++phrases = [x.strip() for x in phrases_obj['Body'].read().decode('utf-8').split('\n')]
+
+# 2017-10-08 01:04:52.170308
++phrases
+
+# 2017-10-08 01:04:55.260725
++phrases_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:04:56.879748
++phrases = [x.strip() for x in phrases_obj['Body'].read().decode('utf-8').split('\n')]
+
+# 2017-10-08 01:05:02.029363
++phrases
+
+# 2017-10-08 01:05:21.733642
++phrases = [x.strip() for x in phrases_obj['Body'].read().decode('utf-8').split('\n') and x]
+
+# 2017-10-08 01:05:30.132754
++phrases_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:05:32.017433
++phrases = [x.strip() for x in phrases_obj['Body'].read().decode('utf-8').split('\n') and x]
+
+# 2017-10-08 01:06:03.988411
++phrases_obj = s3client.get_object(Bucket=BUCKET, Key=PHRASES_KEY)
+
+# 2017-10-08 01:06:38.795644
++phrases_str = phrases_obj['Body'].read().decode('utf-8').strip().split('\n')
+
+# 2017-10-08 01:06:41.893544
++phrases_str
+
+# 2017-10-08 01:07:25.626205
++import configp
+
+# 2017-10-08 01:07:27.227221
++import configparser
+
+# 2017-10-08 01:07:35.389511
++config = configparser.ConfigParser()
+
+# 2017-10-08 01:07:48.973460
++config.read(tables)
+
+# 2017-10-08 01:07:57.771844
++config.read(tables.decode('utf-8'))
+
+# 2017-10-08 01:08:02.883072
++tables
+
+# 2017-10-08 01:08:27.174269
++tables.decode('utf-8')
+
+# 2017-10-08 01:08:32.801573
++tab = _
+
+# 2017-10-08 01:08:33.664378
++tab
+
+# 2017-10-08 01:08:37.665236
++config.read(tab)
+
+# 2017-10-08 01:08:40.384273
++config
+
+# 2017-10-08 01:08:48.096067
++config['Tasks Table']
+
+# 2017-10-08 01:09:09.159184
++import tempfile
+
+# 2017-10-08 01:16:11.672403
++import pyyaml
+
+# 2017-10-08 01:16:14.762171
++import yaml
+
+# 2017-10-08 01:16:36.960601
++with open('test.yaml', 'r') as yfile:
++    stuff = yaml.load(yfile)
+
+# 2017-10-08 01:16:38.244797
++stuff
+
+# 2017-10-08 01:23:10.058561
++import yaml
+
+# 2017-10-08 01:23:32.817730
++with open('conf.yaml', 'r') as conffile:
++    config = yaml.load(conffile)
+
+# 2017-10-08 01:23:34.274733
++config
+
+# 2017-10-08 01:24:04.212473
++print(json.dumps(config, indent=2))
+
+# 2017-10-08 01:24:09.511081
++import json
+
+# 2017-10-08 01:24:10.511425
++print(json.dumps(config, indent=2))
+
+# 2017-10-08 01:25:10.077207
++config['Parse']['Sender Filter']
+
+# 2017-10-08 01:25:26.774611
++config['Parse']['Termination Character']
+
+# 2017-10-08 01:25:41.759234
++print(config['Parse']['Termination Character'])
+
+# 2017-10-08 01:26:12.997187
++import subprocess
+
+# 2017-10-08 01:26:26.836846
++subprocess.run(['gvim', 'conf.yaml'])
+
+# 2017-10-08 01:26:41.497863
++with open('conf.yaml', 'r') as conffile:
++    config = yaml.load(conffile)
+
+# 2017-10-08 01:26:56.366160
++config['Parse']['Termination Character']
+
+# 2017-10-08 01:29:34.447582
++import yaml
+
+# 2017-10-08 01:29:37.991228
++with open('conf.yaml', 'r') as conffile:
++    config = yaml.load(conffile)
+
+# 2017-10-08 01:29:40.639281
++config['Parse']['Termination Character']
+
+# 2017-10-08 01:29:44.329790
++termchar = _
+
+# 2017-10-08 01:29:46.017575
++termchar
+
+# 2017-10-08 01:29:48.355906
++import re
+
+# 2017-10-08 01:30:12.583600
++truncate = re.compile(r'^(.*){}'.format(term_char), re.DOTALL|re.I)
+
+# 2017-10-08 01:30:16.762365
++truncate = re.compile(r'^(.*){}'.format(termchar), re.DOTALL|re.I)
+
+# 2017-10-08 01:30:53.678111
++text = 'this is a test of the emergency broadcast system\ndh if it were not a test, you would hear screaming'
+
+# 2017-10-08 01:30:54.914489
++text
+
+# 2017-10-08 01:31:16.490335
++search_text = truncate.search(text)
+
+# 2017-10-08 01:31:22.527101
++search_text.group(1)
+
+# 2017-10-08 01:31:46.694870
++exit

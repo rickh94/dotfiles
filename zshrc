@@ -26,6 +26,9 @@ setopt correct
 export VISUAL='vim'
 export PAGER='less'
 
+# makeflags
+export MAKEFLAGS='-j4'
+
 # Borg passphrase
 if [ -f ~/.borg_passphrase ]; then
   source ~/.borg_passphrase
