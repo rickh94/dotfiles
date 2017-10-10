@@ -6177,3 +6177,160 @@
 
 # 2017-10-09 01:13:50.493880
 +import os
+
+# 2017-10-09 01:14:43.438664
++import sys
+
+# 2017-10-09 01:14:45.702726
++import threading
+
+# 2017-10-09 01:14:47.944289
++import boto3
+
+# 2017-10-09 01:15:40.191599
++class ProgressPercentage(object):
++    def __init__(self, filename):
++        self._filename = filename
++        self._size = float(os.path.getsize(filename))
++        self._seen_so_far = 0
++        self._lock = threading.lock()
+
+# 2017-10-09 01:17:26.016608
++class ProgressPercentage(object):
++    def __init__(self, filename):
++        self._filename = filename
++        self._size = float(os.path.getsize(filename))
++        self._seen_so_far = 0
++        self._lock = threading.lock()
++    def __call__(self, bytes_amount):
++        with self._lock:
++            self._seen_so_far += bytes_amount
++            percentage = (self._seen_so_far / self._size) * 100
++            sys.stdout.write(
++                "\r{}  {}  / {}  ({:02f})".format(self._filename, self._seen_so_far, self._size, percentage))
++            sys.stdout.flush()
+
+# 2017-10-09 01:18:12.362960
++client = boto3.session.Session()
+
+# 2017-10-09 01:18:18.693684
++session = boto3.session.Session()
+
+# 2017-10-09 01:19:49.882850
++client = session.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com',
++                        aws_access_key_id=os.environ['DO_KEYID'],
++                        aws_secret_access_key=os.environ['DO_SECRET'])
+
+# 2017-10-09 01:22:39.374004
++import nltk
+
+# 2017-10-09 01:24:06.450847
++nltk.book.text1
+
+# 2017-10-09 01:24:14.289166
++from nltk import boot
+
+# 2017-10-09 01:24:16.760718
++from nltk import book
+
+# 2017-10-09 01:24:28.785230
++nltk.download('gutenberg')
+
+# 2017-10-09 01:24:34.890303
++from nltk import book
+
+# 2017-10-09 01:24:45.204602
++nltk.corpus.gutenburg()
+
+# 2017-10-09 01:25:10.846189
++import nltk
+
+# 2017-10-09 01:25:22.177018
++nltk.corpus.gutenberg.fileids()
+
+# 2017-10-09 01:26:01.480253
++whitmanleaves = nltk.corpus.gutenberg.raw('whitman-leaves.txt')
+
+# 2017-10-09 01:26:04.019898
++whitmanleaves
+
+# 2017-10-09 01:26:28.586309
++with open('/tmp/whitman-leaves.txt', 'w') as textfile:
++    textfile.write(whitmanleaves)
+
+# 2017-10-09 01:28:03.247490
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt', Callback=ProgressPercentage('/tmp/whitman-leaves.txt'))
+
+# 2017-10-09 01:29:16.061816
++class ProgressPercentage(object):
++    def __init__(self, filename):
++        self._filename = filename
++        self._size = float(os.path.getsize(filename))
++        self._seen_so_far = 0
++        self._lock = threading.LockType()
++    def __call__(self, bytes_amount):
++        with self._lock:
++            self._seen_so_far += bytes_amount
++            percentage = (self._seen_so_far / self._size) * 100
++            sys.stdout.write(
++                "\r{}  {}  / {}  ({:02f})".format(self._filename, self._seen_so_far, self._size, percentage))
++            sys.stdout.flush()
+
+# 2017-10-09 01:29:20.932427
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt', Callback=ProgressPercentage('/tmp/whitman-leaves.txt'))
+
+# 2017-10-09 01:29:59.658417
++class ProgressPercentage(object):
++    def __init__(self, filename):
++        self._filename = filename
++        self._size = float(os.path.getsize(filename))
++        self._seen_so_far = 0
++        self._lock = threading.Lock()
++    def __call__(self, bytes_amount):
++        with self._lock:
++            self._seen_so_far += bytes_amount
++            percentage = (self._seen_so_far / self._size) * 100
++            sys.stdout.write(
++                "\r{}  {}  / {}  ({:02f})".format(self._filename, self._seen_so_far, self._size, percentage))
++            sys.stdout.flush()
+
+# 2017-10-09 01:31:10.801270
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt', Callback=ProgressPercentage('/tmp/whitman-leaves.txt'))
+
+# 2017-10-09 01:31:20.873253
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt')
+
+# 2017-10-09 01:32:25.063233
++os.environ['DO_KEYID']
+
+# 2017-10-09 01:32:29.915569
++os.environ['DO_SECRET']
+
+# 2017-10-09 01:32:53.832677
++client = session.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com',
++                        aws_access_key_id=os.environ['DO_KEYID'],
++                        aws_secret_access_key=os.environ['DO_SECRET'])
+
+# 2017-10-09 01:33:26.481236
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt')
+
+# 2017-10-09 01:33:44.785372
++client.upload_file('/tmp/whitman-leaves.txt', 'rick-bucket-03850f07', 'whitman-leaves.txt', Callback=ProgressPercentage('/tmp/whitman-leaves.txt'))
+
+# 2017-10-09 01:34:23.725534
++path = '/home/rick/Nextcloud/sheet_music/Adoration-Borowski/Adoration-piano.pdf'
+
+# 2017-10-09 01:34:56.214408
++bucket = 'rick-bucket-9cbefd1'
+
+# 2017-10-09 01:35:26.404725
++client.upload_file(path, bucket, 'adoration-piano.pdf', Callback=ProgressPercentage(path))
+
+# 2017-10-09 01:35:42.994004
++client.create_bucket(bucket)
+
+# 2017-10-09 01:35:49.664485
++client.create_bucket(Bucket=bucket)
+
+# 2017-10-09 01:35:56.530184
++client.upload_file(path, bucket, 'adoration-piano.pdf', Callback=ProgressPercentage(path))
