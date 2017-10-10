@@ -4814,17 +4814,17 @@
 
 # 2017-10-05 02:41:43.520629
 +post_text = ('from: {}\n'.format(data['from']) + 'to: {}'.format(data['to'])
-+                 + 'subject: {}\n'.format(data['subject']) 
++                 + 'subject: {}\n'.format(data['subject'])
 +                 + 'message: {}'.format(emailtext))
 
 # 2017-10-05 02:42:09.630858
 +post_text = ('from: {}\n'.format(data['from']) + 'to: {}'.format(data['to'])
-+                 + 'subject: {}\n'.format(data['subject']) 
++                 + 'subject: {}\n'.format(data['subject'])
 +                 + 'message: {}'.format(text))
 
 # 2017-10-05 02:42:42.559189
 +post_text = ('from: {}\n'.format(msg['from']) + 'to: {}'.format(msg['to'])
-+                 + 'subject: {}\n'.format(msg['subject']) 
++                 + 'subject: {}\n'.format(msg['subject'])
 +                 + 'message: {}'.format(text))
 
 # 2017-10-05 02:42:47.058353
@@ -5764,7 +5764,7 @@
 +        filedata = rawfiledata
 +    filehash = haslib.md5(filedata).hexdigest()
 +    assert str(filehash) == attach['md5hash']
-+    
++
 
 # 2017-10-08 00:30:07.047531
 +hashes
@@ -5785,7 +5785,7 @@
 +    filehash = hashlib.md5(filedata).hexdigest()
 +    assert str(filehash) == attach['md5hash']
 +    readhashes[filename] = filehash
-+    
++
 
 # 2017-10-08 00:31:01.141198
 +for item in data:
@@ -6054,3 +6054,132 @@
 
 # 2017-10-08 19:02:20.942910
 +None + 'hi'
+
+# 2017-10-08 02:08:47.254772
++import boto3
+
+# 2017-10-08 02:08:50.097135
++import yaml
+
+# 2017-10-08 02:08:59.899125
++s3client = boto3.client('s3')
+
+# 2017-10-08 02:09:49.628762
++import boto3
+
+# 2017-10-08 02:09:52.034290
++import yaml
+
+# 2017-10-08 02:09:58.812620
++s3client = boto3.client('s3')
+
+# 2017-10-08 02:10:19.300617
++import os
+
+# 2017-10-08 02:10:28.900827
++confbucket = os.environ['CONFIG_BUCKET']
+
+# 2017-10-08 02:10:39.205023
++confprefix = os.environ['CONFIG_PREFIX']
+
+# 2017-10-08 02:10:53.332982
++from pathlib import Path
+
+# 2017-10-08 02:11:04.153175
++Path(confprefix, 'config.yaml')
+
+# 2017-10-08 02:11:15.228207
++configkey = _
+
+# 2017-10-08 02:11:19.389456
++str(configkey)
+
+# 2017-10-08 02:11:47.045362
++configyaml = s3client.get_object(Bucket=confbucket, Key=str(configkey))
+
+# 2017-10-08 02:12:05.182401
++configdata = configyaml['Body'].read()
+
+# 2017-10-08 02:12:07.169493
++configdata
+
+# 2017-10-08 02:12:31.617465
++config = yaml.load(configdata.decode('utf-8'))
+
+# 2017-10-08 02:12:32.821143
++config
+
+# 2017-10-08 02:12:47.320663
++import json
+
+# 2017-10-08 02:12:56.726778
++print(json.dumps(config))
+
+# 2017-10-08 02:13:03.843783
++print(json.dumps(config), indent=1)
+
+# 2017-10-08 02:13:16.255314
++print(json.dumps(config, indent=1))
+
+# 2017-10-08 02:51:45.721024
++import os
+
+# 2017-10-08 02:51:54.067970
++os.environ.get('nope')
+
+# 2017-10-08 02:52:08.253862
++os.environ.get('nome', 'hi')
+
+# 2017-10-08 02:52:15.372619
++os.environ.get('HOME', 'hi')
+
+# 2017-10-08 03:22:50.035096
++import airtable
+
+# 2017-10-08 03:22:57.290039
++from airtable.airtable import Airtable
+
+# 2017-10-08 03:24:26.505970
++import os
+
+# 2017-10-08 03:24:43.504826
++Airtable(os.environ['ATDB'], os.environ['ATKEY'])
+
+# 2017-10-08 03:24:48.501497
++db = _
+
+# 2017-10-08 03:25:51.702629
++data = {'Name': 'test', 'Notes': 'test', 'person': [''], 'Files': ['']}
+
+# 2017-10-08 03:26:01.318817
++db.create('My Study Cards', data)
+
+# 2017-10-08 03:26:10.275460
++data = {'Name': 'test', 'Notes': 'test', 'person': [None], 'Files': [None]}
+
+# 2017-10-08 03:26:12.858171
++db.create('My Study Cards', data)
+
+# 2017-10-08 03:26:21.611266
++data = {'Name': 'test', 'Notes': 'test', 'person': None, 'Files': None}
+
+# 2017-10-08 03:26:23.725898
++db.create('My Study Cards', data)
+
+# 2017-10-09 01:12:19.480282
++import os
+
+# 2017-10-09 01:12:21.470302
++import sys
+
+# 2017-10-09 01:12:23.982677
++import threading
+
+# 2017-10-09 01:12:26.458573
++import boto3
+
+# 2017-10-09 01:13:47.589001
++import python
+
+# 2017-10-09 01:13:50.493880
++import os

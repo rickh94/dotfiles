@@ -144,6 +144,7 @@ alias lla='exa -la'
 alias lless='exa -la | less'
 alias chmod='chmod -v'
 alias chown='chown -v'
+alias randomgarbage='echo $RANDOM | sha256sum |cut -c1-7'
 
 # Global aliases
 alias -g G='| grep'
