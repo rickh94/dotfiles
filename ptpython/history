@@ -7032,3 +7032,250 @@
 
 # 2017-10-11 00:26:22.883918
 +assert isinstance(headerdict['composer'], dict)
+
+# 2017-10-11 23:20:55.996261
++import boto3
+
+# 2017-10-11 23:23:05.650945
++import os
+
+# 2017-10-11 23:23:19.618288
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:23:27.713687
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:24:05.192017
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_access_secret_key=secret)
+
+# 2017-10-11 23:24:16.716897
++sess = boto3.Session()
+
+# 2017-10-11 23:24:28.710538
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_access_secret_key=secret)
+
+# 2017-10-11 23:24:44.590412
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:27:36.918854
++client.list_buckets()
+
+# 2017-10-11 23:27:49.964343
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:28:02.979828
++client.list_buckets()
+
+# 2017-10-11 23:28:30.951747
++client.create_bucket('rick-test-bucket-cHf4n')
+
+# 2017-10-11 23:28:41.873245
++client.create_bucket(Bucket='rick-test-bucket-cHf4n')
+
+# 2017-10-11 23:28:47.461985
++os.environt['DOKEY']
+
+# 2017-10-11 23:28:51.828835
++os.environ['DOKEY']
+
+# 2017-10-11 23:28:58.633036
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:29:00.909990
++secret
+
+# 2017-10-11 23:29:03.717569
++keyid
+
+# 2017-10-11 23:29:16.309375
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:29:31.533267
++client.list_buckets()
+
+# 2017-10-11 23:30:01.404095
++client.list_objects(Bucket='rick-bucket-9cbefd1')
+
+# 2017-10-11 23:30:33.974205
++client.generate_presigned_url(Bucket='rick-bucket-9cbefd1', Key='adoration-piano.pdf')
+
+# 2017-10-11 23:32:49.992184
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:32:51.632576
++url
+
+# 2017-10-11 23:32:54.878772
++import requrests
+
+# 2017-10-11 23:32:58.908319
++import requests
+
+# 2017-10-11 23:33:08.295003
++data = requests.get(url)
+
+# 2017-10-11 23:33:30.517664
++with open('test.pdf', 'wb') as pdffile:
++    pdffile.write(data.content)
+
+# 2017-10-11 23:34:05.772645
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:34:08.324231
++import os
+
+# 2017-10-11 23:34:25.312404
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:34:32.871734
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:34:39.218001
++import boto3
+
+# 2017-10-11 23:34:45.442032
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:34:57.440751
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:36:12.448754
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:36:15.709692
++url
+
+# 2017-10-11 23:36:25.130097
++data = requests.get(url)
+
+# 2017-10-11 23:36:28.508025
++import requests
+
+# 2017-10-11 23:36:29.460546
++data = requests.get(url)
+
+# 2017-10-11 23:36:30.528733
++data
+
+# 2017-10-11 23:36:33.689265
++data.content
+
+# 2017-10-11 23:42:12.004713
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:42:34.495244
++from botocore.client import Config
+
+# 2017-10-11 23:42:42.589977
++sess = boto3.session.Session()
+
+# 2017-10-11 23:43:50.974316
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3v2')
++                     )
+
+# 2017-10-11 23:43:54.941726
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:44:05.390388
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:44:08.818800
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:44:10.997708
++url
+
+# 2017-10-11 23:44:26.820744
++data = requests.get(url)
+
+# 2017-10-11 23:45:11.190783
++with open('url.txt', 'w') as urlfile:
++    urlfile.write(url)
+
+# 2017-10-11 23:45:54.058481
++import boto3
+
+# 2017-10-11 23:46:01.744382
++from botocore.client import Config
+
+# 2017-10-11 23:46:11.270646
++sess = boto3.session.Session()
+
+# 2017-10-11 23:46:14.728537
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:46:25.569492
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:46:29.318565
++import os
+
+# 2017-10-11 23:46:40.488522
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:46:50.915732
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:46:57.597994
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:47:07.729636
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:47:18.800498
++import requests
+
+# 2017-10-11 23:47:25.631709
++data = requests.get(url)
+
+# 2017-10-11 23:47:30.379185
++url
+
+# 2017-10-11 23:47:35.126694
++print(url)
+
+# 2017-10-11 23:47:53.076087
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3.digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:47:57.320314
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:48:07.750309
++data = requests.get(url)
+
+# 2017-10-11 23:48:13.538675
++data.content
+
+# 2017-10-11 23:48:36.062574
++with open('test.pdf', 'wb') as pdffile:
++    pdffile.write(data.content)
+
+# 2017-10-11 23:49:36.112846
++url
+
+# 2017-10-11 23:49:39.768661
++print(url)
