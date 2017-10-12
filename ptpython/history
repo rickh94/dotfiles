@@ -6788,3 +6788,229 @@
 
 # 2017-10-11 00:26:22.883918
 +assert isinstance(headerdict['composer'], dict)
+
+# 2017-10-11 21:05:38.493109
++import pickle
+
+# 2017-10-11 21:05:39.852063
++import os
+
+# 2017-10-11 21:05:44.673868
++os.chdir('tests')
+
+# 2017-10-11 21:05:51.669283
++os.getcwd()
+
+# 2017-10-11 21:06:43.740139
++with open('lots_of_fields_raw.pickle', 'rb') as datapickle:
++    data = pickle.load(datapickle)
+
+# 2017-10-11 21:06:45.489533
++data
+
+# 2017-10-11 21:07:21.390740
++os.listdir('.')
+
+# 2017-10-11 21:07:34.527301
++import json
+
+# 2017-10-11 21:08:06.279608
++with open('lots_of_fields_raw.json', 'w') as rawjson:
++    json.dump(data, rawjson)
+
+# 2017-10-11 21:09:42.706113
++import json
+
+# 2017-10-11 21:09:44.970876
++import pickle
+
+# 2017-10-11 21:09:49.495393
++with open('lots_of_fields_raw.pickle', 'rb') as datapickle:
++    data = pickle.load(datapickle)
+
+# 2017-10-11 21:09:56.674274
++import os
+
+# 2017-10-11 21:10:01.062946
++os.chdir('tests')
+
+# 2017-10-11 21:10:03.386363
++with open('lots_of_fields_raw.pickle', 'rb') as datapickle:
++    data = pickle.load(datapickle)
+
+# 2017-10-11 21:10:08.885389
++with open('lots_of_fields_raw.json', 'w') as rawjson:
++    json.dump(data, rawjson)
+
+# 2017-10-11 21:14:09.190900
++import pickle
+
+# 2017-10-11 21:14:17.631164
++import requests
+
+# 2017-10-11 21:14:32.083911
++import os
+
+# 2017-10-11 21:14:36.340940
++os.chdir('tests')
+
+# 2017-10-11 21:15:06.106524
++with open('lots_of_fields_data.pickle', 'rb') as datapickle:
++    data = pickle.load(datapickle)
+
+# 2017-10-11 21:15:15.349030
++with open('lots_of_fields_raw.pickle', 'rb') as datapickle:
++    data = pickle.load(datapickle)
+
+# 2017-10-11 21:15:26.471345
++data[0]
+
+# 2017-10-11 21:17:06.001344
++attachmentdata = {}
+
+# 2017-10-11 21:20:19.235318
++len(data)
+
+# 2017-10-11 21:22:04.202200
++from airtable import Airtable
+
+# 2017-10-11 21:22:57.328139
++import airtable
+
+# 2017-10-11 21:22:59.824699
++import pickle
+
+# 2017-10-11 21:23:02.725151
++import json
+
+# 2017-10-11 21:25:01.881113
++from airtable import Airtable
+
+# 2017-10-11 21:25:06.884220
++import pickle
+
+# 2017-10-11 21:25:08.565032
++import json
+
+# 2017-10-11 21:25:18.013869
++import os
+
+# 2017-10-11 21:25:33.652228
++table = Airtable(base_key=os.environ['ATDB'])
+
+# 2017-10-11 21:25:48.655957
++table = Airtable(base_key=os.environ['ATDB'], table_name='Lots of fields')
+
+# 2017-10-11 21:25:57.800314
++data = table.get_all()
+
+# 2017-10-11 21:25:59.233617
++data
+
+# 2017-10-11 21:26:28.546528
++with open('lots_of_fields_raw.pickle', 'wb') as picklefile:
++    pickle.dump(data, picklefile)
+
+# 2017-10-11 21:26:47.101566
++with open('lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(data, picklefile)
+
+# 2017-10-11 21:27:01.212887
++with open('lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(bytes(data), picklefile)
+
+# 2017-10-11 21:27:20.014032
++with open('lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(data, jsonfile)
+
+# 2017-10-11 21:29:52.915411
++import requests
+
+# 2017-10-11 21:30:24.039433
++with open('lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(data, jsonfile, indent=2)
+
+# 2017-10-11 21:30:50.651368
++attachdata = {}
+
+# 2017-10-11 21:31:37.554976
++data[0]['fields']['Attachments'][0]
+
+# 2017-10-11 21:31:42.604457
++data[0]['fields']['Attachments'][0]['url']
+
+# 2017-10-11 21:32:28.085858
++for item in data:
++    attach = requests.get(item['field']['Attachments'][0]['url'])
+
+# 2017-10-11 21:35:54.183837
++for item in data:
++    attach = requests.get(item['fields']['Attachments'][0]['url'])
++    stuff = {'filename': item['fields']['Attachments'][0]['filename'],
++             'data': attach}
++    attachdata.update({item['fields']['Name']: stuff})
+
+# 2017-10-11 21:36:07.761118
++attachdata
+
+# 2017-10-11 21:36:24.148245
++attachdata = {}
+
+# 2017-10-11 21:36:49.659192
++for item in data:
++    attach = requests.get(item['fields']['Attachments'][0]['url'])
++    stuff = {'filename': item['fields']['Attachments'][0]['filename'],
++             'data': attach.content}
++    attachdata.update({item['fields']['Name']: stuff})
+
+# 2017-10-11 21:37:55.658046
++attachdata
+
+# 2017-10-11 21:38:44.524857
++with open('attachdata.pickle', 'wb') as picklefile:
++    pickle.dump(attachdata, picklefile)
+
+# 2017-10-11 21:40:20.925982
++data
+
+# 2017-10-11 21:40:25.789623
++data[0]
+
+# 2017-10-11 21:41:09.743319
++attach1 = requests.get(data[0]['fields']['Attachments']['url'])
+
+# 2017-10-11 21:41:18.302147
++attach1 = requests.get(data[0]['fields']['Attachments'][0]['url'])
+
+# 2017-10-11 21:41:53.949078
++assert attach1.content == attachdata['James Jovich']['data']
+
+# 2017-10-11 21:41:58.732169
++assert attach1.content == attachdata['James Jovich']['filename']
+
+# 2017-10-12 18:50:54.609130
++import boto3
+
+# 2017-10-12 18:51:04.205660
++codecommit = boto3.client('codecommit')
+
+# 2017-10-12 18:51:21.659832
++codecommit.list_repositories
+
+# 2017-10-12 18:51:23.984923
++codecommit.list_repositories()
+
+# 2017-10-12 18:51:43.676864
++import boto3
+
+# 2017-10-12 18:51:45.184220
++codecommit = boto3.client('codecommit')
+
+# 2017-10-12 18:51:47.779450
++codecommit.list_repositories()
+
+# 2017-10-12 18:52:13.173777
++codecommit.get_repository()
+
+# 2017-10-12 18:52:26.051848
++codecommit.get_repository(repositoryName='violin-sonata-1-ecjg')
