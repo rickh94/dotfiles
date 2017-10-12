@@ -6340,3 +6340,248 @@
 
 # 2017-10-09 01:35:56.530184
 +client.upload_file(path, bucket, 'adoration-piano.pdf', Callback=ProgressPercentage(path))
+
+# 2017-10-10 03:28:58.252334
++import sys
+
+# 2017-10-10 03:29:05.515494
++sys.stdout.write('hi')
+
+# 2017-10-10 03:29:10.949321
++sys.stdout.flush()
+
+# 2017-10-10 03:30:07.201678
++from time import sleep
+
+# 2017-10-10 03:30:40.760275
++for i in range(0,12):
++    sleep(1)
++    sys.stdout.write('number is: {}'.format(i))
++    sys.stdout.flush()
+
+# 2017-10-10 03:30:59.367022
++import threading
+
+# 2017-10-10 03:31:20.584693
++for i in range(0,12):
++    with threading.Lock():
++        sleep(1)
++        sys.stdout.write('number is: {}'.format(i))
++        sys.stdout.flush()
+
+# 2017-10-11 02:36:35.374860
++import yaml
+
+# 2017-10-11 02:37:13.935412
++import pickle
+
+# 2017-10-11 02:37:19.959124
++from lyskel import info
+
+# 2017-10-11 02:37:29.495492
++from lilyskel import info
+
+# 2017-10-11 02:56:12.392163
++import re
+
+# 2017-10-11 02:56:34.225324
++text = 'this is a test <@U1245RG|rick>'
+
+# 2017-10-11 02:56:58.058320
++re.findall(r'@([A-Z0-9])|')
+
+# 2017-10-11 02:57:02.638779
++re.findall(r'@([A-Z0-9])|', text)
+
+# 2017-10-11 02:57:16.229761
++re.findall(r'@([A-Z0-9])', text)
+
+# 2017-10-11 02:57:23.208074
++re.findall(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:57:43.304178
++re.findall(r'@[A-Z0-9]*|', text)
+
+# 2017-10-11 02:57:55.952407
++re.search(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:03.300995
++stuff = _
+
+# 2017-10-11 02:58:08.885246
++stuff.group()
+
+# 2017-10-11 02:58:15.069506
++stuff.group(0)
+
+# 2017-10-11 02:58:24.065602
++stuff = re.search(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:28.218378
++stuff.group(1)
+
+# 2017-10-11 02:58:43.653711
++stuff = re.match(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:45.494103
++stuff
+
+# 2017-10-11 02:58:50.725818
++stuff.groupdict()
+
+# 2017-10-11 02:58:58.792731
++re.findall(r'@[A-Z0-9]*|', text)
+
+# 2017-10-11 02:59:28.410310
++regex = re.compile(r'@([A-Z0-9]*)|')
+
+# 2017-10-11 02:59:39.355088
++stuff = regex.search(text)
+
+# 2017-10-11 02:59:41.798219
++stuff.group()
+
+# 2017-10-11 02:59:51.538600
++regex = re.compile(r'@([A-Z0-9]*)')
+
+# 2017-10-11 02:59:54.350308
++stuff = regex.search(text)
+
+# 2017-10-11 02:59:55.686490
++stuff.group()
+
+# 2017-10-11 03:00:06.023286
++regex = re.compile(r'@([A-Z0-9]*)\|')
+
+# 2017-10-11 03:00:07.787330
++stuff = regex.search(text)
+
+# 2017-10-11 03:00:09.162682
++stuff.group()
+
+# 2017-10-11 03:00:34.158351
++stuff = regex.findall(text)
+
+# 2017-10-11 03:00:35.718896
++stuff
+
+# 2017-10-11 03:01:13.260144
++text = text + 'and <@U202RJ8P|don>'
+
+# 2017-10-11 03:01:16.876079
++stuff = regex.findall(text)
+
+# 2017-10-11 03:01:18.375547
++stuff
+
+# 2017-10-11 03:01:48.383869
++re.findall(r'@([A-Z0-9]*)\|', text)
+
+# 2017-10-11 03:05:28.559294
++import slackclient
+
+# 2017-10-11 03:05:29.832654
++import os
+
+# 2017-10-11 03:05:36.733096
++from slackperson import SlackPerson
+
+# 2017-10-11 03:05:43.177432
++import slackmentions
+
+# 2017-10-11 03:05:58.905097
++token = os.environ['SLACKAPITOKEN']
+
+# 2017-10-11 03:06:00.491629
++token
+
+# 2017-10-11 03:06:14.633632
++client = slackclient.SlackClient(token)
+
+# 2017-10-11 03:06:43.724301
++client.api_call('user.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:06:49.924273
++client.api_call('users.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:06:56.953311
++import json
+
+# 2017-10-11 03:07:19.239466
++rick2 = client.api_call('users.info', user='U6G6R7YL')
+
+# 2017-10-11 03:07:20.862568
++rick2
+
+# 2017-10-11 03:07:28.500612
++rick2 = client.api_call('users.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:07:37.862632
++print(json.dumps(rick2))
+
+# 2017-10-11 03:07:43.982747
++print(json.dumps(rick2, indent=2))
+
+# 2017-10-11 03:08:26.194912
++rick2person = SlackPerson.from_userinfo(rick2)
+
+# 2017-10-11 03:08:28.243292
++rick2person
+
+# 2017-10-11 03:11:40.225723
++text = 'hi <@U6G7R7YL8|rick2>'
+
+# 2017-10-11 03:12:13.839711
++clean = re.compile('<@[a-zA-Z0-9-._]*>')
+
+# 2017-10-11 03:12:15.897371
++clean
+
+# 2017-10-11 03:12:29.832614
++clean.sub(text, '')
+
+# 2017-10-11 03:12:39.546987
++clean.sub('', text)
+
+# 2017-10-11 03:12:50.553148
++clean = re.compile('<@[a-zA-Z0-9-._|]*>')
+
+# 2017-10-11 03:12:52.171278
++clean.sub('', text)
+
+# 2017-10-11 03:12:56.844029
++clean = re.compile('<@[a-zA-Z0-9-._|]*> ')
+
+# 2017-10-11 03:45:50.570420
++import slackmentions
+
+# 2017-10-11 03:47:06.479368
++client.api_call('im.list')
+
+# 2017-10-11 03:47:50.680716
++json.dumps(client.api_call('im.list'), indent=2)
+
+# 2017-10-11 03:47:57.345611
++print(_)
+
+# 2017-10-11 03:50:55.239283
++client.api_call('chat.postMessage',
++                channel='D6GRYRSPL',
++                text='hello in dm',
++                as_user=True,
++                )
+
+# 2017-10-11 03:52:39.766982
++_, channels = client.api_call('im.list')
+
+# 2017-10-11 03:52:43.181388
++channels
+
+# 2017-10-11 03:52:47.918450
++channels['ims']
+
+# 2017-10-11 03:53:52.724740
++channels = client.api_call('im.list')
+
+# 2017-10-11 03:53:56.829283
++channels['ims']
