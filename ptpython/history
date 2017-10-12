@@ -6343,6 +6343,250 @@
 # 2017-10-09 01:35:56.530184
 +client.upload_file(path, bucket, 'adoration-piano.pdf', Callback=ProgressPercentage(path))
 
+# 2017-10-10 03:28:58.252334
++import sys
+
+# 2017-10-10 03:29:05.515494
++sys.stdout.write('hi')
+
+# 2017-10-10 03:29:10.949321
++sys.stdout.flush()
+
+# 2017-10-10 03:30:07.201678
++from time import sleep
+
+# 2017-10-10 03:30:40.760275
++for i in range(0,12):
++    sleep(1)
++    sys.stdout.write('number is: {}'.format(i))
++    sys.stdout.flush()
+
+# 2017-10-10 03:30:59.367022
++import threading
+
+# 2017-10-10 03:31:20.584693
++for i in range(0,12):
++    with threading.Lock():
++        sleep(1)
++        sys.stdout.write('number is: {}'.format(i))
++        sys.stdout.flush()
+
+# 2017-10-11 02:36:35.374860
++import yaml
+
+# 2017-10-11 02:37:13.935412
++import pickle
+
+# 2017-10-11 02:37:19.959124
++from lyskel import info
+
+# 2017-10-11 02:37:29.495492
++from lilyskel import info
+
+# 2017-10-11 02:56:12.392163
++import re
+
+# 2017-10-11 02:56:34.225324
++text = 'this is a test <@U1245RG|rick>'
+
+# 2017-10-11 02:56:58.058320
++re.findall(r'@([A-Z0-9])|')
+
+# 2017-10-11 02:57:02.638779
++re.findall(r'@([A-Z0-9])|', text)
+
+# 2017-10-11 02:57:16.229761
++re.findall(r'@([A-Z0-9])', text)
+
+# 2017-10-11 02:57:23.208074
++re.findall(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:57:43.304178
++re.findall(r'@[A-Z0-9]*|', text)
+
+# 2017-10-11 02:57:55.952407
++re.search(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:03.300995
++stuff = _
+
+# 2017-10-11 02:58:08.885246
++stuff.group()
+
+# 2017-10-11 02:58:15.069506
++stuff.group(0)
+
+# 2017-10-11 02:58:24.065602
++stuff = re.search(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:28.218378
++stuff.group(1)
+
+# 2017-10-11 02:58:43.653711
++stuff = re.match(r'@([A-Z0-9]*)|', text)
+
+# 2017-10-11 02:58:45.494103
++stuff
+
+# 2017-10-11 02:58:50.725818
++stuff.groupdict()
+
+# 2017-10-11 02:58:58.792731
++re.findall(r'@[A-Z0-9]*|', text)
+
+# 2017-10-11 02:59:28.410310
++regex = re.compile(r'@([A-Z0-9]*)|')
+
+# 2017-10-11 02:59:39.355088
++stuff = regex.search(text)
+
+# 2017-10-11 02:59:41.798219
++stuff.group()
+
+# 2017-10-11 02:59:51.538600
++regex = re.compile(r'@([A-Z0-9]*)')
+
+# 2017-10-11 02:59:54.350308
++stuff = regex.search(text)
+
+# 2017-10-11 02:59:55.686490
++stuff.group()
+
+# 2017-10-11 03:00:06.023286
++regex = re.compile(r'@([A-Z0-9]*)\|')
+
+# 2017-10-11 03:00:07.787330
++stuff = regex.search(text)
+
+# 2017-10-11 03:00:09.162682
++stuff.group()
+
+# 2017-10-11 03:00:34.158351
++stuff = regex.findall(text)
+
+# 2017-10-11 03:00:35.718896
++stuff
+
+# 2017-10-11 03:01:13.260144
++text = text + 'and <@U202RJ8P|don>'
+
+# 2017-10-11 03:01:16.876079
++stuff = regex.findall(text)
+
+# 2017-10-11 03:01:18.375547
++stuff
+
+# 2017-10-11 03:01:48.383869
++re.findall(r'@([A-Z0-9]*)\|', text)
+
+# 2017-10-11 03:05:28.559294
++import slackclient
+
+# 2017-10-11 03:05:29.832654
++import os
+
+# 2017-10-11 03:05:36.733096
++from slackperson import SlackPerson
+
+# 2017-10-11 03:05:43.177432
++import slackmentions
+
+# 2017-10-11 03:05:58.905097
++token = os.environ['SLACKAPITOKEN']
+
+# 2017-10-11 03:06:00.491629
++token
+
+# 2017-10-11 03:06:14.633632
++client = slackclient.SlackClient(token)
+
+# 2017-10-11 03:06:43.724301
++client.api_call('user.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:06:49.924273
++client.api_call('users.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:06:56.953311
++import json
+
+# 2017-10-11 03:07:19.239466
++rick2 = client.api_call('users.info', user='U6G6R7YL')
+
+# 2017-10-11 03:07:20.862568
++rick2
+
+# 2017-10-11 03:07:28.500612
++rick2 = client.api_call('users.info', user='U6G6R7YL8')
+
+# 2017-10-11 03:07:37.862632
++print(json.dumps(rick2))
+
+# 2017-10-11 03:07:43.982747
++print(json.dumps(rick2, indent=2))
+
+# 2017-10-11 03:08:26.194912
++rick2person = SlackPerson.from_userinfo(rick2)
+
+# 2017-10-11 03:08:28.243292
++rick2person
+
+# 2017-10-11 03:11:40.225723
++text = 'hi <@U6G7R7YL8|rick2>'
+
+# 2017-10-11 03:12:13.839711
++clean = re.compile('<@[a-zA-Z0-9-._]*>')
+
+# 2017-10-11 03:12:15.897371
++clean
+
+# 2017-10-11 03:12:29.832614
++clean.sub(text, '')
+
+# 2017-10-11 03:12:39.546987
++clean.sub('', text)
+
+# 2017-10-11 03:12:50.553148
++clean = re.compile('<@[a-zA-Z0-9-._|]*>')
+
+# 2017-10-11 03:12:52.171278
++clean.sub('', text)
+
+# 2017-10-11 03:12:56.844029
++clean = re.compile('<@[a-zA-Z0-9-._|]*> ')
+
+# 2017-10-11 03:45:50.570420
++import slackmentions
+
+# 2017-10-11 03:47:06.479368
++client.api_call('im.list')
+
+# 2017-10-11 03:47:50.680716
++json.dumps(client.api_call('im.list'), indent=2)
+
+# 2017-10-11 03:47:57.345611
++print(_)
+
+# 2017-10-11 03:50:55.239283
++client.api_call('chat.postMessage',
++                channel='D6GRYRSPL',
++                text='hello in dm',
++                as_user=True,
++                )
+
+# 2017-10-11 03:52:39.766982
++_, channels = client.api_call('im.list')
+
+# 2017-10-11 03:52:43.181388
++channels
+
+# 2017-10-11 03:52:47.918450
++channels['ims']
+
+# 2017-10-11 03:53:52.724740
++channels = client.api_call('im.list')
+
+# 2017-10-11 03:53:56.829283
++channels['ims']
 # 2017-10-10 22:57:13.651028
 +from lyskel import info
 
@@ -7014,3 +7258,249 @@
 
 # 2017-10-12 18:52:26.051848
 +codecommit.get_repository(repositoryName='violin-sonata-1-ecjg')
+# 2017-10-11 23:20:55.996261
++import boto3
+
+# 2017-10-11 23:23:05.650945
++import os
+
+# 2017-10-11 23:23:19.618288
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:23:27.713687
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:24:05.192017
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_access_secret_key=secret)
+
+# 2017-10-11 23:24:16.716897
++sess = boto3.Session()
+
+# 2017-10-11 23:24:28.710538
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_access_secret_key=secret)
+
+# 2017-10-11 23:24:44.590412
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:27:36.918854
++client.list_buckets()
+
+# 2017-10-11 23:27:49.964343
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspace.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:28:02.979828
++client.list_buckets()
+
+# 2017-10-11 23:28:30.951747
++client.create_bucket('rick-test-bucket-cHf4n')
+
+# 2017-10-11 23:28:41.873245
++client.create_bucket(Bucket='rick-test-bucket-cHf4n')
+
+# 2017-10-11 23:28:47.461985
++os.environt['DOKEY']
+
+# 2017-10-11 23:28:51.828835
++os.environ['DOKEY']
+
+# 2017-10-11 23:28:58.633036
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:29:00.909990
++secret
+
+# 2017-10-11 23:29:03.717569
++keyid
+
+# 2017-10-11 23:29:16.309375
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:29:31.533267
++client.list_buckets()
+
+# 2017-10-11 23:30:01.404095
++client.list_objects(Bucket='rick-bucket-9cbefd1')
+
+# 2017-10-11 23:30:33.974205
++client.generate_presigned_url(Bucket='rick-bucket-9cbefd1', Key='adoration-piano.pdf')
+
+# 2017-10-11 23:32:49.992184
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:32:51.632576
++url
+
+# 2017-10-11 23:32:54.878772
++import requrests
+
+# 2017-10-11 23:32:58.908319
++import requests
+
+# 2017-10-11 23:33:08.295003
++data = requests.get(url)
+
+# 2017-10-11 23:33:30.517664
++with open('test.pdf', 'wb') as pdffile:
++    pdffile.write(data.content)
+
+# 2017-10-11 23:34:05.772645
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:34:08.324231
++import os
+
+# 2017-10-11 23:34:25.312404
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:34:32.871734
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:34:39.218001
++import boto3
+
+# 2017-10-11 23:34:45.442032
++client = sess.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:34:57.440751
++client = boto3.client('s3', region_name='nyc3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=secret)
+
+# 2017-10-11 23:36:12.448754
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:36:15.709692
++url
+
+# 2017-10-11 23:36:25.130097
++data = requests.get(url)
+
+# 2017-10-11 23:36:28.508025
++import requests
+
+# 2017-10-11 23:36:29.460546
++data = requests.get(url)
+
+# 2017-10-11 23:36:30.528733
++data
+
+# 2017-10-11 23:36:33.689265
++data.content
+
+# 2017-10-11 23:42:12.004713
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:42:34.495244
++from botocore.client import Config
+
+# 2017-10-11 23:42:42.589977
++sess = boto3.session.Session()
+
+# 2017-10-11 23:43:50.974316
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3v2')
++                     )
+
+# 2017-10-11 23:43:54.941726
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:44:05.390388
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:44:08.818800
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:44:10.997708
++url
+
+# 2017-10-11 23:44:26.820744
++data = requests.get(url)
+
+# 2017-10-11 23:45:11.190783
++with open('url.txt', 'w') as urlfile:
++    urlfile.write(url)
+
+# 2017-10-11 23:45:54.058481
++import boto3
+
+# 2017-10-11 23:46:01.744382
++from botocore.client import Config
+
+# 2017-10-11 23:46:11.270646
++sess = boto3.session.Session()
+
+# 2017-10-11 23:46:14.728537
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:46:25.569492
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:46:29.318565
++import os
+
+# 2017-10-11 23:46:40.488522
++keyid = os.environ['DOKEY']
+
+# 2017-10-11 23:46:50.915732
++secret = os.environ['DOSEC']
+
+# 2017-10-11 23:46:57.597994
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3/digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:47:07.729636
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:47:18.800498
++import requests
+
+# 2017-10-11 23:47:25.631709
++data = requests.get(url)
+
+# 2017-10-11 23:47:30.379185
++url
+
+# 2017-10-11 23:47:35.126694
++print(url)
+
+# 2017-10-11 23:47:53.076087
++client = sess.client('s3', region_name='nyc3',
++                     endpoint_url='https://nyc3.digitaloceanspaces.com',
++                     aws_access_key_id=keyid,
++                     aws_secret_access_key=secret,
++                     config=Config(signature_version='s3')
++                     )
+
+# 2017-10-11 23:47:57.320314
++url = client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'rick-bucket-9cbefd1', 'Key': 'adoration-piano.pdf'})
+
+# 2017-10-11 23:48:07.750309
++data = requests.get(url)
+
+# 2017-10-11 23:48:13.538675
++data.content
+
+# 2017-10-11 23:48:36.062574
++with open('test.pdf', 'wb') as pdffile:
++    pdffile.write(data.content)
+
+# 2017-10-11 23:49:36.112846
++url
+
+# 2017-10-11 23:49:39.768661
++print(url)
