@@ -7279,3 +7279,72 @@
 
 # 2017-10-11 23:49:39.768661
 +print(url)
+
+# 2017-10-12 01:27:09.064556
++import gitpython
+
+# 2017-10-12 01:27:12.801363
++import git
+
+# 2017-10-12 01:27:31.854578
++repo = git.Repo('.')
+
+# 2017-10-12 01:27:33.237933
++repo
+
+# 2017-10-12 01:27:58.633858
++repo.create_remote('origin', '/home/rick/tmp/remote-dwCl.git')
+
+# 2017-10-12 01:28:06.413465
++repo.push()
+
+# 2017-10-12 01:28:22.836122
++origin = repo.create_remote('origin', '/home/rick/tmp/remote-dwCl.git')
+
+# 2017-10-12 01:28:38.128880
++origin = repo.remotes.origin
+
+# 2017-10-12 01:28:39.727852
++origin
+
+# 2017-10-12 01:28:43.101499
++origin.push()
+
+# 2017-10-12 01:28:56.233977
++origin.push('master')
+
+# 2017-10-12 01:30:49.986072
++import boto3
+
+# 2017-10-12 01:31:40.785904
++codecommit = boto3.client('codecommit')
+
+# 2017-10-12 01:31:55.775826
++codecommit.create_repository(repositoryName='test1')
+
+# 2017-10-12 01:32:12.177158
++awsrepo = codecommit.create_repository(repositoryName='test2')
+
+# 2017-10-12 01:32:35.521859
++awsrepo['repositoryMetadata']['cloneUrlSsh']
+
+# 2017-10-12 01:32:43.709527
++import git
+
+# 2017-10-12 01:32:50.487300
++repo = git.Repo('.')
+
+# 2017-10-12 01:33:26.131972
++remote = repo.create_remote('codecommit', awsrepo['repositoryMetadata']['cloneUrlSsh'])
+
+# 2017-10-12 01:33:34.947663
++remote.push('master')
+
+# 2017-10-12 01:34:11.645744
++codecommit.delete_repository(repositoryName='test1')
+
+# 2017-10-12 01:34:16.954722
++codecommit.delete_repository(repositoryName='test2')
+
+# 2017-10-12 01:34:24.840869
++codecommit.delete_repository(repositoryName='api-test-repo')
