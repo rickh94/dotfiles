@@ -7,6 +7,7 @@ fi
 pass git pull
 pass git push
 cd $HOME
+sh .bin/aws-config
 tar -cJf /tmp/password-backup.tar.xz .password-store/*
 SUM="$(openssl md5 -binary /tmp/password-backup.tar.xz|base64)"
 aws s3api put-object --bucket ricks-password-backup --body /tmp/password-backup.tar.xz --key password-backup.tar.xz --content-md5 $SUM --server-side-encryption aws:kms --ssekms-key-id 3ef2ce0a-84ea-4bb2-844b-fb1e444ce084 --storage-class STANDARD_IA
