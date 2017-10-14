@@ -7573,3 +7573,129 @@
 
 # 2017-10-12 01:34:24.840869
 +codecommit.delete_repository(repositoryName='api-test-repo')
+
+# 2017-10-13 00:21:34.523991
++import progressbar
+
+# 2017-10-13 00:21:40.704177
++bar = progressbar.ProgressBar()
+
+# 2017-10-13 00:21:57.896972
++from time import sleep
+
+# 2017-10-13 00:22:10.114694
++for i in bar(range(0, 10)):
++    sleep(0.2)
+
+# 2017-10-13 00:25:35.843692
++from tqdm import tqdm
+
+# 2017-10-13 00:26:07.108443
++for i in tqdm(range(int(9e6))):
++    pass
+
+# 2017-10-13 19:46:42.180328
++import os
+
+# 2017-10-13 19:46:53.651470
++key = os.environ['SLACKTOKEN']
+
+# 2017-10-13 19:47:02.513452
++from slackclient import SlackClient
+
+# 2017-10-13 19:47:08.163075
++client = SlackClient(key)
+
+# 2017-10-13 19:47:38.361091
++client.api_call('users.list')
+
+# 2017-10-13 19:47:44.940042
++users = _
+
+# 2017-10-13 19:47:48.252150
++import json
+
+# 2017-10-13 19:48:07.960845
++with open('userfile.txt', 'w') as userfile:
++    json.dump(users, userfile)
+
+# 2017-10-13 19:48:25.243341
++with open('userfile.txt', 'w') as userfile:
++    json.dump(users, userfile, indent=2)
+
+# 2017-10-13 19:49:12.503467
++text = 'test posting tags <@U6G6R7YL8|rick2>'
+
+# 2017-10-13 19:49:36.310457
++client.api_call('channels.list')
+
+# 2017-10-13 19:49:41.254531
++channels = _
+
+# 2017-10-13 19:50:00.607164
++with open('channelfile.json', 'w') as chanfile:
++    json.dump(channels, chanfile, indent=2)
+
+# 2017-10-13 19:50:46.700016
++client.api_call('chat.postMessage',
++                text=text,
++                channel='C6DJD4FLP',
++                as_user=True)
+
+# 2017-10-13 20:00:47.235952
++import re
+
+# 2017-10-13 20:00:50.529094
++'This is a test'
+
+# 2017-10-13 20:00:57.405609
++searchtext = _
+
+# 2017-10-13 20:01:54.342968
++re.sub('^This', '', searchtext)
+
+# 2017-10-13 20:01:59.422282
++re.sub('^test', '', searchtext)
+
+# 2017-10-13 21:00:03.939833
++try:
++    raise Exception("hi")
++except Exception as err:
++    str(err)
+
+# 2017-10-13 21:00:10.412178
++try:
++    raise Exception("hi")
++except Exception as err:
++    print(str(err))
+
+# 2017-10-13 21:04:03.761004
++text = ['person']
+
+# 2017-10-13 21:04:10.690033
++', '.join(text)
+
+# 2017-10-13 21:35:26.999645
++text = 'this is a thing'
+
+# 2017-10-13 21:35:43.819697
++re.sub(r'thing\s?', 'REPLACES', text)
+
+# 2017-10-13 21:35:48.588316
++re.sub(r'thing\s?', 'REPLACED', text)
+
+# 2017-10-13 21:35:56.839406
++text = 'thing this is'
+
+# 2017-10-13 21:35:58.237247
++re.sub(r'thing\s?', 'REPLACED', text)
+
+# 2017-10-13 21:48:12.178417
++import yaml
+
+# 2017-10-13 21:48:29.281158
++with open('configtest.yaml', 'r') as configfile:
++    config = yaml.load(configfile)
+
+# 2017-10-13 21:48:33.861083
++config['Phrases']
