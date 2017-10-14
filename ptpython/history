@@ -7573,3 +7573,42 @@
 
 # 2017-10-12 01:34:24.840869
 +codecommit.delete_repository(repositoryName='api-test-repo')
+
+# 2017-10-13 00:54:16.412092
++import csv
+
+# 2017-10-13 00:55:05.020057
++data = []
+
+# 2017-10-13 00:55:56.590572
++with open('dra-pitchers-2017-with-teamsrecs.csv', 'r') as datafile:
++    reader = csv.DictReader(datafile)
++    for row in reader:
++        if row['Team(s)'] not in data:
++            data.append(row['Team(s)'])
+
+# 2017-10-13 00:55:57.725560
++data
+
+# 2017-10-13 00:57:45.863829
++with open('teams.txt', 'w') as teamsfile:
++    properteams = [item for item in data if ',' not in item]
++    teamsfile.writelines(properteams)
+
+# 2017-10-13 00:58:14.599316
++import csv
+
+# 2017-10-13 00:58:22.238030
++data = []
+
+# 2017-10-13 00:58:28.648310
++with open('dra-pitchers-2017-with-teamsrecs.csv', 'r') as datafile:
++    reader = csv.DictReader(datafile)
++    for row in reader:
++        if row['Team(s)'] not in data:
++            data.append(row['Team(s)'])
+
+# 2017-10-13 00:58:46.871420
++with open('teams.txt', 'w') as teamsfile:
++    properteams = '\n'.join([item for item in data if ',' not in item])
++    teamsfile.write(properteams)
