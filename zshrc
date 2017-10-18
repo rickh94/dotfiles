@@ -40,7 +40,7 @@ if [ -f $HOME/.keychaincommand ]; then
 fi
 
 # login to gcloud
-if [ -f $HOME/.gcloud ]; then
+if [ -f $HOME/.gcloud ] && [ ! -f $HOME/.config/gcloud/credentials.db ]; then
   source $HOME/.bin/gcloud-login
 fi
 
