@@ -7738,6 +7738,69 @@
 # 2017-10-13 21:48:33.861083
 +config['Phrases']
 
+# 2017-10-17 02:58:01.374926
++import boto3
+
+# 2017-10-17 02:58:08.565305
++s3client = boto3.client('s3')
+
+# 2017-10-17 02:58:14.626579
++kmsclient = boto3.client('kms')
+
+# 2017-10-17 02:58:59.625537
++message = s3client.get_object(Bucket='fmhmail-in', Key='ricksencryptedbucket/10ek4fvlo2sfac7jve7637t5m58375a6s3358qg1')
+
+# 2017-10-17 02:59:03.924197
++message
+
+# 2017-10-17 02:59:22.305403
++data = message['Body'].read()
+
+# 2017-10-17 02:59:23.628753
++data
+
+# 2017-10-17 02:59:45.974719
++mess = kmsclient.decrypt(CiphertextBlob=data)
+
+# 2017-10-17 02:59:59.348088
++mess = kmsclient.decrypt(CiphertextBlob=data.decode('utf-8'))
+
+# 2017-10-17 03:02:53.964446
++message
+
+# 2017-10-17 03:03:01.052444
++message['Metadata']
+
+# 2017-10-17 03:03:12.506482
++context = {}
+
+# 2017-10-17 03:03:49.167169
++context['aws:ses:source-account'] = message['Metadata']['x-amz-matdesc']['aws:ses:source-account']
+
+# 2017-10-17 03:03:57.175682
++message['Metadata']
+
+# 2017-10-17 03:04:12.395369
++message['Metadata']['x-amz-matdesc']
+
+# 2017-10-17 03:04:24.677772
++message['Metadata']['x-amz-matdesc']['aws:ses:source-account']
+
+# 2017-10-17 03:04:39.634674
++import json
+
+# 2017-10-17 03:04:57.285241
++json.loads(message['Metadata']['x-amz-matdesc']
++)
+
+# 2017-10-17 03:05:06.690518
++enc = _
+
+# 2017-10-17 03:05:08.299583
++enc
+
+# 2017-10-17 03:05:37.543954
++mess = kmsclient.decrypt(CiphertextBlob=data, EncryptionContext=enc)
 # 2017-10-14 12:24:20.231451
 +from slackclient import SlackClient
 
