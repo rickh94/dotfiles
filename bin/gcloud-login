@@ -1,0 +1,5 @@
+#!/bin/bash
+export PASSWORD=$(pass show gcloud-decrypt)
+sudo -E sh -c "yes '$PASSWORD' | cryptsetup open $HOME/.gcloud gcloud"
+sudo mount /dev/mapper/gcloud $HOME/.config/gcloud
+sudo chown -R $USER $HOME/.config/gcloud
