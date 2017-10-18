@@ -7801,3 +7801,177 @@
 
 # 2017-10-17 03:05:37.543954
 +mess = kmsclient.decrypt(CiphertextBlob=data, EncryptionContext=enc)
+# 2017-10-14 12:24:20.231451
++from slackclient import SlackClient
+
+# 2017-10-14 12:24:22.748583
++import json
+
+# 2017-10-14 12:24:32.545598
++import os
+
+# 2017-10-14 12:24:44.761304
++client = SlackClient(os.environ['SLACKTOKEN'])
+
+# 2017-10-14 12:24:56.806294
++userlist = client.api_call('users.list')
+
+# 2017-10-14 12:24:58.847574
++userlist
+
+# 2017-10-14 12:25:22.207670
++with open('userlist.json', 'w') as userfile:
++    json.dump(userlist, userfile, indent=2)
+
+# 2017-10-14 12:26:30.177817
++import json
+
+# 2017-10-14 12:26:47.804541
++with open('userlist.json', 'r') as userfile:
++    userdata = json.load(userfile)
+
+# 2017-10-14 12:28:05.898852
++user = [item for item in userdata['members'] if item['id'] == 'U7HRV2BLZ'][0]
+
+# 2017-10-14 12:28:07.069949
++user
+
+# 2017-10-14 12:28:23.298855
++assert user.haskey('id')
+
+# 2017-10-14 12:28:37.747367
++assert 'id' in user
+
+# 2017-10-14 12:29:00.771830
++assert 'first_name' in user['profile']
+
+# 2017-10-14 12:29:05.928414
++assert 'real_name' in user['profile']
+
+# 2017-10-14 12:29:12.268034
++import humanname
+
+# 2017-10-14 12:29:22.825183
++import pickle
+
+# 2017-10-14 12:29:44.012737
++with open('rick3.pickle', 'wb') as picklefile:
++    pickle.dum(user, picklefile)
+
+# 2017-10-14 12:29:55.521280
++with open('rick3.pickle', 'wb') as picklefile:
++    pickle.dump(user, picklefile)
+
+# 2017-10-14 12:31:47.061626
++import pickle
+
+# 2017-10-14 12:32:24.853123
++with open('rick3.pickle', 'rb') as picklefile:
++    user = pickle.load(picklefile)
+
+# 2017-10-14 12:32:25.902927
++user
+
+# 2017-10-14 12:34:41.838847
++import nameparser
+
+# 2017-10-14 12:34:53.641925
++nameparser.HumanName(user['profile']['real_name'])
+
+# 2017-10-14 14:33:23.777015
++import boto3
+
+# 2017-10-14 14:33:43.991481
++s3 = boto3.resource('s3')
+
+# 2017-10-14 14:34:18.793271
++s3.Bucket('lambda-echo-ef125ad9d35f3')
+
+# 2017-10-14 14:34:23.834504
++bucket = _
+
+# 2017-10-14 14:34:33.839431
++bucket.objects()
+
+# 2017-10-14 14:34:37.288065
++bucket.objects
+
+# 2017-10-14 14:34:49.884020
++list(bucket.objects)
+
+# 2017-10-14 14:35:00.559624
++s3 = boto3.client('s3')
+
+# 2017-10-14 14:35:12.863720
++s3.list_objects(Bucket='lambda-echo-ef125ad9d35f3')
+
+# 2017-10-14 14:35:20.752347
++objects = s3.list_objects(Bucket='lambda-echo-ef125ad9d35f3')
+
+# 2017-10-14 14:35:24.663675
++import json
+
+# 2017-10-14 14:35:34.993416
++json.dumps(objects, indent=2)
+
+# 2017-10-14 14:36:29.775089
++objects['Contents']
+
+# 2017-10-14 14:36:42.388775
++assert isinstance(objects['Contents'], list)
+
+# 2017-10-14 14:37:43.458912
++keys = dict()
+
+# 2017-10-14 14:39:04.779823
++keys = list()
+
+# 2017-10-14 14:39:45.803391
++for object_ in objects['Contents']:
++    if 'testslackecho' in object_['Key'] and object_['Key'] != 'testslackecho.zip':
++        keys.append(object['Key'])
+
+# 2017-10-14 14:39:53.465569
++for object_ in objects['Contents']:
++    if 'testslackecho' in object_['Key'] and object_['Key'] != 'testslackecho.zip':
++        keys.append(object_['Key'])
+
+# 2017-10-14 14:39:55.701276
++keys
+
+# 2017-10-14 14:42:26.571807
++for key in keys:
++    assert 0
++    new_key = 'oldfiles/' + key
++    s3.copy_object(Bucket='lambda-echo-ef125ad9d35f3', CopySource=key, Key=new_key)
++    s3.delete_object(Bucket='lambda-echo-ef125ad9d35f3', Key=key)
+
+# 2017-10-14 14:43:14.066192
++new_key0 = 'oldfiles/' + keys[0]
+
+# 2017-10-14 14:43:26.933697
++bucket = 'lambda-echo-ef125ad9d35f3'
+
+# 2017-10-14 14:43:50.678713
++s3.copy_object(Bucket=bucket, Key=new_key0, CopySource=keys[0])
+
+# 2017-10-14 14:44:09.617868
++s3.copy_object(Bucket=bucket, Key=new_key0, CopySource={'Bucket': bucket, 'Key': keys[0]})
+
+# 2017-10-14 14:44:45.264520
++s3.delete_object(Bucket=bucket, Key=keys[0])
+
+# 2017-10-14 14:45:57.729157
++del keys[0]
+
+# 2017-10-14 14:46:01.218794
++keys
+
+# 2017-10-14 14:46:18.264768
++assert 'testslackecho.043f1ec5.zip' not in keys
+
+# 2017-10-14 14:47:12.113415
++for key in keys:
++    new_key = 'oldfiles/' + key
++    s3.copy_object(Bucket=bucket, CopySource={'Bucket': bucket, 'Key': key}, Key=new_key)
++    s3.delete_object(Bucket=bucket, Key=key)

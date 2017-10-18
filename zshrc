@@ -30,13 +30,18 @@ export PAGER='less'
 export MAKEFLAGS='-j4'
 
 # Borg passphrase
-if [ -f ~/.borg_passphrase ]; then
-  source ~/.borg_passphrase
+if [ -f $HOME/.borg_passphrase ]; then
+  source $HOME/.borg_passphrase
 fi
 
 # keychain if present
-if [ -f ~/.keychaincommand ]; then
-  source ~/.keychaincommand
+if [ -f $HOME/.keychaincommand ]; then
+  source $HOME/.keychaincommand
+fi
+
+# login to gcloud
+if [ -f $HOME/.gcloud ] && [ ! -f $HOME/.config/gcloud/credentials.db ]; then
+  source $HOME/.bin/gcloud-login
 fi
 
 # Prompt
@@ -153,14 +158,11 @@ alias -g G='| grep'
 alias -g L='| less'
 
 # update pass store
-#if [[ -f ~/.passupdate ]]; then
+#if [[ -f $HOME/.passupdate ]]; then
 #  echo "Updating passwords"
-#  source ~/.passupdate
+#  source $HOME/.passupdate
 #fi
 
-source ~/.zprofile
+source $HOME/.zprofile
 
 # vim: se ft=sh:
-if [[ -d /usr/share/autoenv ]]; then
-  source /usr/share/autoenv/activate.sh
-fi
