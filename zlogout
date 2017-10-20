@@ -1,4 +1,4 @@
-if [ -f $HOME/.gcloud ]; then
+if [ -f $HOME/.gcloud ] && [ -f $Home/.config/gcloud/credentials.db ]; then
   source $HOME/.bin/gcloud-logout
 fi
 /bin/rm -f $HOME/.pypirc
