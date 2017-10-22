@@ -8470,3 +8470,672 @@
 
 # 2017-10-18 02:05:16.957714
 +dbx.files_upload(data, '/bosnia_website_photos/groupphoto.jpg')
+
+# 2017-10-20 19:58:47.425911
++import airtable
+
+# 2017-10-20 19:58:49.302126
++import os
+
+# 2017-10-20 19:58:59.703594
++key = os.environ['AIRTABLE_API_KEY']
+
+# 2017-10-20 23:13:20.286895
++import os
+
+# 2017-10-20 23:29:39.920205
++import boto3
+
+# 2017-10-20 23:29:46.976714
++s3 = boto3.client('s3')
+
+# 2017-10-21 04:17:16.515526
++import pyautogui
+
+# 2017-10-21 04:20:02.306449
++pyautogui.size()
+
+# 2017-10-21 04:21:33.374902
++for i in range(10):
++    pyautogui.moveTo(100, 100, duration=0.25)
++    pyautogui.moveTo(200, 100, duration=0.25)
++    pyautogui.moveTo(200, 200, duration=0.25)
++    pyautogui.moveTo(100, 200, duration=0.25)
+
+# 2017-10-21 04:22:57.306370
++for i in range(10):
++    pyautogui.moveRel(100, 0, duration=0.1)
++    pyautogui.moveRel(0, 100, duration=0.1)
++    pyautogui.moveRel(-100, 0, duration=0.1)
++    pyautogui.moveRel(0, -100, duration=0.1)
+
+# 2017-10-21 04:24:09.826374
++pyautogui.position()
+
+# 2017-10-21 04:24:29.435682
++from time import sleep
+
+# 2017-10-21 04:28:08.382521
++while True:
++    x, y = pyautogui.position()
++    pos_str = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
++    print(pos_str, end='')
++    print('\b' * len(pos_str), end='', flush=True)
+
+# 2017-10-21 19:21:32.858047
++import pyautogui
+
+# 2017-10-21 19:21:38.471651
++pyautogui.click(10, 5)
+
+# 2017-10-21 19:22:13.955428
++import time
+
+# 2017-10-21 20:05:28.382662
++from s3_s3fs import s3FS
+
+# 2017-10-21 20:07:13.257137
++from fs_s3fs import s3FS
+
+# 2017-10-21 20:07:18.036794
++from fs_s3fs import S3FS
+
+# 2017-10-21 20:07:25.842620
++from fs import open_fs
+
+# 2017-10-21 20:07:28.990359
++import fs
+
+# 2017-10-21 20:07:56.107893
++s3fs = S3FS('ricksencryptedbucket')
+
+# 2017-10-21 20:08:19.272992
++s3fs.getinfo()
+
+# 2017-10-21 20:09:23.879270
++s3fs.tree()
+
+# 2017-10-21 20:09:58.759089
++s3fs.listdir()
+
+# 2017-10-21 20:10:02.984123
++s3fs.listdir('/')
+
+# 2017-10-21 20:10:09.947201
++s3fs.listdir('/atrestoretest')
+
+# 2017-10-21 20:11:03.070579
++with s3fs.open('testfile1.txt') as testfile1:
++    testfile1.write('this is a test of pyfilesystem and s3fs')
+
+# 2017-10-21 20:11:32.901562
++with s3fs.open('testfile1.txt', 'wb') as testfile1:
++    testfile1.write('this is a test of pyfilesystem and s3fs')
+
+# 2017-10-21 20:11:42.098184
++with s3fs.open('testfile1.txt', 'wb') as testfile1:
++    testfile1.write(b'this is a test of pyfilesystem and s3fs')
+
+# 2017-10-21 20:15:47.126988
++tmpfs = fs.tempfs.TempFS()
+
+# 2017-10-21 20:16:21.207642
++import fs.tempfs
+
+# 2017-10-21 20:19:07.330634
++tmp = fs.tempfs.TempFS()
+
+# 2017-10-21 20:19:44.369982
++tarfile = tmp.open('test.tar')
+
+# 2017-10-21 20:20:35.699386
++tarfile = tmp.open('test.tar', 'w')
+
+# 2017-10-21 20:20:57.270187
++tarfs = fs.open_fs(tarfile)
+
+# 2017-10-21 20:22:39.617471
++s3fs.listdir('garbagefiles')
+
+# 2017-10-21 20:24:32.155857
++for f in s3fs.listdir('garbagefiles'):
++    if '.txt' in f:
++        with open(f, 'rb') as filedata:
++            data = filedata.read()
++        with tmp.open(f, 'wb') as outfile:
++            outfile.write(data)
+
+# 2017-10-21 20:25:01.575552
++for f in s3fs.listdir('garbagefiles'):
++    if '.txt' in f:
++        with s3fs.open(f, 'rb') as filedata:
++            data = filedata.read()
++        with tmp.open(f, 'wb') as outfile:
++            outfile.write(data)
+
+# 2017-10-21 20:25:22.670904
++for f in s3fs.listdir('garbagefiles'):
++    if '.txt' in f:
++        with s3fs.open('garbagefiles/' + f, 'rb') as filedata:
++            data = filedata.read()
++        with tmp.open(f, 'wb') as outfile:
++            outfile.write(data)
+
+# 2017-10-21 20:25:36.767333
++for f in s3fs.listdir('garbagefiles'):
++    if '.txt' in f:
++        with s3fs.open('/garbagefiles/' + f, 'rb') as filedata:
++            data = filedata.read()
++        with tmp.open(f, 'wb') as outfile:
++            outfile.write(data)
+
+# 2017-10-21 20:26:50.016997
++with s3fs.open('garbagefiles/file1.txt', 'rb') as thing:
++    print(thing.read())
+
+# 2017-10-21 20:27:00.422465
++s3fs.listdir('/')
+
+# 2017-10-21 20:27:11.589535
++s3fs.listdir('/garbagefiles')
+
+# 2017-10-21 20:27:31.153619
++thing = s3fs.open('/garbagefiles/file1.txt')
+
+# 2017-10-21 20:28:45.031423
++thing = s3fs.open('testfile1.txt')
+
+# 2017-10-21 20:28:46.524919
++thing
+
+# 2017-10-21 20:28:48.954248
++thing.read()
+
+# 2017-10-21 20:29:02.366572
++from pathlib import Path
+
+# 2017-10-21 20:29:20.446103
++thing = s3fs.open(Path('garbagefiles', 'file1.txt'))
+
+# 2017-10-21 20:29:35.592282
++thing = s3fs.open('garbagefiles', 'file1.txt')
+
+# 2017-10-21 20:29:44.138016
++thing = s3fs.open('garbagefiles', 'file1.txt', 'rb')
+
+# 2017-10-21 20:29:52.812265
++thing = s3fs.openbin('garbagefiles', 'file1.txt')
+
+# 2017-10-21 20:31:12.504444
++thing = s3fs.open(u'garbagefiles/file1.txt' 'rb')
+
+# 2017-10-21 20:31:17.528825
++thing = s3fs.open(u'garbagefiles/file1.txt', 'rb')
+
+# 2017-10-21 20:31:23.243233
++thing = s3fs.open(u'/garbagefiles/file1.txt', 'rb')
+
+# 2017-10-21 20:31:37.124816
++thing = s3fs.open(u'garbagefiles/file10', 'rb')
+
+# 2017-10-21 20:33:09.632570
++thing = s3fs.open(u'garbagefiles/file1.txt', 'rb')
+
+# 2017-10-21 20:33:22.292556
++thing = s3fs.open('garbagefiles')
+
+# 2017-10-21 20:33:28.930265
++thing = s3fs.open('/garbagefiles')
+
+# 2017-10-21 20:33:37.315493
++s3fs.isdir('garbagefiles')
+
+# 2017-10-21 20:33:52.269456
++s3fs.listdir('garbagefiles')
+
+# 2017-10-21 20:34:54.687628
++files = s3fs.opendir('garbagefiles')
+
+# 2017-10-21 20:35:28.773919
++s3fs.scandir('garbagefiles')
+
+# 2017-10-21 20:35:35.997782
++list(_)
+
+# 2017-10-21 20:35:42.902773
++s3fs
+
+# 2017-10-21 20:35:47.201650
++s3fs.listdir()
+
+# 2017-10-21 20:35:52.726744
++s3fs.listdir('garbagefiles')
+
+# 2017-10-21 20:37:33.078192
++s3list = S3FS('ricksencryptedbucket')
+
+# 2017-10-21 20:37:58.808039
++s3walk = S3FS('ricksencryptedbucket', delimiter=None)
+
+# 2017-10-21 20:38:10.270151
++s3walk.open('garbagefiles/file1.txt')
+
+# 2017-10-21 20:38:40.372313
++s3walk = S3FS('ricksencryptedbucket', delimiter='/')
+
+# 2017-10-21 20:38:43.056735
++s3walk.open('garbagefiles/file1.txt')
+
+# 2017-10-21 20:38:47.724288
++s3walk = S3FS('ricksencryptedbucket', delimiter='')
+
+# 2017-10-21 20:38:50.290509
++s3walk.open('garbagefiles/file1.txt')
+
+# 2017-10-21 20:39:00.064904
++s3walk = S3FS('ricksencryptedbucket', delimiter='\\')
+
+# 2017-10-21 20:39:02.178448
++s3walk.open('garbagefiles/file1.txt')
+
+# 2017-10-21 20:39:47.710758
++from fs import s3fs
+
+# 2017-10-21 20:40:19.062290
++s3fs2 = open_fs('s3://ricksencryptedbucket')
+
+# 2017-10-21 20:40:28.508091
++s3fs2.open('garbagefiles/file1.txt')
+
+# 2017-10-21 20:40:51.837708
++s3fs2.open('garbagefiles/file1.txt', strict=False)
+
+# 2017-10-21 20:40:58.772401
++s3fs2 = open_fs('s3://ricksencryptedbucket', strict=False)
+
+# 2017-10-21 20:41:09.147475
++s3walk = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-21 20:41:23.888157
++s3walk.open('garbagefiles/file1.txt', 'rb')
+
+# 2017-10-21 20:41:29.080184
++thing = _
+
+# 2017-10-21 20:41:32.969496
++thing.read()
+
+# 2017-10-21 20:42:01.694935
++s3fs = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-21 20:43:13.722660
++for f in s3fs.listdir('garbagefiles'):
++    if '.txt' in f:
++        with s3fs.open('garbagefiles/' + f, 'rb') as filedata:
++            data = filedata.read()
++        with tmp.open(f, 'wb') as outfile:
++            outfile.write(data)
+
+# 2017-10-21 20:43:24.314673
++tmp.listdir('/')
+
+# 2017-10-21 20:43:43.561863
++tmp.remove('test.tar')
+
+# 2017-10-21 20:43:59.301716
++tarfile = open_fs('files.tar')
+
+# 2017-10-21 20:44:06.304354
++tarfile = open_fs('tar://files.tar')
+
+# 2017-10-21 20:44:10.897662
++import fs.tarfs
+
+# 2017-10-21 20:44:21.213462
++tarfile = fs.tarfs('files.tar')
+
+# 2017-10-21 20:44:28.365764
++tarfile = fs.tarfs.TarFS('files.tar')
+
+# 2017-10-21 20:44:59.470610
++tarfile = fs.tarfs.TarFS('files.tar', write=True)
+
+# 2017-10-21 20:46:41.162149
++fs.copy.copy_fs(tmp, tarfile)
+
+# 2017-10-21 20:46:50.277747
++import os
+
+# 2017-10-21 20:46:55.530495
++os.listdir('.')
+
+# 2017-10-21 20:48:44.592791
++tarfile.close()
+
+# 2017-10-21 20:48:48.949231
++os.listdir('.')
+
+# 2017-10-21 20:52:04.010567
++with s3fs.open('garbagefiles/testtar.tar', 'wb') as stuff:
++    with open('files.tar', 'rb') as tarfile:
++        stuff.write(tarfile.read())
+
+# 2017-10-21 20:53:58.972492
++tmp.close()
+
+# 2017-10-21 20:54:11.396801
++s3fs.close()
+
+# 2017-10-21 21:50:14.084366
++from airtable import Airtable
+
+# 2017-10-21 21:50:34.077340
++import os
+
+# 2017-10-21 21:50:41.257362
++base = os.environ['ATDB']
+
+# 2017-10-21 21:50:50.052886
++table = os.environ['TABLE']
+
+# 2017-10-21 21:51:07.677108
++at = Airtable(base_key=base, table_name=table)
+
+# 2017-10-21 21:53:12.689252
++import json
+
+# 2017-10-21 21:53:33.926009
++with open('lots_of_fields.json', 'rb') as jsonfile:
++    data = json.load(jsonfile)
+
+# 2017-10-21 21:53:38.024918
++data[0]
+
+# 2017-10-21 21:53:55.665167
++data[1]['id']
+
+# 2017-10-21 21:54:02.992015
++os.listdir()
+
+# 2017-10-21 21:54:08.456091
++import pickle
+
+# 2017-10-21 21:54:27.644257
++with open('lots_of_fields_raw.pickle', 'rb') as picklefile:
++    data = pickle.load(picklefile)
+
+# 2017-10-21 21:54:30.039411
++data[0]
+
+# 2017-10-21 21:54:51.318772
++data[0]['id']
+
+# 2017-10-21 21:54:56.328796
++counter = 0
+
+# 2017-10-21 21:55:41.747133
++from fs_s3fs import S3FS
+
+# 2017-10-21 21:56:00.667630
++newfiles = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-21 21:56:35.494050
++path = 'garbagefiles/file{}.txt'
+
+# 2017-10-21 21:56:39.701220
++path.format(1)
+
+# 2017-10-21 21:58:54.278875
++for rec in data:
++    counter += 1
++    url = newfiles.geturl(path.format(counter))
++    fields = {'Attachments': [{'url': url}]}
++    at.update(rec['id'], fields)
+
+# 2017-10-21 22:03:37.444543
++import pickle
+
+# 2017-10-21 22:03:59.875247
++with open('tests/lots_of_fields_raw.pickle', 'rb') as picklefile:
++    data = pickle.load(picklefile)
+
+# 2017-10-21 22:04:02.176911
++data[0]
+
+# 2017-10-21 22:04:35.949453
++data[0]['fields']['Attachments'][0]['url']
+
+# 2017-10-21 22:04:46.872582
++copyright
+
+# 2017-10-21 22:06:03.191778
++for rec in data:
++    rec['fields']['Attachments'][0]['url'] = 'https://dl.airtable.com/nothere'
+
+# 2017-10-21 22:06:06.466844
++data[0]
+
+# 2017-10-21 22:06:12.342365
++data[5]
+
+# 2017-10-21 22:06:39.430074
++with open('tests/lots_of_fields_raw.pickle', 'wb') as picklefile:
++    pickle.dump(data, picklefile)
+
+# 2017-10-21 22:07:09.676732
++with open('tests/lots_of_fields_raw.pickle', 'rb') as picklefile:
++    stuff = pickle.load(picklefile)
++    print(stuff[0])
+
+# 2017-10-21 22:10:01.449850
++import pickle
+
+# 2017-10-21 22:10:17.394688
++with open('tests/pyhashes.pickle', 'rb') as picklefile:
++    data = pickle.load(picklefile)
+
+# 2017-10-21 22:10:19.363869
++data
+
+# 2017-10-21 22:10:26.261480
++data[10]
+
+# 2017-10-21 22:11:36.134441
++import pickle
+
+# 2017-10-21 22:11:43.488829
++from fs_s3fs import S3FS
+
+# 2017-10-21 22:11:47.141267
++import json
+
+# 2017-10-21 22:11:50.578878
++import hashlib
+
+# 2017-10-21 22:12:22.702596
++with open('tests/lots_of_fields_raw.pickle', 'rb') as picklefile:
++    fielddata = pickle.load(picklefile)
+
+# 2017-10-21 22:12:42.372718
++with open('tests/lots_of_fields.json', 'rb') as jsonfile:
++    jsondata = json.load(jsonfile)
+
+# 2017-10-21 22:12:46.167304
++jsondata[0]
+
+# 2017-10-21 22:13:16.014035
++s3fs = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-21 22:13:55.153180
++with s3fs.open('garbagefiles/file1.txt', 'rb') as thefile:
++    data = thefile.read()
+
+# 2017-10-21 22:14:23.480430
++file1hash = hashlib.md5(data)
+
+# 2017-10-21 22:14:28.721565
++file1hash.hexdigest()
+
+# 2017-10-21 22:15:43.679475
++fielddata[0]
+
+# 2017-10-21 22:16:04.500061
++fielddata[0]['fields']['Attachments']['filename']
+
+# 2017-10-21 22:16:09.798758
++fielddata[0]['fields']['Attachments'][0]['filename']
+
+# 2017-10-21 22:17:26.895158
++hashes = []
+
+# 2017-10-21 22:18:41.213939
++for item in fielddata:
++    filename = item['fields']['Attachments'][0]['filename']
++    with s3fs.open('garbagefiles/' + filename, 'rb') as filecontent:
++        filehash = hashlib.md5(filecontent.read()).hexdigest()
++    hashes.append({'filename': filename, 'hash': filehash})
+
+# 2017-10-21 22:18:43.854105
++hashes
+
+# 2017-10-21 22:19:13.397510
++with open('hashes.json', 'rb') as hashfile:
++    json.dump(data, hashfile, indent=2)
+
+# 2017-10-21 22:19:22.045625
++with open('hashes.json', 'wb') as hashfile:
++    json.dump(data, hashfile, indent=2)
+
+# 2017-10-21 22:19:30.141009
++with open('hashes.json', 'w') as hashfile:
++    json.dump(data, hashfile, indent=2)
+
+# 2017-10-21 22:19:49.874889
++with open('hashes.json', 'w') as hashfile:
++    json.dump(hashfile, hashes, indent=2)
+
+# 2017-10-21 22:20:00.780854
++with open('hashes.json', 'w') as hashfile:
++    json.dump(hashes, hashfile, indent=2)
+
+# 2017-10-21 22:21:51.578671
++import json
+
+# 2017-10-21 22:22:05.342435
++from fs_s3fs import S3FS
+
+# 2017-10-21 22:22:19.807807
++s3fs = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-21 22:24:01.356180
++with open('tests/lots_of_fields.json', 'r') as jsonfile:
++    records = json.load(jsonfile)
+
+# 2017-10-21 22:24:04.754924
++records[0]
+
+# 2017-10-21 22:24:29.324592
++records[0]['Attachments'][0]['filename']
+
+# 2017-10-21 22:24:40.585375
++filedata = []
+
+# 2017-10-21 22:24:49.625145
++filedata = {}
+
+# 2017-10-21 22:26:18.880789
++for item in records:
++    filename = item['Attachments'][0]['filename']
++    with s3fs.open('garbagefiles/' + filename, 'rb') as testfile:
++        data = testfile.read()
++    filedata[filename] = data
+
+# 2017-10-21 22:26:24.989639
++fieldata[0]
+
+# 2017-10-21 22:26:28.336095
++filedata[0]
+
+# 2017-10-21 22:26:42.965477
++filedata['file1.txt']
+
+# 2017-10-21 22:26:44.812191
++filedata
+
+# 2017-10-21 22:27:17.843662
++with open('tests/filedata.json', 'wb') as filefile:
++    json.dump(filedata, filefile, indent=2)
+
+# 2017-10-21 22:27:36.732019
++with open('tests/filedata.json', 'w') as filefile:
++    json.dump(filedata, filefile, indent=2)
+
+# 2017-10-21 22:28:05.947909
++for key, value in filedata:
++    value = value.decode('utf-8')
+
+# 2017-10-21 22:28:13.031792
++for key, value in filedata.items():
++    value = value.decode('utf-8')
+
+# 2017-10-21 22:28:16.334329
++filedata
+
+# 2017-10-21 22:28:28.579798
++for key, value in filedata.items():
++    filedata[key] = value.decode('utf-8')
+
+# 2017-10-21 22:28:31.062551
++filedata
+
+# 2017-10-21 22:28:36.839123
++with open('tests/filedata.json', 'w') as filefile:
++    json.dump(filedata, filefile, indent=2)
+
+# 2017-10-21 22:30:14.147645
++import pickle
+
+# 2017-10-21 22:30:39.532122
++with open('tests/lots_of_fields_raw.pickle', 'rb') as picklefile:
++    rawdata = pickle.load(picklefile)
+
+# 2017-10-21 22:30:41.370947
++rawdata
+
+# 2017-10-21 22:31:20.554440
++with open('tests/lots_of_fields_raw.json', 'wb') as jsonfile:
++    json.dump(rawdata, jsonfile, indent=2)
+
+# 2017-10-21 22:31:25.947742
++with open('tests/lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(rawdata, jsonfile, indent=2)
+
+# 2017-10-21 22:33:19.849505
++with open('tests/lots_of_fields.json', 'r') as jsonfile:
++    lotsdata = json.load(jsonfile)
+
+# 2017-10-21 22:33:21.497608
++lotsdata
+
+# 2017-10-21 22:34:20.413333
++import everything
+
+# 2017-10-21 22:35:01.969848
++lotsdata
+
+# 2017-10-21 22:36:30.464536
++with open('tests/lots_of_fields.json', 'w') as jsonfile:
++    json.dump(lotsdata, jsonfile, indent=2)
+
+# 2017-10-21 22:37:06.138551
++with open('tests/lots_of_fields_data.pickle', 'rb') as picklefile:
++    data = pickle.load(picklefile)
+
+# 2017-10-21 22:37:07.832939
++data
+
+# 2017-10-21 22:37:16.078766
++assert data == lotsdata
+
+# 2017-10-21 22:37:24.441211
++assert data[5] == lotsdata[5]

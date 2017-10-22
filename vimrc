@@ -44,6 +44,7 @@ else
   set background=dark
 endif
 
+set cm=blowfish2
 set backup		" keep a backup file (restore to previous version)
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
