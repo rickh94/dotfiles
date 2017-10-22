@@ -39,10 +39,6 @@ if [ -f $HOME/.keychaincommand ]; then
   source $HOME/.keychaincommand
 fi
 
-# login to gcloud
-if [ -f $HOME/.gcloud ] && [ ! -f $HOME/.config/gcloud/credentials.db ]; then
-  source $HOME/.bin/gcloud-login
-fi
 
 # Prompt
 #export PROMPT='%F{red}%n%f@%F{cyan}%m%f %F{yellow}$(collapsed_path -l)%f

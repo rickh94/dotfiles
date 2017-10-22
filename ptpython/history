@@ -8052,3 +8052,497 @@
 +    if re.match(r'.*-\d+x\d+.*', item['Key']):
 +        copy_source = {'Bucket': 'servanttrips-org-media', 'Key': item['Key']}
 +        s3.copy(copy_source, 'servanttrips-org-media', copy_source['Key'], ExtraArgs=extra_args)
+# 2017-10-17 23:08:16.291589
++import os
+
+# 2017-10-17 23:08:19.651631
++import dropbox
+
+# 2017-10-17 23:08:40.674209
++EXIT()
+
+# 2017-10-17 23:09:08.481898
++import os
+
+# 2017-10-17 23:09:09.024638
++import dropbox
+
+# 2017-10-17 23:09:20.893920
++token = os.environ['DROPBOX_TOKEN']
+
+# 2017-10-17 23:09:22.170231
++token
+
+# 2017-10-17 23:09:34.673725
++dbx = dropbox.Dropbox(token)
+
+# 2017-10-17 23:09:40.698173
++dbx.users_get_current_account()
+
+# 2017-10-17 23:10:02.151656
++for entry in dbs.files_list_folder('').entries:
++    print(entry.name)
+
+# 2017-10-17 23:10:10.055947
++for entry in dbx.files_list_folder('').entries:
++    print(entry.name)
+
+# 2017-10-17 23:12:05.089039
++from pathlib import Path
+
+# 2017-10-17 23:12:20.885123
++randomfiles = Path('/tmp/randomfiles')
+
+# 2017-10-17 23:12:25.163414
++randomfiles.list()
+
+# 2017-10-17 23:12:32.686392
++randomfiles.lstat()
+
+# 2017-10-17 23:13:08.282270
++randomfiles.is_dir()
+
+# 2017-10-17 23:14:46.362936
++for filename in os.listdir(randomfiles):
++    with open(Path(randomfiles, filename), 'r') as datafile:
++        data = datafile.read()
++    path = '/{}'.format(filename)
++    dbx.files_upload(data, path)
+
+# 2017-10-17 23:14:59.155550
++for filename in os.listdir(randomfiles):
++    with open(Path(randomfiles, filename), 'r') as datafile:
++        data = datafile.read()
++    path = '/{}'.format(filename)
++    dbx.files_upload(bytes(data), path)
+
+# 2017-10-17 23:16:13.594991
++for filename in os.listdir(randomfiles):
++    with open(Path(randomfiles, filename), 'r') as datafile:
++        data = datafile.read()
++    path = '/{}'.format(filename)
++    dbx.files_upload(data.encode('utf-8'), path)
+
+# 2017-10-17 23:16:49.117300
++for filename in dbx.files_list_folder(''):
++    print(filename)
+
+# 2017-10-17 23:17:03.387659
++for filename in dbx.files_list_folder('').entries:
++    print(filename.entry)
+
+# 2017-10-17 23:17:17.164446
++for filename in dbx.files_list_folder('').entries:
++    print(filename.name)
+
+# 2017-10-17 23:18:25.523271
++md, res = dbs.files_download('/file1.txt')
+
+# 2017-10-17 23:18:30.334100
++md, res = dbx.files_download('/file1.txt')
+
+# 2017-10-17 23:18:32.289943
++md
+
+# 2017-10-17 23:18:34.682940
++res
+
+# 2017-10-17 23:18:37.527370
++res.content
+
+# 2017-10-17 23:18:46.136026
++body = res.content
+
+# 2017-10-17 23:18:48.819943
++import boto3
+
+# 2017-10-17 23:18:57.498675
++s3client = boto3.client('s3')
+
+# 2017-10-17 23:20:16.543322
++s3client.put_object(Bucket='ricksencryptedbucket', Key='garbagefiles/dropboxtest/file1.txt', Body=body)
+
+# 2017-10-17 23:22:33.319300
++seenfiles = []
+
+# 2017-10-17 23:28:49.409855
++import boto3
+
+# 2017-10-17 23:28:56.415512
++s3client = boto3.client('s3')
+
+# 2017-10-17 23:31:47.450763
++url = s3client.generate_presigned_url(Bucket='ricksencryptedbucket', Key='garbagefiles/bosnia01.jpg')
+
+# 2017-10-17 23:32:52.861428
++url = s3client.generate_presigned_url(ClientMethod='get_object', Params={'Bucket': 'ricksencryptedbucket', 'Key': 'garbagefiles/bosnia01.jpg'})
+
+# 2017-10-17 23:32:54.491295
++url
+
+# 2017-10-17 23:37:50.387129
++import dropbox
+
+# 2017-10-17 23:38:00.500436
++import os
+
+# 2017-10-17 23:38:13.691099
++dbx = dropbox.Dropbox(os.environ['DROPBOX_TOKEN'])
+
+# 2017-10-17 23:38:23.210823
++dbx.files_list_folder('')
+
+# 2017-10-17 23:38:38.592091
++files = _
+
+# 2017-10-17 23:38:41.261715
++files[0]
+
+# 2017-10-17 23:38:56.845894
++list(files)[0]
+
+# 2017-10-17 23:39:07.029782
++files.entries[0]
+
+# 2017-10-17 23:39:27.309295
++files.entries[0].path_display
+
+# 2017-10-17 23:45:26.428303
++s3client.get_object(Bucket='ricksencryptedbucket', Key='garbagefiles/dropboxtest/file1.txt')
+
+# 2017-10-17 23:45:33.171624
++file1 = _
+
+# 2017-10-17 23:45:35.462103
++file1[0]
+
+# 2017-10-17 23:45:37.647241
++file1
+
+# 2017-10-17 23:45:50.964932
++file1['Body'].read()
+
+# 2017-10-17 23:46:20.718943
++data = [1, 2, 3, 4]
+
+# 2017-10-17 23:46:39.590191
++import json
+
+# 2017-10-17 23:46:51.316735
++json.dumps(data).encode('utf-8')
+
+# 2017-10-17 23:47:27.431034
++s3client.put_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json', Body=_)
+
+# 2017-10-17 23:47:53.045646
++res = s3client.put_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json')
+
+# 2017-10-17 23:48:05.380196
++data_s = res['Body'].read()
+
+# 2017-10-17 23:48:08.839941
++res
+
+# 2017-10-17 23:48:19.915627
++res = s3client.get_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json')
+
+# 2017-10-17 23:48:24.390210
++res['Body'].read()
+
+# 2017-10-17 23:48:35.774129
++data_up_s = json.dumps(data).encode('utf-8')
+
+# 2017-10-17 23:48:44.388516
++res = s3client.put_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json', Body=data_up_s)
+
+# 2017-10-17 23:48:51.107737
++res = s3client.get_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json')
+
+# 2017-10-17 23:49:00.462372
++data_down_s = res['Body'].read()
+
+# 2017-10-17 23:49:03.869965
++data_down_s
+
+# 2017-10-17 23:49:20.380077
++data_down = json.loads(data_down_s.decode('utf-8'))
+
+# 2017-10-17 23:49:22.422855
++data_down
+
+# 2017-10-17 23:49:41.369282
++data_down.extend([5, 6, 7, 8])
+
+# 2017-10-17 23:49:43.420768
++data_down
+
+# 2017-10-17 23:50:04.150667
++res = s3client.put_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json', Body=json.dumps(data_down).encode('utf-8'))
+
+# 2017-10-17 23:50:11.315956
++res = s3client.get_object(Bucket='ricksencryptedbucket', Key='garbagefiles/testdatafile.json')
+
+# 2017-10-17 23:50:25.735492
++data_down = json.loads(res['Body'].read().decode('utf-8'))
+
+# 2017-10-17 23:50:27.732177
++data_down
+
+# 2017-10-17 23:55:47.046410
++md, res = dbx.files_download('/file1.txt')
+
+# 2017-10-17 23:55:51.752430
++md.name
+
+# 2017-10-18 00:05:36.288946
++import boto3
+
+# 2017-10-18 00:05:41.745075
++ses = boto3.client('ses')
+
+# 2017-10-18 00:09:47.360069
++ses.send_email(Source='rick@fmhmail.online',
++    Destination={
++        'ToAddresses': 'fredericmhenry@gmail.com'
++        },
++    Message={
++        'Subject': {
++       'Data': 'Test Ses sending from boto3'
++       },
++       'Body': {
++       'Text': {
++        'Data': 'This is a test of sending email using simple email service'
++        }}})
+
+# 2017-10-18 00:10:10.282056
++ses.send_email(Source='rick@fmhmail.online',
++    Destination={
++        'ToAddresses': ['fredericmhenry@gmail.com']
++        },
++    Message={
++        'Subject': {
++       'Data': 'Test Ses sending from boto3'
++       },
++       'Body': {
++       'Text': {
++        'Data': 'This is a test of sending email using simple email service'
++        }}})
+
+# 2017-10-18 00:14:47.497176
++import yaml
+
+# 2017-10-18 00:15:05.490460
++data = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt']
+
+# 2017-10-18 00:15:11.323310
++yaml.dump(data)
+
+# 2017-10-18 00:15:28.732654
++yaml.compose(data)
+
+# 2017-10-18 00:15:43.096846
++yaml.dump_all(data)
+
+# 2017-10-18 00:15:51.912583
++print(yaml.dump_all(data))
+
+# 2017-10-18 00:15:58.804139
++print(yaml.dump(data))
+
+# 2017-10-18 00:16:12.896677
++yaml.dump({'newfiles': data})
+
+# 2017-10-18 00:16:35.450750
++yaml.dump_all({'newfiles': data})
+
+# 2017-10-18 00:16:40.279303
++data
+
+# 2017-10-18 00:22:16.730074
++from ruamel.yaml import YAML
+
+# 2017-10-18 00:22:22.118233
++yaml = YAML()
+
+# 2017-10-18 00:22:34.221261
++data = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt']
+
+# 2017-10-18 00:22:39.910256
++yaml.dump(data)
+
+# 2017-10-18 00:22:47.682370
++yaml.default_flow_style = False
+
+# 2017-10-18 00:22:52.618120
++yaml.dump(data, s)
+
+# 2017-10-18 00:23:01.234761
++yaml.dumps(data)
+
+# 2017-10-18 00:23:15.209823
++yaml.dump(data, sys.stdout)
+
+# 2017-10-18 00:23:51.457209
++yaml.dump_all(data)
+
+# 2017-10-18 00:23:57.680784
++yaml.dump(data, var)
+
+# 2017-10-18 00:24:02.606514
++var = ''
+
+# 2017-10-18 00:24:04.388952
++yaml.dump(data, var)
+
+# 2017-10-18 00:24:57.112965
++import tempfile
+
+# 2017-10-18 00:25:38.383551
++with tempfile.TemporaryFile() as tmp:
++    yaml.dump(data, tmp)
++    tmp.seek(0)
++    data_s = tmp.read()
+
+# 2017-10-18 00:25:39.787802
++data_s
+
+# 2017-10-18 00:27:24.742115
++import boto3
+
+# 2017-10-18 00:27:30.359473
++ses = boto3.client('ses')
+
+# 2017-10-18 00:27:51.257083
++ses.send_email(Source='rick@fmhmail.online',
++    Destination={
++        'ToAddresses': ['fredericmhenry@gmail.com']
++        },
++    Message={
++        'Subject': {
++       'Data': 'Test Ses sending from boto3'
++       },
++       'Body': {
++       'Text': {
++        'Data': b'This is a test of sending bytes using simple email service'
++        }}})
+
+# 2017-10-18 00:28:05.829135
++ses.send_email(Source='rick@fmhmail.online',
++    Destination={
++        'ToAddresses': ['fredericmhenry@gmail.com']
++        },
++    Message={
++        'Subject': {
++       'Data': 'Test Ses sending from boto3'
++       },
++       'Body': {
++       'Text': {
++        'Data': b'This is a test of sending bytes using simple email service',
++        'Charset': 'utf-8'
++        }}})
+
+# 2017-10-18 00:28:57.162617
++s3client.get_object(Bucket='ricksencryptedbucket', Key='notreallythere')
+
+# 2017-10-18 00:29:05.359579
++s3client = boto3.client('s3')
+
+# 2017-10-18 00:29:06.446193
++s3client.get_object(Bucket='ricksencryptedbucket', Key='notreallythere')
+
+# 2017-10-18 01:05:15.974052
++original = []
+
+# 2017-10-18 01:05:23.525115
++original.extend(['hi'])
+
+# 2017-10-18 01:05:25.798435
++original
+
+# 2017-10-18 01:06:00.813125
++orignal + ['hithere']
+
+# 2017-10-18 01:06:03.787632
++original
+
+# 2017-10-18 01:06:08.037095
++original + ['hithere']
+
+# 2017-10-18 01:41:47.212687
++import dropbox
+
+# 2017-10-18 01:41:54.686926
++import os
+
+# 2017-10-18 01:42:14.772507
++dbx = dropbox.Dropbox(os.environ['DROPBOX_TOKEN'])
+
+# 2017-10-18 01:42:29.597377
++dbx.files_list_folder('bosnia_website_photos')
+
+# 2017-10-18 01:42:35.853198
++dbx.files_list_folder('/bosnia_website_photos')
+
+# 2017-10-18 01:42:46.243231
++stuff = _
+
+# 2017-10-18 01:42:51.321437
++stuff.entries[0]
+
+# 2017-10-18 01:42:57.645350
++stuff.entries
+
+# 2017-10-18 01:44:00.457979
++import os
+
+# 2017-10-18 01:44:03.752118
++import dropbox
+
+# 2017-10-18 01:44:07.842163
++dbx = dropbox.Dropbox(os.environ['DROPBOX_TOKEN'])
+
+# 2017-10-18 01:45:03.562733
++entries = dbx.files_list_folder('/bosnia_website_photos')
+
+# 2017-10-18 01:45:15.413617
++entres.entries[0]
+
+# 2017-10-18 01:45:18.773898
++entries.entries[0]
+
+# 2017-10-18 01:45:25.207090
++entries.entries[0].path_display
+
+# 2017-10-18 01:45:28.302300
++path = _
+
+# 2017-10-18 01:45:52.298874
++md, res = dbx.files_download(path)
+
+# 2017-10-18 01:45:53.325681
++res
+
+# 2017-10-18 01:45:57.716614
++res.content
+
+# 2017-10-18 01:46:01.407391
++md
+
+# 2017-10-18 02:02:21.873751
++import dropbox
+
+# 2017-10-18 02:02:28.961247
++import os
+
+# 2017-10-18 02:02:34.683236
++dbx = dropbox.Dropbox(os.environ['DROPBOX_TOKEN'])
+
+# 2017-10-18 02:03:23.905652
++with open('/home/rick/Pictures/bosniawebsite/Bosnia01.jpg', 'rb') as photo:
++    data = photo.read()
+
+# 2017-10-18 02:04:01.912562
++dbx.files_upload(data=data, path='/bosnia_website_photos/groupphoto.jpg')
+
+# 2017-10-18 02:05:16.957714
++dbx.files_upload(data, '/bosnia_website_photos/groupphoto.jpg')
