@@ -7976,6 +7976,82 @@
 +    s3.copy_object(Bucket=bucket, CopySource={'Bucket': bucket, 'Key': key}, Key=new_key)
 +    s3.delete_object(Bucket=bucket, Key=key)
 
+# 2017-10-19 02:24:48.790399
++import re
+
+# 2017-10-19 02:25:05.652302
++re.sub(r'[- ]', '_', 'this is a test')
+
+# 2017-10-20 15:45:20.923958
++import boto3
+
+# 2017-10-20 15:45:36.772864
++s3 = boto3.client('s3')
+
+# 2017-10-20 15:46:48.297522
++copy_source = {'Bucket': 'servanttrips-org-media', 'Key': '2017/10/IMG_0058-150x150.jpg'}
+
+# 2017-10-20 15:48:10.190204
++s3.copy(copy_source, 'servanttrips-org-media', copy_source['Key'], ExtraArgs={'StorageClass': 'REDUCED_REDUNDANCY', 'MetadataDirective': 'COPY'})
+
+# 2017-10-20 15:49:39.097785
++all_objects = s3.list_objects('servanttrips-org-media')
+
+# 2017-10-20 15:49:44.767229
++all_objects = s3.list_objects(Bucket='servanttrips-org-media')
+
+# 2017-10-20 15:49:51.143996
++all_objects
+
+# 2017-10-20 15:50:19.954484
++import re
+
+# 2017-10-20 15:51:03.256756
++for item in all_objects:
++    if re.match(r'.*-\d+x\d_.*', item['Key']):
++        print(item['Key'])
+
+# 2017-10-20 15:51:16.196318
++import json
+
+# 2017-10-20 15:51:31.698416
++stuff = json.loads(all_objects)
+
+# 2017-10-20 15:51:48.160283
++all_objects[0]
+
+# 2017-10-20 15:52:11.670749
++all_objects['Contents'][0]
+
+# 2017-10-20 15:52:20.488915
++for item in all_objects['Contents']:
++    if re.match(r'.*-\d+x\d_.*', item['Key']):
++        print(item['Key'])
+
+# 2017-10-20 15:52:28.190397
++for item in all_objects['Contents']:
++    if re.match(r'.*-\d+x\d+.*', item['Key']):
++        print(item['Key'])
+
+# 2017-10-20 15:55:25.144669
++s3.copy(copy_source, 'servanttrips-org-media', copy_source['Key'], ExtraArgs={'StorageClass': 'REDUCED_REDUNDANCY', 'MetadataDirective': 'COPY', 'Acl': 'public-read'})
+
+# 2017-10-20 15:55:32.861392
++s3.copy(copy_source, 'servanttrips-org-media', copy_source['Key'], ExtraArgs={'StorageClass': 'REDUCED_REDUNDANCY', 'MetadataDirective': 'COPY', 'ACL': 'public-read'})
+
+# 2017-10-20 15:56:24.095934
++extra_args = {'StorageClass': 'REDUCED_REDUNDANCY', 'MetadataDirective': 'COPY', 'ACL': 'public-read'}
+
+# 2017-10-20 15:56:47.131636
++for item in all_objects['Contents']:
++    if re.match(r'.*-\d+x\d+.*', item['Key']):
++        print(item['Key'])
+
+# 2017-10-20 15:58:24.707116
++for item in all_objects['Contents']:
++    if re.match(r'.*-\d+x\d+.*', item['Key']):
++        copy_source = {'Bucket': 'servanttrips-org-media', 'Key': item['Key']}
++        s3.copy(copy_source, 'servanttrips-org-media', copy_source['Key'], ExtraArgs=extra_args)
 # 2017-10-17 23:08:16.291589
 +import os
 
