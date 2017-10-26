@@ -54,7 +54,7 @@ POWERLEVEL9K_VIRTUALENV_BACKGROUND='005'
 if [[ "$(hostname)" == 'couperin' ]]; then
   export POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='011'
   export POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='008'
-  export DIGITAL_OCEAN_ACCESS_TOKEN="$(pass show digitalocean/couperin-do-token)"
+  export DIGITALOCEAN_ACCESS_TOKEN="$(pass show digitalocean/couperin-do-token)"
 elif [[ "$(hostname)" == 'beethoven' ]]; then
   export POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='006'
   export POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='015'
