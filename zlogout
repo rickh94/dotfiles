@@ -3,3 +3,4 @@ if [ -f $HOME/.gcloud ] && [ -f $Home/.config/gcloud/credentials.db ]; then
 fi
 /bin/rm -f $HOME/.pypirc
 /bin/rm -f $HOME/.aws/credentials
+/bin/rm -f $HOME/.exercism.json

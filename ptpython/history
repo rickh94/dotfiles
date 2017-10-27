@@ -9261,3 +9261,547 @@
 # 2017-10-22 02:08:02.969428
 +with open('tests/hashes.json', 'w') as jsonfile:
 +    json.dump(newdata, jsonfile)
+# 2017-10-22 16:36:46.550056
++import lilyskel
+
+# 2017-10-22 16:36:51.456974
++lilyskel.__version__
+
+# 2017-10-22 16:49:44.218473
++import fs
+
+# 2017-10-22 16:51:22.761640
++import boto3
+
+# 2017-10-22 16:51:47.860058
++sess = boto3.Session()
+
+# 2017-10-22 16:53:05.071329
++import boto3
+
+# 2017-10-22 16:53:38.665178
++import os
+
+# 2017-10-22 16:53:51.044021
++keyid = os.environ['DOKEY']
+
+# 2017-10-22 16:54:04.899521
++keysecret = os.environ['DOSECRET']
+
+# 2017-10-22 16:54:47.186681
++spaces = boto3.client('s3', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=keysecret)
+
+# 2017-10-22 16:54:53.539502
++spaces.list_buckets()
+
+# 2017-10-22 16:55:04.872489
++spaces.create_bucket('rickstestspace')
+
+# 2017-10-22 16:55:10.707384
++spaces.create_bucket(Bucket='rickstestspace')
+
+# 2017-10-22 16:56:11.473349
++import os
+
+# 2017-10-22 16:56:14.304375
++keyid = os.environ['DOKEY']
+
+# 2017-10-22 16:56:16.456787
++keysecret = os.environ['DOSECRET']
+
+# 2017-10-22 16:56:20.084129
++import fs
+
+# 2017-10-22 16:56:59.254873
++space = fs.open_fs('s3://rickstestspace', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=keysecret)
+
+# 2017-10-22 16:57:24.584510
++from fs_s3fs import S3FS
+
+# 2017-10-22 16:57:26.265215
++space = fs.open_fs('s3://rickstestspace', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=keysecret)
+
+# 2017-10-22 16:57:57.343029
++space = S3FS('rickstestspace', endpoint_url='https://nyc3.digitaloceanspaces.com', aws_access_key_id=keyid, aws_secret_access_key=keysecret)
+
+# 2017-10-22 16:58:03.937927
++space.listdir('/')
+
+# 2017-10-22 16:58:21.797174
++with space.open('testfile.txt', 'w') as testfile:
++    testfile.write('this is a test')
+
+# 2017-10-22 16:58:45.858784
++spaces.list_objects(Bucket='rickstestspace')
+
+# 2017-10-22 16:59:04.798128
++obj = spaces.get_object('testfile.txt')
+
+# 2017-10-22 16:59:17.301536
++obj = spaces.get_object(Bucket='rickstestspace', Key='testfile.txt')
+
+# 2017-10-22 16:59:29.099610
++text = obj['Body'].read()
+
+# 2017-10-22 16:59:30.931464
++text
+
+# 2017-10-22 16:59:38.043755
++text.decode('utf-8')
+
+# 2017-10-22 17:02:30.920529
++space.geturl('testfile.txt')
+
+# 2017-10-22 17:02:38.559170
++url = _
+
+# 2017-10-22 17:02:46.719097
++import webbrowser
+
+# 2017-10-22 17:02:55.722616
++webbrowser.open(url)
+
+# 2017-10-22 17:06:41.050488
++bucket = S3FS('ricksencryptedbucket', endpoint_url=None, aws_access_key_id=None, aws_secret_access_key=None)
+
+# 2017-10-22 17:06:46.552339
++bucket.listdir('/')
+
+# 2017-10-22 17:36:12.833438
++import json
+
+# 2017-10-22 17:36:16.190371
++import base64
+
+# 2017-10-22 17:36:19.485798
++import lzma
+
+# 2017-10-22 17:36:37.638958
++with open('tests/lots_of_fields.json', 'r') as jsonfile:
++    data = json.load(jsonfile)
+
+# 2017-10-22 17:36:46.120169
++data[0]
+
+# 2017-10-22 17:36:50.053329
++item = data[0]
+
+# 2017-10-22 17:37:04.546571
++filedata = base64.b64decode(item['data'])
+
+# 2017-10-22 17:37:16.660968
++filedata = base64.b64decode(item['Attachments'][0]['data'])
+
+# 2017-10-22 17:37:18.892814
++filedata
+
+# 2017-10-22 17:37:46.021023
++if item['Attachments'][0]['compressed']:
++    filedata_d = lzma.decompress(filedata)
+
+# 2017-10-22 17:37:48.276095
++filedata_d
+
+# 2017-10-22 17:38:16.794967
++import hashlib
+
+# 2017-10-22 18:20:08.568075
++import uuid4
+
+# 2017-10-22 18:20:16.878245
++from uuid import uuid4
+
+# 2017-10-22 18:20:19.357351
++uuid4()
+
+# 2017-10-22 18:20:26.549123
++print(uuid4())
+
+# 2017-10-22 18:21:01.585181
++"{}".format(uuid4())
+
+# 2017-10-22 19:48:22.884264
++import os
+
+# 2017-10-22 19:48:44.754943
++stuff = {'key1': 'value1', 'key2': 'value2'}
+
+# 2017-10-22 19:48:47.596872
++stuff.values()
+
+# 2017-10-22 19:48:54.408040
++stuff.values()[0]
+
+# 2017-10-22 19:49:02.194504
++list(stuff.values())
+
+# 2017-10-22 19:49:13.795254
++assert 'value1' in sutff.values()
+
+# 2017-10-22 19:49:18.193954
++assert 'value1' in stuff.values()
+
+# 2017-10-22 22:05:07.275759
++import fs
+
+# 2017-10-22 22:05:31.424087
++data1 = fs.open_fs('/tmp/pytest-of-rick')
+
+# 2017-10-22 22:05:51.726290
++data2 = fs.open_fs('/tmp/random')
+
+# 2017-10-22 22:06:04.707180
++os.makedir('/tmp/test')
+
+# 2017-10-22 22:06:08.553453
++import os
+
+# 2017-10-22 22:06:13.738986
++os.makedir('/tmp/test')
+
+# 2017-10-22 22:06:25.737586
++os.mkdir('/tmp/test')
+
+# 2017-10-22 22:06:32.634115
++data2 = fs.open_fs('/tmp/test')
+
+# 2017-10-22 22:07:09.337958
++fs.copy_fs(data1, data2.opendir('prefix'))
+
+# 2017-10-22 22:07:16.257771
++from fs import copy_fs
+
+# 2017-10-22 22:07:24.825299
++from fs import copyfs
+
+# 2017-10-22 22:07:57.030030
++fs.copy.copy_fs(data1, data2.opendir('prefix'))
+
+# 2017-10-22 22:08:05.119430
++data2.makedir('prefix')
+
+# 2017-10-22 22:08:07.198615
++fs.copy.copy_fs(data1, data2.opendir('prefix'))
+
+# 2017-10-22 22:08:14.599957
++data2.listdir('prefix')
+
+# 2017-10-22 22:08:31.653475
++from fs_s3fs import S3FS
+
+# 2017-10-22 22:08:41.198380
++bucket = S3FS('ricksencryptedbucket')
+
+# 2017-10-22 22:09:00.056807
++fs.copy.copy_fs(data2, bucket.opendir('garbagefiles'))
+
+# 2017-10-22 22:09:05.638073
++bucket = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-22 22:09:07.908672
++fs.copy.copy_fs(data2, bucket.opendir('garbagefiles'))
+
+# 2017-10-22 22:09:35.014228
++fs.copy.copy_fs(data2, bucket.dir_path('garbagefiles'))
+
+# 2017-10-22 22:10:08.258911
++bucket.makedir('testprefix/')
+
+# 2017-10-22 22:10:43.151456
++fs.copy.copy_fs(data2, bucket.opendir('testprefix'))
+
+# 2017-10-22 22:10:52.134086
++bucket.listdir('testprefix')
+
+# 2017-10-22 22:10:56.706653
++bucket.listdir('testprefix/')
+
+# 2017-10-22 22:11:02.450901
++bucket.listdir('testprefix/prefix')
+
+# 2017-10-22 22:11:33.369388
++bucket.makedir('garbagefiles')
+
+# 2017-10-22 22:11:52.358253
++bucket.opendir('garbagefiles')
+
+# 2017-10-22 22:19:47.242251
++import fs
+
+# 2017-10-22 22:20:10.034622
++stuff = fs.tarfs.TarFS('myfile.tar', 'w')
+
+# 2017-10-22 22:20:16.541566
++from fs import tarfs
+
+# 2017-10-22 22:20:37.981785
++tarfile = tarfs.TarFS('myfile.tar', write=True)
+
+# 2017-10-22 22:20:54.973241
++with tarfile.open('testfile.txt', 'w') as tf:
++    tf.write('this is a test')
+
+# 2017-10-22 22:20:59.165303
++tarfile.close()
+
+# 2017-10-22 22:22:03.076514
++with open('mysecondfile.tar', 'w') as tarfile:
++    with open('myfile.tar', 'r') as infile:
++        tarfile.write(infile.read())
+
+# 2017-10-22 22:22:19.888618
++outfile = tarfs.TarFS('mysecondfile.tar')
+
+# 2017-10-22 22:22:37.547111
++with outfile.open('testfile.txt', 'r') as tf:
++    print(tf.read())
+
+# 2017-10-22 22:34:40.655337
++from fs_s3fs import S3FS
++
++
+
+# 2017-10-22 22:34:50.915252
++bucket = S3FS('ricksencryptedbucket', strict=False)
+
+# 2017-10-22 22:34:57.240943
++bucket.makedir('garbagefiles')
+
+# 2017-10-22 22:35:17.155603
++fs.copy.copy_fs(data2, bucket.opendir('garbagefiles'))
+
+# 2017-10-22 22:35:33.747172
++data2 = fs.open_fs('/tmp/test')
+
+# 2017-10-22 22:36:09.881251
++fs.copy.copy_fs(data2, bucket.opendir('garbagefiles'))
+
+# 2017-10-23 00:13:24.246368
++import json
+
+# 2017-10-23 00:13:58.178273
++with open('tests/lots_of_fields_raw.json', 'rw') as jsonfile:
++    data = json.load(jsonfile)
++    json.dump(data, jsonfile, indent=2)
+
+# 2017-10-23 00:14:09.652295
++with open('tests/lots_of_fields_raw.json', 'r') as jsonfile:
++    data = json.load(jsonfile)
+
+# 2017-10-23 00:14:25.587717
++with open('tests/lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(data, jsonfile, indent=2)
+
+# 2017-10-23 15:17:24.466406
++import fs
+
+# 2017-10-23 15:17:34.173860
++fs.tarfs.TarFS
+
+# 2017-10-23 15:17:40.411872
++from fs import tarfs
+
+# 2017-10-23 22:18:20.362782
++from ruamel.yaml import YAML
+
+# 2017-10-23 22:18:26.043839
++yaml = YAML()
+
+# 2017-10-23 22:19:23.303317
++with open('test.yaml', 'w') as yamlfile:
++    yamlfile.write('test:\n  - test 1\n  - test 2\nother thing: a thing\nanother thing: not a thing')
+
+# 2017-10-23 22:19:39.578756
++with open('test.yaml', 'r') as yamlfile:
++    thing = yaml.load(yamlfile)
+
+# 2017-10-23 22:19:41.482899
++thing
+
+# 2017-10-23 22:19:50.028714
++thing.test
+
+# 2017-10-23 22:19:52.958362
++thing['test']
+
+# 2017-10-23 22:19:59.492332
++thing['another thing']
+
+# 2017-10-24 13:50:24.225455
++import fs
+
+# 2017-10-24 13:50:37.832540
++fs.open_fs('tar://mytar.tar', writeable=True)
+
+# 2017-10-24 13:50:56.678538
++fs.open_fs('tar://mytar.tar', create=True, writeable=True)
+
+# 2017-10-24 13:51:04.340081
++thing = fs.open_fs('tar://mytar.tar', create=True, writeable=True)
+
+# 2017-10-24 13:59:30.897446
++otherfs = fs.open_fs('ssh://rick:finally here@192.168.1.120:Documents')
+
+# 2017-10-24 14:01:56.302553
++import fs
+
+# 2017-10-24 14:02:12.347327
++fs.open_fs('ssh://192.168.1.120:Documents')
+
+# 2017-10-24 14:02:19.304849
++_.listdir('/')
+
+# 2017-10-24 21:59:45.535234
++from ruamel.yaml import YAML
+
+# 2017-10-24 21:59:49.800691
++yaml = YAML()
+
+# 2017-10-24 22:00:13.664743
++data = yaml.load('tests/testdata/testconf.yml')
+
+# 2017-10-24 22:00:15.270031
++data
+
+# 2017-10-24 22:01:34.309459
++with open('tests/testdata/testconf.yml', 'r') as yamlfile:
++    data = yaml.load(yamlfile)
+
+# 2017-10-24 22:01:35.366532
++data
+
+# 2017-10-24 22:01:45.717874
++data['Backing Store']
+
+# 2017-10-24 22:02:01.549245
++data['Store As']
+
+# 2017-10-24 22:02:36.470804
++from ruamel.yaml import YAML
+
+# 2017-10-24 22:02:40.627606
++yaml = YAML()
+
+# 2017-10-24 22:02:44.464160
++with open('tests/testdata/testconf.yml', 'r') as yamlfile:
++    data = yaml.load(yamlfile)
+
+# 2017-10-24 22:02:51.088636
++data['Store As']['Type']
+
+# 2017-10-24 22:03:03.247575
++with open('tests/testdata/testconf.yml', 'r') as yamlfile:
++    data = yaml.load(yamlfile)
+
+# 2017-10-24 22:03:13.360047
++data['Store As']['Type']
+
+# 2017-10-24 22:05:19.321787
++table1 = {'Name': 'Random Data', 'fields': {'ID': 'Number', 'Notes': 'Multi line text', 'Check': 'Checkbox', 'Attachments': 'Attachment'}}
+
+# 2017-10-24 22:06:13.721979
++table2 = {'Name': 'Contacts', 'fields': {'Last Name': 'Single line text', 'First Name': 'Single line text', 'Email Address': 'Email', 'Phone Number': 'Phone Number'}}
+
+# 2017-10-24 22:06:31.098817
++stuff = {'Tables': [table1, table2]}
+
+# 2017-10-24 22:06:35.704735
++yaml.dump(stuff)
+
+# 2017-10-24 22:06:56.360149
++with open('/tmp/testyaml.yml', 'w') as fp:
++    yaml.dump(stuff, fp)
+
+# 2017-10-24 22:09:23.193281
++from ruamel.yaml import YAML
+
+# 2017-10-24 22:09:27.594341
++yaml = YAML()
+
+# 2017-10-24 22:09:44.717380
++with open('tests/testdata/testconf.yml', 'r') as fp:
++    data = yaml.load(fp)
+
+# 2017-10-24 22:10:02.317240
++data['Backing Store']['Date']
+
+# 2017-10-24 22:10:22.325411
++assert not isinstance(data['Backing Store']['Date'], str)
+
+# 2017-10-24 22:10:40.551388
++assert isinstance(data['Backing Store']['Date'], bool)
+
+# 2017-10-24 22:10:49.457645
++data['backing store']
+
+# 2017-10-24 22:16:36.369794
++from ruamel.yaml import YAML
+
+# 2017-10-24 22:16:38.848583
++import json
+
+# 2017-10-24 22:17:18.003657
++with open('tests/testdata/testconf.yml', 'r') as yamlfile:
++    yaml = YAML()
++    data = yaml.load(yamlfile)
+
+# 2017-10-24 22:17:46.490504
++with open('/tmp/yaml-to-json.json', 'w') as jsonfile:
++    json.dump(data, jsonfile, indent=2)
+
+# 2017-10-25 21:43:51.543446
++sometext= 'my thing'
+
+# 2017-10-25 21:44:00.713372
++print(f"Please print {sometext}")
+
+# 2017-10-25 21:45:02.385161
++mynumber = 10
+
+# 2017-10-25 21:46:41.723642
++print(f"Please print {mynumber:#2}")
+
+# 2017-10-25 21:46:46.679573
++print(f"Please print {mynumber:#3}")
+
+# 2017-10-25 21:49:35.712016
++print(f"Please print {mynumber:3}")
+
+# 2017-10-25 21:49:47.720184
++print(f"Please print {mynumber:10}")
+
+# 2017-10-25 21:51:59.602979
++print(f"Please print {mynumber.rjust(2)}")
+
+# 2017-10-25 21:52:06.990019
++print(f"Please print {str(mynumber).rjust(2)}")
+
+# 2017-10-25 21:52:10.669945
++print(f"Please print {str(mynumber).rjust(5)}")
+
+# 2017-10-25 21:52:29.874971
++str(mynumber).rjust(5, 0)
+
+# 2017-10-25 21:52:34.320058
++str(mynumber).rjust(5, '0')
+
+# 2017-10-25 21:52:39.902725
++print(f"Please print {str(mynumber).rjust(5, '0')}")
+
+# 2017-10-25 21:53:40.900493
++mynumbers = [0, 20, 100, 284, 88, 35, 891]
+
+# 2017-10-25 21:54:02.081311
++for num in mynumbers:
++    print(f"The number is: {num:3}")
+
+# 2017-10-25 21:54:15.322821
++for num in mynumbers.sort():
++    print(f"The number is: {num:3}")
+
+# 2017-10-25 21:54:19.176634
++mynumbers
+
+# 2017-10-25 21:54:35.240636
++for num in sorted(mynumbers):
++    print(f"The number is: {num:3}")
