@@ -9805,3 +9805,19 @@
 # 2017-10-25 21:54:35.240636
 +for num in sorted(mynumbers):
 +    print(f"The number is: {num:3}")
+
+# 2017-10-27 01:54:58.476012
++from ruamel.yaml import YAML
+
+# 2017-10-27 01:55:02.268362
++yaml = YAML()
+
+# 2017-10-27 01:55:21.029505
++with open('bad.yml', 'r') as ymlfile:
++    data = yaml.load(ymlfile)
+
+# 2017-10-27 01:55:22.546933
++data
+
+# 2017-10-27 01:55:26.732506
++data['Fail']
