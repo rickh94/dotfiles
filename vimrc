@@ -29,6 +29,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lepture/vim-jinja'
+Plugin 'udalov/kotlin-vim'
 
 call vundle#end()
 
@@ -103,6 +104,10 @@ if has("autocmd")
   autocmd FileType gitcommit setlocal textwidth=78
   autocmd FileType c setlocal textwidth=78
   autocmd FileType rst setlocal textwidth=78
+  autocmd FileType go setlocal textwidth=120
+  autocmd FileType go setlocal shiftwidth=2
+  autocmd FileType go setlocal expandtab!
+  autocmd FileType go setlocal tabstop=2
 
   " add abbreviations
   autocmd FileType lilypond :iabbrev <buffer> bnc \barNumberCheck #
@@ -194,6 +199,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_checkers = ["pycodestyle", "pydocstyle"]
 let g:syntastic_loc_list_height = 5
+let g:syntastic_rst_checkers = ['rst2pseudoxml', 'sphinx']
 
 " turn on rainbow brackets
 let g:rainbow_active = 1

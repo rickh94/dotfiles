@@ -9760,3 +9760,205 @@
 # 2017-10-25 21:54:35.240636
 +for num in sorted(mynumbers):
 +    print(f"The number is: {num:3}")
+
+# 2017-10-25 22:39:54.125504
++for num, letter in enumerate('test'):
++    print(f"letter number {num} is {letter}")
+
+# 2017-10-25 23:18:58.074242
++list1 = [1, 2, 3, 4, 5]
+
+# 2017-10-25 23:19:06.092755
++list2 = [1, 2, 3, 5, 6]
+
+# 2017-10-25 23:19:10.408138
++zip(list1, list2)
+
+# 2017-10-25 23:19:35.508513
++for i, j in zip(list1, list2):
++    print(f"i is {i} j is {j}")
+
+# 2017-10-25 23:20:06.700338
++for i, j in zip(list1, list2):
++    if i == j:
++        print(f"{i} matches {j}")
+
+# 2017-10-25 23:20:23.024676
++zip('hi', 'hi')
+
+# 2017-10-25 23:20:51.584200
++for let1, let2 in zip('hi', 'hi'):
++    if let1 == let2:
++        print(f"{let1}")
+
+# 2017-10-25 23:27:30.973222
++phrase = 'these are my words. my words are good'.split(' ')
+
+# 2017-10-25 23:27:32.575639
++phrase
+
+# 2017-10-25 23:27:42.918907
++phrase = 'these are my words my words are good'.split(' ')
+
+# 2017-10-25 23:27:45.039519
++phrase
+
+# 2017-10-25 23:27:49.801950
++phrase.remote('words')
+
+# 2017-10-25 23:27:53.758409
++phrase.remove('words')
+
+# 2017-10-25 23:27:55.056738
++phrase
+
+# 2017-10-25 23:28:22.489144
++phrase.uniq
+
+# 2017-10-25 23:28:49.622916
++phrase.append('words')
+
+# 2017-10-25 23:28:52.690212
++set(phrase)
+
+# 2017-10-25 23:29:18.158631
++phrase.count('words')
+
+# 2017-10-26 19:49:40.098699
++import editor
+
+# 2017-10-26 19:49:53.536639
++data = editor.edit()
+
+# 2017-10-26 19:49:55.053880
++data
+
+# 2017-10-26 19:50:12.816668
++data = editor.edit(use_tty=True)
+
+# 2017-10-26 19:50:14.274922
++data
+
+# 2017-10-26 19:52:02.577306
++with open('/home/rick/repositories/lilyskel/lilyskel/templates/defs.ily', 'r') as stuff:
++    contents = stuff.read()
+
+# 2017-10-26 19:52:21.049883
++template = editor.edit(contents=bytes(contents))
+
+# 2017-10-26 19:52:27.054379
++template = editor.edit(contents=contents)
+
+# 2017-10-26 19:52:54.736741
++template = editor.edit(contents=contents.encode('utf-8'))
+
+# 2017-10-27 05:41:01.931261
++import string
+
+# 2017-10-27 05:41:14.101564
++string.ascii_letters
+
+# 2017-10-27 05:41:29.966812
++_.split('')
+
+# 2017-10-27 05:41:32.641697
++_.split()
+
+# 2017-10-27 05:42:19.840051
++'a'.isalpha()
+
+# 2017-10-27 05:43:58.584485
++dict(zip([i for i in range(1, 27)], string.ascii_lowercase))
+
+# 2017-10-27 05:44:56.525062
++lowerdict = _
+
+# 2017-10-27 05:46:16.946683
++string.ascii_lowercase.index('a')
+
+# 2017-10-27 05:46:19.619088
++string.ascii_lowercase.index('c')
+
+# 2017-10-27 05:48:32.160328
++(0 + 26) % 26
+
+# 2017-10-27 05:48:37.159446
++(8 + 26) % 26
+
+# 2017-10-27 05:48:41.999168
++(8 + 13) % 26
+
+# 2017-10-27 05:48:46.057170
++(0 + 13) % 26
+
+# 2017-10-27 05:48:58.958850
++(25 + 13) % 26
+
+# 2017-10-27 05:50:05.351385
++'abc'.get(2)
+
+# 2017-10-27 05:50:12.606708
++'abc'[2]
+
+# 2017-10-27 21:52:38.756740
++for m in range(1, 501):
++    n = (500 - pow(m, 2)) / m
++    if m > n:
++        print(f'm is {m}, n is {n}')
++        break
+
+# 2017-10-27 21:53:00.346785
++for m in range(1, 501):
++    n = (500 - pow(m, 2)) / m
++    if m > n and int(n) == n:
++        print(f'm is {m}, n is {n}')
++        break
+
+# 2017-11-12 21:57:22.222278
++import os
+
+# 2017-11-12 21:57:30.955462
++os.listdir('.')
+
+# 2017-11-12 21:57:36.097900
++import pythagorean_triplet
+
+# 2017-11-12 21:57:51.051785
++pythagorean_triplet.primitive_triplets(8, coprime=False)
+
+# 2017-11-12 21:57:55.862995
++pythagorean_triplet.primitive_triplets(6, coprime=False)
+
+# 2017-11-12 21:58:09.299561
++pythagorean_triplet.primitive_triplets(10, coprime=False)
+
+# 2017-11-18 21:23:22.343754
++def flatten(array):
++    queue = [array]
++    result = []
++    while len(queue) > 0:
++        item = queue.pop(0)
++        if isinstance(item, list):
++            for sub_item in item:
++                queue.append(sub_item)
++        else:
++            result.append(item)
++    return result
+
+# 2017-11-18 21:23:32.458956
++a = [1, [2, 3], [4, [5, 6]]]
+
+# 2017-11-18 21:23:36.391916
++flatten(a)
+
+# 2017-11-18 21:23:55.108399
++a = [1, [2, 3], [4, [5, [6]]]]
+
+# 2017-11-18 21:23:56.162531
++flatten(a)
+
+# 2017-11-18 21:24:23.107590
++a = [1, [2, [3, 3.5], [3.7], [[3.8]]], [4, [5, [6]]]]
+
+# 2017-11-18 21:24:24.529687
++flatten(a)
