@@ -9216,6 +9216,51 @@
 # 2017-10-21 22:37:24.441211
 +assert data[5] == lotsdata[5]
 
+# 2017-10-22 01:38:17.146486
++import json
+
+# 2017-10-22 01:38:33.633483
++with open('tests/lots_of_fields_raw.json', 'r') as jsonfile:
++    data = json.load(jsonfile)
+
+# 2017-10-22 01:38:34.568321
++data
+
+# 2017-10-22 01:39:40.796013
++for item in data:
++    item['fields']['Attachments'][0]['url'] = item['fields']['Attachments'][0]['filename']
+
+# 2017-10-22 01:39:43.358986
++data
+
+# 2017-10-22 01:40:06.478267
++with open('tests/lots_of_fields_raw.json', 'w') as jsonfile:
++    json.dump(data, jsonfile)
+
+# 2017-10-22 02:06:37.823379
++import json
+
+# 2017-10-22 02:07:00.826264
++with open('tests/hashes.json', 'r') as jsonfile:
++    data = json.load(jsonfile)
+
+# 2017-10-22 02:07:02.836916
++data
+
+# 2017-10-22 02:07:17.782849
++newdata = {}
+
+# 2017-10-22 02:07:44.712204
++for item in data:
++    newdata[item['filename']] = item['hash']
+
+# 2017-10-22 02:07:57.519678
++with open('tests/hashes.json', 'w') as jsonfile:
++    json.dump(newdata)
+
+# 2017-10-22 02:08:02.969428
++with open('tests/hashes.json', 'w') as jsonfile:
++    json.dump(newdata, jsonfile)
 # 2017-10-22 16:36:46.550056
 +import lilyskel
 
@@ -9962,3 +10007,36 @@
 
 # 2017-11-18 21:24:24.529687
 +flatten(a)
+# 2017-10-27 01:54:58.476012
++from ruamel.yaml import YAML
+
+# 2017-10-27 01:55:02.268362
++yaml = YAML()
+
+# 2017-10-27 01:55:21.029505
++with open('bad.yml', 'r') as ymlfile:
++    data = yaml.load(ymlfile)
+
+# 2017-10-27 01:55:22.546933
++data
+
+# 2017-10-27 01:55:26.732506
++data['Fail']
+
+# 2017-11-26 19:33:19.885121
++import num2words
+
+# 2017-11-26 19:33:27.641712
++num2words.__package__
+
+# 2017-11-26 19:33:32.941167
++num2words.__dict__
+
+# 2017-11-26 19:36:24.321250
++from num2words import num2words
+
+# 2017-11-26 19:36:29.285283
++import num2words
+
+# 2017-11-26 19:36:34.486289
++num2words(42)
