@@ -1,0 +1,7 @@
+#!/bin/bash
+TMP=$(mktemp -d /tmp/ipad-backup-XXXXX)
+ARCHIVE=$HOME/Documents/backup_of_ipad/backup_$(date +"%Y_%m_%d").tar.xz
+cp -v * $TMP
+cd $TMP
+tar -cvJf $ARCHIVE *
+scp $ARCHIVE rick@brahms:mobile_backups/rick_ipad/forscore
