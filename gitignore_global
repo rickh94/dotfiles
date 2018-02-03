@@ -33,3 +33,4 @@ htmlcov
 # intellij idea files
 .idea
 .idea
+.pytest_cache
