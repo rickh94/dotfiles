@@ -8,6 +8,8 @@ antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle olivierverdier/zsh-git-prompt
 antibody bundle bhilburn/powerlevel9k powerlevel9k
 
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
+
 # Declare the variable for zsh highlight tweaks. That's kind of important.
 typeset -A ZSH_HIGHLIGHT_STYLES
 
