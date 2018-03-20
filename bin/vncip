@@ -1,0 +1,13 @@
+#!/bin/bash
+HOST=$1
+OFFSET=${2:-1}
+START=5900
+PORT=$(($START + $OFFSET))
+DESKTOP=$OFFSET
+ssh -X -f $HOST -L "$PORT:localhost:$PORT" -N &>/dev/null
+ssh $HOST "vncserver :$DESKTOP -autokill -geometry 1280x800 -alwaysshared -dpi 96 -localhost"
+vncviewer "localhost:$PORT"
+#echo "Press enter to end connection"
+#read
+kill -9 $(ps -ef|grep '[s]sh -X'|awk '{print $2}')
+ssh rick@$HOST "vncserver -kill :$DESKTOP" &>/dev/null
