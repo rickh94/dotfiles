@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "updating passwords"
-if [[ ! -z "$(pass git status -s)" ]]; then
+if [ ! -z "$(pass git status -s)" ]; then
   pass git add -A
   pass git commit -sm 'add manual password changes'
 fi
