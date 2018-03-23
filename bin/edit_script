@@ -1,0 +1,7 @@
+#!/bin/bash
+SCRIPT=$1
+SCRIPT_PATH="$(which $1)"
+
+gvim $SCRIPT_PATH
+
+# vim: se ft=sh wrap:

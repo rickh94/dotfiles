@@ -1,8 +1,9 @@
 #!/bin/bash
 INFILE=$1
-OUTFILE=$1
+OUTFILE=$2
+echo "outfile is $OUTFILE"
 
-ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutFile=$OUTFILE $INFILE
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$OUTFILE $INFILE
 
 
-# vim: se ft=sh se wrap:
+# vim: se ft=sh wrap:
