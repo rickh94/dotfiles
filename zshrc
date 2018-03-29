@@ -175,6 +175,10 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 
+
 source $HOME/.zprofile
 
+if [ -x $HOME/.command-not-found.zsh ]; then
+  source $HOME/.command-not-found.zsh
+fi
 # vim: se ft=sh:
