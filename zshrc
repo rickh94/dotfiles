@@ -158,11 +158,22 @@ alias randomgarbage='echo $RANDOM | sha256sum |cut -c1-7'
 alias -g G='| grep'
 alias -g L='| less'
 
-# update pass store
-#if [[ -f $HOME/.passupdate ]]; then
-#  echo "Updating passwords"
-#  source $HOME/.passupdate
-#fi
+# if the command-not-found package is installed, use it
+if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-not-found ]; then
+	function command_not_found_handler {
+	        # check because c-n-f could've been removed in the meantime
+                if [ -x /usr/lib/command-not-found ]; then
+		   /usr/lib/command-not-found --no-failure-msg -- "$1"
+                   return $?
+                elif [ -x /usr/share/command-not-found/command-not-found ]; then
+		   /usr/share/command-not-found/command-not-found --no-failure-msg -- "$1"
+                   return $?
+		else
+		   printf "%s: command not found\n" "$1" >&2
+		   return 127
+		fi
+	}
+fi
 
 source $HOME/.zprofile
 
