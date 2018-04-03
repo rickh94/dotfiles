@@ -1,2 +1,5 @@
+package errno
+package sudope
+package tab
 theme bobthefish
 theme default
