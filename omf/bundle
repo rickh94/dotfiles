@@ -1,4 +1,6 @@
+package apt
 package errno
+package pisces
 package sudope
 package tab
 theme bobthefish
