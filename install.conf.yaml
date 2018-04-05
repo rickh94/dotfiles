@@ -1,3 +1,7 @@
+- defaults:
+    link:
+      force: true
+
 - clean: ['~']
 
 - link:
@@ -5,5 +9,11 @@
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-
-
+    ~/.gitignore_global: gitignore_global
+    ~/bin: bin
+    ~/.zlogout: zlogout
+    ~/.ptpython/config.py: ptpython-config.py
+    ~/.jrnl_config: jrnl_config
+    ~/.pylintrc: pylintrc
+    ~/.config/fish: config/fish
+    ~/.config/omf: config/omf
