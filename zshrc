@@ -41,6 +41,8 @@ if [ -f $HOME/.keychaincommand ]; then
   source $HOME/.keychaincommand
 fi
 
+#if which pass; then
+#  export
 
 # Prompt
 #export PROMPT='%F{red}%n%f@%F{cyan}%m%f %F{yellow}$(collapsed_path -l)%f
