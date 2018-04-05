@@ -1,5 +1,7 @@
 package apt
 package errno
+package https://github.com/rickh94/nft
+package hub
 package pisces
 package sudope
 package tab
