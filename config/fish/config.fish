@@ -6,18 +6,20 @@ set -x SSH_ASKPASS "/usr/bin/ksshaskpass"
 
 set -x VISUAL 'vim'
 set -x EDITOR 'vim'
-set -x PAGER 'less'
+set -x PAGER 'view'
 set -x MAKEFLAGS '-j4'
 
 fish_default_key_bindings
-#fish_vi_key_bindings
 
-#if which pass
-#  set -x BORG_PASSPHRASE=(pass show borg/(hostname))
-#end
+if which pass
+  if pass show borg/hostname
+    set -x BORG_PASSPHRASE (pass show borg/(hostname))
+  end
+end
 
-#if test -f $HOME/.borg_repo
-#  set -x BORG_REPO=(cat $HOME/.borg_repo)
-#end
+if test -f $HOME/.borg_repo
+  set -x BORG_REPO (cat $HOME/.borg_repo)
+end
+
 
 # vim: se wrap:

@@ -1,5 +1,4 @@
-function cleanup_passwords --on-process %self
-  echo "fish is exiting"
+function clean_passwords
   /bin/rm -f $HOME/.aws/credentials
   /bin/rm -f $HOME/.exercism.json
   /bin/rm -f $HOME/.pypirc

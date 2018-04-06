@@ -11,4 +11,4 @@ sh .bin/aws-config
 tar -cJf /tmp/password-backup.tar.xz .password-store/*
 SUM="$(openssl md5 -binary /tmp/password-backup.tar.xz|base64)"
 aws s3api put-object --bucket ricks-password-backup --body /tmp/password-backup.tar.xz --key password-backup.tar.xz --content-md5 $SUM --server-side-encryption AES256 --storage-class STANDARD_IA
-# vim: se ft=sh:
+# vim: se ft=sh wrap:
