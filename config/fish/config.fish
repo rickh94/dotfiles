@@ -6,7 +6,7 @@ set -x SSH_ASKPASS /usr/bin/ksshaskpass
 
 set -x VISUAL 'vim'
 set -x EDITOR 'vim'
-set -x PAGER 'view'
+set -x PAGER 'less'
 set -x MAKEFLAGS '-j4'
 
 fish_default_key_bindings
