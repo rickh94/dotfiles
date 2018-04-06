@@ -17,3 +17,6 @@
     ~/.pylintrc: pylintrc
     ~/.config/fish: config/fish
     ~/.config/omf: config/omf
+
+- shell:
+  - ['omf install']
