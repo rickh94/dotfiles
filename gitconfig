@@ -18,6 +18,7 @@
 	cam = commit -am
 	a = add
 	csm = commit -sm
+	csam = commit -sam
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
