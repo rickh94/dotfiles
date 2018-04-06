@@ -11,10 +11,8 @@ set -x MAKEFLAGS '-j4'
 
 fish_default_key_bindings
 
-if which pass
-  if pass show borg/hostname
-    set -x BORG_PASSPHRASE (pass show borg/(hostname))
-  end
+if test -f /usr/bin/pass
+  set -x BORG_PASSPHRASE (pass show borg/(hostname))
 end
 
 if test -f $HOME/.borg_repo
