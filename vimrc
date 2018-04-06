@@ -1,3 +1,7 @@
+if $SHELL=~'bin/fish'
+  set shell=/bin/sh
+endif
+
 if v:progname =~? "evim"
   finish
 endif
