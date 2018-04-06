@@ -1,6 +1,6 @@
 package apt
 package errno
-package https://github.com/rickh94/nft
+package https://github.com/rickh94/fish-jrnl
 package https://github.com/tuvistavie/fish-ssh-agent
 package hub
 package pisces
