@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.tmux.conf.local: tmux.conf.local
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
