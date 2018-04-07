@@ -1,4 +1,4 @@
-# Defined in /tmp/fish.0NWGhs/dotbotify.fish @ line 2
+# Defined in /tmp/fish.wltV85/dotbotify.fish @ line 2
 function dotbotify --description 'add file to dotbot'
 	if not set -q argv[2]
     echo "Missing Argument"
@@ -8,6 +8,7 @@ function dotbotify --description 'add file to dotbot'
 	set -l prevdir $PWD
   set -l oldpath (readlink -f $argv[1] | sed "s@$HOME@\~@")
   set -l newpath (echo $argv[2] | sed 's@.*/.dotfiles/@@ ; s@"@@')
+  mkdir -p (dirname $HOME/.dotfiles/$newpath) ^ /dev/null
   mv $argv[1] $HOME/.dotfiles/$newpath
   sed -i.bak "/- link:/a\\
     $oldpath: $newpath" $HOME/.dotfiles/install.conf.yaml
