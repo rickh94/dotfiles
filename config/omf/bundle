@@ -1,4 +1,5 @@
 package apt
+package aws
 package errno
 package https://github.com/rickh94/fish-jrnl
 package https://github.com/tuvistavie/fish-ssh-agent
