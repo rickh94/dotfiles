@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/fail: 
     ~/.bash_profile: bash_profile
     ~/.bash_profile: 
     ~/.tmux.conf.local: tmux.conf.local
