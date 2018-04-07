@@ -10,5 +10,6 @@ package pisces
 package sudope
 package tab
 package tmux-zen
+package virtualfish
 theme bobthefish
 theme default
