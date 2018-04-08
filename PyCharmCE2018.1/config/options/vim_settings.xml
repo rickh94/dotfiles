@@ -1,0 +1,91 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" timestamp="1522301044229">
+        <mark key="'" line="56" column="0" />
+        <mark key="[" line="82" column="31" />
+        <mark key="]" line="82" column="31" />
+        <mark key="^" line="68" column="34" />
+        <mark key="." line="82" column="31" />
+      </file>
+      <file name="/Python Console" timestamp="1523039607364">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/repositories/download-fish-completions/getfiles.py" timestamp="1523135001233">
+        <mark key="[" line="14" column="38" />
+        <mark key="]" line="15" column="19" />
+        <mark key="." line="15" column="19" />
+        <mark key="^" line="15" column="19" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="55" column="0" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
+      <jump line="57" column="20" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
+      <jump line="8" column="18" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
+      <jump line="54" column="0" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
+    </jumps>
+    <registers>
+      <register name="&quot;" type="2">
+        <text encoding="base64">ICAgIAo=</text>
+      </register>
+      <register name="-" type="4">
+        <text>.href</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgZm9yIHBpbiBpbiBwd21waW5zOgo=</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">ICAgIAo=</text>
+      </register>
+      <register name="2" type="4">
+        <text encoding="base64">ICAgIHdpdGggb3BlbihmaWxlX3RhZ3MudGV4dCwgJ3cnKSBhcyB0aGVmaWxlOgogICAgICAgIHRoZWZpbGUud3JpdGUoZmlsZV9kYXRhLnRleHQp</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">ICAgICAgICBuZXdfcGluID0gR1BJTy5QV00ocGluLCAxMDAwKQogICAgICAgIHB3bXBpbnMuYXBwZW5kKG5ld19waW4pCg==</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">ICAgICAgICBwcmludChwaW4pCg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">ICAgICAgICBuZXdfcGluID0gR1BJTy5QV00ocGluLCAxMDAwKQogICAgICAgIHB3bXBpbnMuYXBwZW5kKG5ld19waW4pCg==</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgIHB3bXBpbnMgPSBbXQo=</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">ICAgICAgICBuZXdfcGluLnN0YXJ0KDApCg==</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgICNiYWNrX2FuZF9mb3J0aCgpCiAgICAjc2tpcCgpCiAgICAjb3V0c2lkZV9pbnNpZGUoKQo=</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name=":" type="4">
+        <text>w</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd>
+        <entry>w</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed O</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed R</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+</application>
