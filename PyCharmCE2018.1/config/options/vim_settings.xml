@@ -3,68 +3,64 @@
     <state version="4" enabled="true" />
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" timestamp="1522301044229">
-        <mark key="'" line="56" column="0" />
-        <mark key="[" line="82" column="31" />
-        <mark key="]" line="82" column="31" />
-        <mark key="^" line="68" column="34" />
-        <mark key="." line="82" column="31" />
+      <file name="$USER_HOME$/repositories/download-fish-completions/setup.py" timestamp="1523149599692">
+        <mark key="[" line="25" column="22" />
+        <mark key="]" line="25" column="25" />
+        <mark key="^" line="25" column="25" />
+        <mark key="." line="25" column="25" />
       </file>
-      <file name="/Python Console" timestamp="1523039607364">
+      <file name="/Python Console" timestamp="1523148913081">
         <mark key="[" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/repositories/download-fish-completions/getfiles.py" timestamp="1523135001233">
-        <mark key="[" line="14" column="38" />
-        <mark key="]" line="15" column="19" />
-        <mark key="." line="15" column="19" />
-        <mark key="^" line="15" column="19" />
+      <file name="$USER_HOME$/repositories/download-fish-completions/dl_fish_completions.py" timestamp="1523150005020">
+        <mark key="[" line="44" column="41" />
+        <mark key="]" line="44" column="41" />
+        <mark key="." line="44" column="41" />
+        <mark key="^" line="44" column="14" />
+      </file>
+      <file name="$USER_HOME$/repositories/download-fish-completions/README.md" timestamp="1523149177302">
+        <mark key="[" line="17" column="85" />
+        <mark key="]" line="18" column="53" />
+        <mark key="." line="18" column="53" />
+        <mark key="^" line="18" column="53" />
       </file>
     </filemarks>
     <jumps>
-      <jump line="55" column="0" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
-      <jump line="57" column="20" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
-      <jump line="8" column="18" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
-      <jump line="54" column="0" filename="$USER_HOME$/seitz_home/rpi_random_projects/blink_with_button/blink_leds.py" />
+      <jump line="31" column="0" filename="$USER_HOME$/repositories/download-fish-completions/setup.py" />
     </jumps>
     <registers>
-      <register name="&quot;" type="2">
-        <text encoding="base64">ICAgIAo=</text>
-      </register>
-      <register name="-" type="4">
-        <text>.href</text>
-      </register>
-      <register name="0" type="2">
-        <text encoding="base64">ICAgICAgICAgICAgZm9yIHBpbiBpbiBwd21waW5zOgo=</text>
-      </register>
       <register name="1" type="2">
-        <text encoding="base64">ICAgIAo=</text>
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="&quot;" type="4">
+        <text>)</text>
       </register>
       <register name="2" type="4">
-        <text encoding="base64">ICAgIHdpdGggb3BlbihmaWxlX3RhZ3MudGV4dCwgJ3cnKSBhcyB0aGVmaWxlOgogICAgICAgIHRoZWZpbGUud3JpdGUoZmlsZV9kYXRhLnRleHQp</text>
+        <text encoding="base64">ICAgICAgICBmb3IgZmlsZV8gaW4gZG93bmxvYWRlZDoKICAgICAgICAgICAgcHJpbnQoZmlsZV8p</text>
       </register>
       <register name="3" type="2">
-        <text encoding="base64">ICAgICAgICBuZXdfcGluID0gR1BJTy5QV00ocGluLCAxMDAwKQogICAgICAgIHB3bXBpbnMuYXBwZW5kKG5ld19waW4pCg==</text>
+        <text encoding="base64">ICAgICMgZmlsZV9kYXRhID0gcmVxdWVzdHMuZ2V0KGZpbGVfdXJsKQogICAgIyBwcmludChmImRvd25sb2FkaW5nIHtmaWxlX3RhZ3MudGV4dH0iKQo=</text>
       </register>
       <register name="4" type="2">
-        <text encoding="base64">ICAgICAgICBwcmludChwaW4pCg==</text>
+        <text encoding="base64">ICAgICAgICAgICAgIyBwcmludChmIntmaWxlX3RhZ3MudGV4dH06IHtmaWxlX2RhdGFbOjMwXX0iKQo=</text>
       </register>
       <register name="5" type="2">
-        <text encoding="base64">ICAgICAgICBuZXdfcGluID0gR1BJTy5QV00ocGluLCAxMDAwKQogICAgICAgIHB3bXBpbnMuYXBwZW5kKG5ld19waW4pCg==</text>
+        <text encoding="base64">ICAgICMgcmV0dXJuIGZpbGVfZGF0YSwgZmlsZV90YWdzLnRleHQKICAgICMgcmV0dXJuIGZpbGVfZGF0YQogICAgIyB3aXRoIG9wZW4oZmlsZV90YWdzLnRleHQsICd3JykgYXMgdGhlZmlsZToKICAgICMgICAgIHRoZWZpbGUud3JpdGUoZmlsZV9kYXRhLnRleHQpCg==</text>
       </register>
       <register name="6" type="2">
-        <text encoding="base64">ICAgIHB3bXBpbnMgPSBbXQo=</text>
+        <text encoding="base64">IwojICMgaW5zdGFsbCBtYW4gcGFnZXMKIyBpZiAnaW5zdGFsbCcgaW4gc3lzLmFyZ3Y6CiMgICAgIG1hbl9wYXRoID0gJy91c3Ivc2hhcmUvbWFuL21hbjEvJwojIGlmIG9zLnBhdGguZXhpc3RzKG1hbl9wYXRoKToKIyAgICAgcHJpbnQoIkluc3RhbGxpbmcgbWFuIHBhZ2VzIikKIyAgICAgbWFuX3BhZ2UgPSAiZG9jL2x5LWJhci1pbmNyLjEuZ3oiCiMgICAgIHNodXRpbC5jb3B5MihtYW5fcGFnZSwgbWFuX3BhdGgpCiMgICAgIG9zLmNobW9kKG1hbl9wYXRoICsgJ2x5LWJhci1pbmNyLjEuZ3onLCBpbnQoJzQ0NCcsIDgpKQo=</text>
       </register>
       <register name="7" type="2">
-        <text encoding="base64">ICAgICAgICBuZXdfcGluLnN0YXJ0KDApCg==</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="8" type="2">
-        <text encoding="base64">ICAgICNiYWNrX2FuZF9mb3J0aCgpCiAgICAjc2tpcCgpCiAgICAjb3V0c2lkZV9pbnNpZGUoKQo=</text>
-      </register>
-      <register name="9" type="2">
-        <text encoding="base64">Cg==</text>
+        <text encoding="base64">JCBkbC1maXNoLWNvbXBsZXRpb25zCg==</text>
       </register>
       <register name=":" type="4">
         <text>w</text>
+      </register>
+      <register name="-" type="4">
+        <text>)</text>
       </register>
     </registers>
     <search>
@@ -79,13 +75,6 @@
       <history-expr />
       <history-input />
     </history>
-    <shortcut-conflicts>
-      <shortcut-conflict owner="vim">
-        <text>ctrl pressed O</text>
-      </shortcut-conflict>
-      <shortcut-conflict owner="vim">
-        <text>ctrl pressed R</text>
-      </shortcut-conflict>
-    </shortcut-conflicts>
+    <shortcut-conflicts />
   </component>
 </application>
