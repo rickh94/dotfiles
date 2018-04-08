@@ -3,6 +3,7 @@
     <option name="SDK_TO_PYTEST">
       <map>
         <entry key="$USER_HOME$/.virtualenvs/blink_with_button/bin/python" value="false" />
+        <entry key="$USER_HOME$/.virtualenvs/download-fish-completions-n5JlodGP/bin/python" value="false" />
         <entry key="$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/bin/python" value="true" />
         <entry key="$USER_HOME$/seitz_home/.local/share/virtualenvs/blink_with_button-ugMhSggt/bin/python" value="false" />
       </map>
@@ -10,6 +11,7 @@
     <option name="SDK_TO_NOSETEST">
       <map>
         <entry key="$USER_HOME$/.virtualenvs/blink_with_button/bin/python" value="false" />
+        <entry key="$USER_HOME$/.virtualenvs/download-fish-completions-n5JlodGP/bin/python" value="false" />
         <entry key="$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/bin/python" value="false" />
         <entry key="$USER_HOME$/seitz_home/.local/share/virtualenvs/blink_with_button-ugMhSggt/bin/python" value="false" />
       </map>
@@ -17,6 +19,7 @@
     <option name="SDK_TO_TRIALTEST">
       <map>
         <entry key="$USER_HOME$/.virtualenvs/blink_with_button/bin/python" value="false" />
+        <entry key="$USER_HOME$/.virtualenvs/download-fish-completions-n5JlodGP/bin/python" value="false" />
         <entry key="$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/bin/python" value="false" />
         <entry key="$USER_HOME$/seitz_home/.local/share/virtualenvs/blink_with_button-ugMhSggt/bin/python" value="false" />
       </map>
