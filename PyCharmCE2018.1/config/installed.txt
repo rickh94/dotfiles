@@ -1,0 +1,3 @@
+BashSupport
+IdeaVIM
+org.intellij.plugins.markdown
