@@ -9,6 +9,5 @@ package hub
 package pisces
 package sudope
 package tab
-package virtualfish
 theme bobthefish
 theme default
