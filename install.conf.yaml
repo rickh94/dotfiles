@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.PyCharmCE2018.1/config/codestyles: PyCharmCE2018.1/config/codestyles
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.tmux.conf.local: tmux.conf.local
