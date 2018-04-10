@@ -13,4 +13,5 @@ function update_dotfiles
   end
   ./install
   cd $prevdir
+  omf install
 end

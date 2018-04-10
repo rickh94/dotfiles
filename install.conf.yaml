@@ -26,5 +26,4 @@
     ~/.config/omf: config/omf
 
 - shell:
-  - ['omf install']
   - ['git submodule update --init --recursive']
