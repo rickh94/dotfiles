@@ -1,6 +1,6 @@
 <application>
   <component name="WindowManager">
-    <frame x="83" y="55" width="1333" height="797" />
+    <frame x="85" y="52" width="1333" height="797" />
     <layout>
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
