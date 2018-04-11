@@ -12,10 +12,6 @@
         <option value="Py.class.shortName" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
-        <option value="markdown.referenceable-text.index" />
-        <option value="markdown.plain-text-element.index" />
-        <option value="markdown.link-element.index" />
-        <option value="markdown.flexmark.example.option.index" />
       </list>
     </option>
   </component>

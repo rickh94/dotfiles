@@ -2,16 +2,17 @@
   <component name="RecentDirectoryProjectsManager">
     <option name="recentPaths">
       <list>
+        <option value="$USER_HOME$/seitz_home/rpi_random_projects/motor_button_control" />
         <option value="$USER_HOME$/repositories/download-fish-completions" />
       </list>
     </option>
     <option name="openPaths">
       <list>
-        <option value="$USER_HOME$/repositories/download-fish-completions" />
+        <option value="$USER_HOME$/seitz_home/rpi_random_projects/motor_button_control" />
       </list>
     </option>
-    <option name="lastPath" value="$USER_HOME$/repositories/download-fish-completions" />
-    <option name="pid" value="26042" />
+    <option name="lastPath" value="$USER_HOME$/seitz_home/rpi_random_projects/motor_button_control" />
+    <option name="pid" value="23704" />
     <option name="additionalInfo">
       <map>
         <entry key="$USER_HOME$/repositories/download-fish-completions">
@@ -20,8 +21,19 @@
               <option name="build" value="PC-181.4203.547" />
               <option name="productionCode" value="PC" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1523151351684" />
-              <option name="buildTimestamp" value="1522074599350" />
+              <option name="projectOpenTimestamp" value="1523295146407" />
+              <option name="buildTimestamp" value="1522074574630" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/seitz_home/rpi_random_projects/motor_button_control">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PC-181.4203.547" />
+              <option name="productionCode" value="PC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1523297790242" />
+              <option name="buildTimestamp" value="1522074574630" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

@@ -1,9 +1,14 @@
 <application>
   <component name="ActionsCollector">
     <counts>
-      <entry action="EditorBackSpace" count="11" />
+      <entry action="EditorBackSpace" count="29" />
       <entry action="EditorChooseLookupItem" count="2" />
+      <entry action="EditorChooseLookupItemReplace" count="9" />
+      <entry action="EditorTab" count="1" />
+      <entry action="OpenFile" count="1" />
       <entry action="ShowSettings" count="2" />
+      <entry action="SplitVertically" count="1" />
+      <entry action="SynchronizeCurrentFile" count="1" />
     </counts>
   </component>
   <component name="FeatureUsageStatistics" first-run="1523148483364" have-been-shown="false" show-in-other="true" show-in-compilation="true">
@@ -15,7 +20,7 @@
     <feature id="editing.completion.cancelByControlArrows" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.symbol" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="find.recent.search" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.replace" count="0" last-shown="1523149998555" last-used="0" shown-count="544" />
+    <feature id="editing.completion.replace" count="9" last-shown="1523295774408" last-used="1523296451315" shown-count="604" />
     <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.camelprefix" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="SearchEverywhere" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -25,7 +30,7 @@
     <feature id="refactoring.introduceVariable" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickdefinition" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="find.completion" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.basic" count="2" last-shown="0" last-used="1523149142602" shown-count="0" />
+    <feature id="editing.completion.basic" count="11" last-shown="0" last-used="1523296451323" shown-count="0" />
     <feature id="tag.name.completion" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.select.word" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.recent.files" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -40,16 +45,16 @@
     <feature id="navigation.goto.usages" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickjavadoc" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="ui.recentchanges" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="ui.tree.speedsearch" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="ui.tree.speedsearch" count="1" last-shown="0" last-used="1523295042144" shown-count="0" />
     <feature id="editing.completion.changeSorting" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="ui.horizontal.scrolling" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickdefinition.lookup" count="0" last-shown="0" last-used="0" shown-count="0" />
     <completionStatsTag>
-      <option name="sparedCharacters" value="0" />
-      <option name="invocations" value="0" />
-      <option name="startDate" value="0" />
-      <option name="dayCount" value="0" />
-      <option name="lastDate" value="0" />
+      <option name="sparedCharacters" value="109" />
+      <option name="invocations" value="8" />
+      <option name="startDate" value="1523246400000" />
+      <option name="dayCount" value="1" />
+      <option name="lastDate" value="1523246400000" />
     </completionStatsTag>
     <fixesStatsTag>
       <option name="invocations" value="0" />
@@ -60,15 +65,18 @@
   </component>
   <component name="MainMenuCollector">
     <counts>
+      <entry path="File -&gt; Open..." count="1" />
       <entry path="File -&gt; Settings..." count="2" />
     </counts>
   </component>
   <component name="ShortcutsCollector">
     <counts>
-      <entry shortcut="Backspace" count="68" />
-      <entry shortcut="Enter" count="22" />
-      <entry shortcut="Escape" count="46" />
-      <entry shortcut="Right" count="6" />
+      <entry shortcut="Backspace" count="144" />
+      <entry shortcut="Down" count="1" />
+      <entry shortcut="Enter" count="64" />
+      <entry shortcut="Escape" count="90" />
+      <entry shortcut="Right" count="7" />
+      <entry shortcut="Tab" count="10" />
     </counts>
   </component>
   <component name="ToolbarClicksCollector">
@@ -79,11 +87,12 @@
   </component>
   <component name="UsageTrigger">
     <counts>
+      <entry feature="StripeButton[Version Control].shown" count="1" />
       <entry feature="ide.settings.Appearance" count="1" />
       <entry feature="ide.settings.Project Interpreter" count="1" />
-      <entry feature="ideaapp.started" count="2" />
+      <entry feature="ideaapp.started" count="3" />
       <entry feature="python.console.local" count="1" />
-      <entry feature="terminal.linux" count="3" />
+      <entry feature="terminal.linux" count="4" />
       <entry feature="tips.of.the.day.next" count="2" />
       <entry feature="welcome.screen.WelcomeScreen.OpenDirectoryProject" count="1" />
     </counts>

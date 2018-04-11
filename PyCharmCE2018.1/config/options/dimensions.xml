@@ -4,6 +4,8 @@
     <location key="WELCOME_SCREEN.0.0.1440.900" x="724" y="398" />
     <location key="com.intellij.ide.util.TipDialog.0.0.1440.900" x="377" y="271" />
     <location key="SettingsEditor.0.0.1440.900" x="192" y="92" />
+    <location key="com.intellij.ide.util.TipDialog.1280.0.1920.1080" x="1759" y="377" />
+    <location key="FileChooserDialogImpl.1280.0.1920.1080" x="1914" y="307" />
     <size key="FileChooserDialogImpl.0.0.1440.900" width="432" height="495" />
     <size key="SettingsEditor.0.0.1440.900" width="1053" height="717" />
   </component>
