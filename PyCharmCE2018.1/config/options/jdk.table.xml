@@ -10,10 +10,10 @@
           <root type="composite">
             <root url="file://$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/lib/python3.6" type="simple" />
             <root url="file://$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/lib/python3.6/lib-dynload" type="simple" />
+            <root url="file:///usr/lib64/python3.6" type="simple" />
             <root url="file:///usr/lib/python3.6" type="simple" />
             <root url="file://$USER_HOME$/.virtualenvs/lilyskel-NMtq32I3/lib/python3.6/site-packages" type="simple" />
-            <root url="file://$USER_HOME$/repositories/lilyskel" type="simple" />
-            <root url="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/53324615" type="simple" />
+            <root url="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/53324615" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.6" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" type="simple" />

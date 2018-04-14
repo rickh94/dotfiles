@@ -3,14 +3,27 @@
     <state version="4" enabled="true" />
     <globalmarks />
     <filemarks>
+      <file name="$USER_HOME$/repositories/lilyskel/lilyskel/db_interface.py" timestamp="1523381578632">
+        <mark key="[" line="8" column="50" />
+        <mark key="]" line="8" column="58" />
+        <mark key="^" line="8" column="58" />
+        <mark key="." line="8" column="58" />
+      </file>
       <file name="$USER_HOME$/repositories/download-fish-completions/setup.py" timestamp="1523149599692">
         <mark key="[" line="25" column="22" />
         <mark key="]" line="25" column="25" />
         <mark key="^" line="25" column="25" />
         <mark key="." line="25" column="25" />
       </file>
-      <file name="/Python Console" timestamp="1523148913081">
+      <file name="/Python Console" timestamp="1523381595404">
         <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" timestamp="1523587209835">
+        <mark key="'" line="330" column="30" />
+        <mark key="[" line="215" column="0" />
+        <mark key="]" line="215" column="0" />
+        <mark key="^" line="219" column="77" />
+        <mark key="." line="215" column="0" />
       </file>
       <file name="$USER_HOME$/repositories/download-fish-completions/dl_fish_completions.py" timestamp="1523150005020">
         <mark key="[" line="44" column="41" />
@@ -27,54 +40,106 @@
     </filemarks>
     <jumps>
       <jump line="31" column="0" filename="$USER_HOME$/repositories/download-fish-completions/setup.py" />
+      <jump line="311" column="23" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="54" column="8" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="62" column="8" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="65" column="28" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="83" column="43" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="141" column="18" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="154" column="47" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="152" column="19" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="158" column="19" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="183" column="40" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="8" column="15" filename="$USER_HOME$/repositories/lilyskel/lilyskel/db_interface.py" />
+      <jump line="190" column="31" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="295" column="15" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="332" column="0" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="310" column="15" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="346" column="12" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="205" column="0" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="209" column="48" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="296" column="6" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
+      <jump line="331" column="30" filename="$USER_HOME$/repositories/lilyskel/lilyskel/cli.py" />
     </jumps>
     <registers>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="-" type="4">
+        <text>composer_completer</text>
+      </register>
+      <register name="/" type="4">
+        <text>InsensitiveCompleter(C</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICAgIGNvbXBvc2VycyA9IGRiX2ludGVyZmFjZS5leHBsb3JlX3RhYmxlKGRiLnRhYmxlKCJjb21wb3NlcnMiKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlYXJjaD0oIm5hbWUiLCAiIikpCiAgICBjb21wb3Nlcl9jb21wbGV0ZXIgPSBXb3JkQ29tcGxldGVyKGNvbXBvc2VycykK</text>
+      </register>
       <register name="1" type="2">
         <text encoding="base64">Cg==</text>
       </register>
-      <register name="&quot;" type="4">
-        <text>)</text>
-      </register>
-      <register name="2" type="4">
-        <text encoding="base64">ICAgICAgICBmb3IgZmlsZV8gaW4gZG93bmxvYWRlZDoKICAgICAgICAgICAgcHJpbnQoZmlsZV8p</text>
+      <register name="2" type="2">
+        <text encoding="base64">Y2xhc3MgSW5zZW5zaXRpdmVDb21wbGV0ZXIoQ29tcGxldGVyKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB3b3JkX2xpc3QpOgogICAgICAgIHNlbGYuX3dvcmRfbGlzdCA9IHdvcmRfbGlzdAoKICAgIGRlZiBnZXRfY29tcGxldGlvbnMoc2VsZiwgZG9jdW1lbnQsIGNvbXBsZXRlX2V2ZW50KToKICAgICAgICBzdGFydCA9IC0gbGVuKGRvY3VtZW50LnRleHQpCiAgICAgICAgZm9yIHdvcmQgaW4gc2VsZi5fd29yZF9saXN0OgogICAgICAgICAgICBpZiBkb2N1bWVudC50ZXh0Lmxvd2VyKCkgaW4gd29yZC5sb3dlcigpOgogICAgICAgICAgICAgICAgeWllbGQgQ29tcGxldGlvbih3b3JkLCBzdGFydF9wb3NpdGlvbj1zdGFydCkKCgo=</text>
       </register>
       <register name="3" type="2">
-        <text encoding="base64">ICAgICMgZmlsZV9kYXRhID0gcmVxdWVzdHMuZ2V0KGZpbGVfdXJsKQogICAgIyBwcmludChmImRvd25sb2FkaW5nIHtmaWxlX3RhZ3MudGV4dH0iKQo=</text>
-      </register>
-      <register name="4" type="2">
-        <text encoding="base64">ICAgICAgICAgICAgIyBwcmludChmIntmaWxlX3RhZ3MudGV4dH06IHtmaWxlX2RhdGFbOjMwXX0iKQo=</text>
-      </register>
-      <register name="5" type="2">
-        <text encoding="base64">ICAgICMgcmV0dXJuIGZpbGVfZGF0YSwgZmlsZV90YWdzLnRleHQKICAgICMgcmV0dXJuIGZpbGVfZGF0YQogICAgIyB3aXRoIG9wZW4oZmlsZV90YWdzLnRleHQsICd3JykgYXMgdGhlZmlsZToKICAgICMgICAgIHRoZWZpbGUud3JpdGUoZmlsZV9kYXRhLnRleHQpCg==</text>
-      </register>
-      <register name="6" type="2">
-        <text encoding="base64">IwojICMgaW5zdGFsbCBtYW4gcGFnZXMKIyBpZiAnaW5zdGFsbCcgaW4gc3lzLmFyZ3Y6CiMgICAgIG1hbl9wYXRoID0gJy91c3Ivc2hhcmUvbWFuL21hbjEvJwojIGlmIG9zLnBhdGguZXhpc3RzKG1hbl9wYXRoKToKIyAgICAgcHJpbnQoIkluc3RhbGxpbmcgbWFuIHBhZ2VzIikKIyAgICAgbWFuX3BhZ2UgPSAiZG9jL2x5LWJhci1pbmNyLjEuZ3oiCiMgICAgIHNodXRpbC5jb3B5MihtYW5fcGFnZSwgbWFuX3BhdGgpCiMgICAgIG9zLmNobW9kKG1hbl9wYXRoICsgJ2x5LWJhci1pbmNyLjEuZ3onLCBpbnQoJzQ0NCcsIDgpKQo=</text>
-      </register>
-      <register name="7" type="2">
         <text encoding="base64">Cg==</text>
       </register>
+      <register name="4" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">IyBjbGFzcyBDb21wb3NlckNvbXBsZXRlcihDb21wbGV0ZXIpOgojICAgICBkZWYgX19pbml0X18oc2VsZiwgY29tcG9zZXJsaXN0KToKIyAgICAgICAgIHNlbGYuX2NvbXBvc2VybGlzdCA9IGNvbXBvc2VybGlzdAojICAgICAgICAgY29tcG9zZXJfbGFzdF9uYW1lcyA9IHt9CiMgICAgICAgICBmb3IgY29tcG9zZXIgaW4gY29tcG9zZXJsaXN0OgojICAgICAgICAgICAgIHRva2VuaXplZF9uYW1lID0gY29tcG9zZXIuc3BsaXQoKQojICAgICAgICAgICAgIGxhc3RfbmFtZSA9IHRva2VuaXplZF9uYW1lWy0xXQojICAgICAgICAgICAgIGNvbXBvc2VyX2xhc3RfbmFtZXNbbGFzdF9uYW1lXSA9IGNvbXBvc2VyCiMgICAgICAgICBzZWxmLl9jb21wb3Nlcl9sYXN0X25hbWVzID0gY29tcG9zZXJfbGFzdF9uYW1lcwojCiMgICAgIGRlZiBnZXRfY29tcGxldGlvbnMoc2VsZiwgZG9jdW1lbnQsIGNvbXBsZXRlX2V2ZW50KToK</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgIGNvbXBvc2VyX2NvbXBsZXRlciA9IFdvcmRDb21wbGV0ZXIoY29tcG9zZXJzKQo=</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">Y2xhc3MgSW5zZW5zaXRpdmVDb21wbGV0ZXIoQ29tcGxldGVyKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB3b3JkX2xpc3QpOgogICAgICAgIHNlbGYuX3dvcmRfbGlzdCA9IHdvcmRfbGlzdAoKICAgIGRlZiBnZXRfY29tcGxldGlvbnMoc2VsZiwgZG9jdW1lbnQsIGNvbXBsZXRlX2V2ZW50KToKICAgICAgICBzdGFydCA9IC0gbGVuKGRvY3VtZW50LnRleHQpCiAgICAgICAgZm9yIHdvcmQgaW4gc2VsZi5fd29yZF9saXN0OgogICAgICAgICAgICBpZiBkb2N1bWVudC50ZXh0Lmxvd2VyKCkgaW4gd29yZDoKICAgICAgICAgICAgICAgIHlpZWxkIENvbXBsZXRpb24od29yZCwgc3RhcnRfcG9zaXRpb249c3RhcnQpCg==</text>
+      </register>
       <register name="8" type="2">
-        <text encoding="base64">JCBkbC1maXNoLWNvbXBsZXRpb25zCg==</text>
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgbGFzdCA9IGNvbXBvc2VyLgo=</text>
       </register>
       <register name=":" type="4">
-        <text>w</text>
-      </register>
-      <register name="-" type="4">
-        <text>)</text>
+        <text>%s/InstrumentCompleter/InsensitiveCompleter/g</text>
       </register>
     </registers>
     <search>
-      <last-dir>0</last-dir>
+      <last-search>InsensitiveCompleter(C</last-search>
+      <last-offset />
+      <last-pattern>InsensitiveCompleter(C</last-pattern>
+      <last-replace>InsensitiveCompleter</last-replace>
+      <last-substitute>InstrumentCompleter</last-substitute>
+      <last-dir>1</last-dir>
       <show-last>false</show-last>
     </search>
     <history>
-      <history-search />
+      <history-search>
+        <entry>composer</entry>
+        <entry>composer_prompt</entry>
+        <entry>ComposerCompleter</entry>
+        <entry>InstrumentC</entry>
+        <entry>InstrumentCompleter</entry>
+        <entry>InsensitiveCompleter(C</entry>
+      </history-search>
       <history-cmd>
         <entry>w</entry>
+        <entry>%s/InstrumentCompleter/InsensitiveCompleter/g</entry>
       </history-cmd>
       <history-expr />
       <history-input />
     </history>
-    <shortcut-conflicts />
+    <shortcut-conflicts>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed O</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed N</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed Q</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
   </component>
 </application>
