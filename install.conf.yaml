@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.PyCharmCE2018.1/config/options: PyCharmCE2018.1/config/options
     ~/.PyCharmCE2018.1/config/installed.txt: PyCharmCE2018.1/config/installed.txt
     ~/.PyCharmCE2018.1/config/codestyles: PyCharmCE2018.1/config/codestyles
     ~/.bashrc: bashrc
