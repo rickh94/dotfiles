@@ -1,5 +1,5 @@
 set -x GOROOT /usr/lib/go
-set -x GOPATH $HOME/go /usr/lib/go
+set -x GOPATH $HOME/go:/usr/lib/go
 set -x SSH_ASKPASS /usr/bin/ksshaskpass
 
 set -x VISUAL 'vim'
