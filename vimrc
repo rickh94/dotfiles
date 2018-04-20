@@ -36,6 +36,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'udalov/kotlin-vim'
 Plugin 'dag/vim-fish'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'vim-scripts/vim-auto-save'
 
 call vundle#end()
 
@@ -227,6 +228,11 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
+
+" vim AutoSave config
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+
 " Custom commands
 command Wly w | !lilypond %:r
 command Wpy w | !python3 %
@@ -242,6 +248,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" insert matching reverse character
+inoremap { {  }<Esc>hi
+inoremap " "  "<Esc>hi
+inoremap [ [  ]<Esc>hi
+inoremap ( (  )<Esc>hi
+inoremap < <  ><Esc>hi
 
 " Enable folding
 set foldmethod=indent
