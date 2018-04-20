@@ -37,6 +37,7 @@ Plugin 'udalov/kotlin-vim'
 Plugin 'dag/vim-fish'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'vim-scripts/vim-auto-save'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -230,7 +231,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 
 " vim AutoSave config
-let g:auto_save = 1
+let g:auto_save = 0
 let g:auto_save_in_insert_mode = 0
 
 " Custom commands
@@ -250,11 +251,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " insert matching reverse character
-inoremap { {  }<Esc>hi
-inoremap " "  "<Esc>hi
-inoremap [ [  ]<Esc>hi
-inoremap ( (  )<Esc>hi
-inoremap < <  ><Esc>hi
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+inoremap [ []<Esc>i
+inoremap ( ()<Esc>i
+inoremap < <><Esc>i
 
 " Enable folding
 set foldmethod=indent
