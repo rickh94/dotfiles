@@ -251,11 +251,44 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " insert matching reverse character
-inoremap { {}<Esc>i
-inoremap " ""<Esc>i
-inoremap [ []<Esc>i
-inoremap ( ()<Esc>i
-inoremap < <><Esc>i
+inoremap { {}<Left>
+"inoremap " ""<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap < <><Left>
+inoremap <expr> } CharacterMatches("}")
+inoremap <expr> ] CharacterMatches("]")
+inoremap <expr> ) CharacterMatches(")")
+inoremap <expr> > CharacterMatches(">")
+inoremap <expr> " IsQuote()
+"inoremap <expr> " CharacterMatches("\"")
+
+
+
+fun! CurrentCharacter()
+  return matchstr(getline('.'), '\%'.col('.').'c.')
+endfunction
+
+fun! CharacterMatches(matchchar)
+  let l:currchar = CurrentCharacter()
+  if l:currchar == a:matchchar
+    "echom l:currchar
+    return "\<Right>"
+  else
+    "echo l:currchar
+    "echo "fails to match"
+    return a:matchchar
+  endif
+endfunction
+
+fun! IsQuote()
+  let l:currchar = CurrentCharacter()
+  if l:currchar == "\""
+    return "\<Right>"
+  else
+    return "\"\"\<Left>"
+  endif
+endfunction
 
 " Enable folding
 set foldmethod=indent
