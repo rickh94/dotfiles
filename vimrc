@@ -61,8 +61,6 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
 silent execute '!mkdir ~/.vim/backup 2>/dev/null'
-set backupdir=~/.vim/backup,.,/tmp
-set directory=.,~/.vim/swap,/tmp
 
 
 au FileType * execute 'setlocal dict+=~/.vim/words/'.&filetype.'.txt'
@@ -231,7 +229,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 
 " vim AutoSave config
-let g:auto_save = 0
+let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 
 " Custom commands
@@ -252,16 +250,15 @@ nnoremap <C-H> <C-W><C-H>
 
 " insert matching reverse character
 inoremap { {}<Left>
-"inoremap " ""<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
 inoremap < <><Left>
+" prevent inserting extra reverse bracket character
 inoremap <expr> } CharacterMatches("}")
 inoremap <expr> ] CharacterMatches("]")
 inoremap <expr> ) CharacterMatches(")")
 inoremap <expr> > CharacterMatches(">")
 inoremap <expr> " IsQuote()
-"inoremap <expr> " CharacterMatches("\"")
 
 
 
