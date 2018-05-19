@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Defined in /tmp/fish.JKlzK2/aws_config.fish @ line 2
+=======
+# Defined in /tmp/fish.AJFzP3/aws_config.fish @ line 2
+>>>>>>> 432575ee340a78a7f31315de6ed1f33b748d4cef
 function aws_config
 	/bin/mkdir ~/.aws ^/dev/null
   echo "[default]" > ~/.aws/credentials
