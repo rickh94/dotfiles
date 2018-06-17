@@ -1,4 +1,4 @@
-# Defined in /home/rick/.config/fish/functions/backup_forscore.fish @ line 1
+# Defined in /home/rick/.config/fish/functions/backup_forscore.fish @ line 2
 function backup_forscore
 	set -l tmp (mktemp -d /tmp/ipad-backup-XXXXXX)
 set -l archive $HOME/Documents/backup_of_ipad/backup_(date +"%Y_%m_%d").tar.xz
