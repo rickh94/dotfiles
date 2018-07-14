@@ -144,8 +144,8 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set modeline
 
-let g:python3_host_prog = '/home/rick/neovim-venv/bin/python3'
-let g:python_host_prog = '/home/rick/neovim-venv2/bin/python2'
+let g:python_host_prog = '/home/rick/.local/share/nvim/venv2/bin/python2'
+let g:python3_host_prog = '/home/rick/.local/share/nvim/venv3/bin/python3'
 
 function! BuildComposer(info)
 	if a:info.status != 'unchanged' || a:info.force
