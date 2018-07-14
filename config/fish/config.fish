@@ -6,7 +6,7 @@ set -x VISUAL 'vim'
 set -x EDITOR 'vim'
 set -x PAGER 'less'
 set -x MAKEFLAGS '-j4'
-set -x TERM 'xterm-256color'
+set -x TERM 'konsole-256color'
 
 fish_default_key_bindings
 

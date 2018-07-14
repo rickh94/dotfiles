@@ -23,6 +23,7 @@
     ~/.pylintrc: pylintrc
     ~/.config/fish: config/fish
     ~/.config/omf: config/omf
+    ~/.config/nvim/init.vim: nvim/init.vim
 
 - shell:
   - ['git submodule update --init --recursive']
