@@ -185,6 +185,7 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'KeitaNakamura/highlighter.nvim', {'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
