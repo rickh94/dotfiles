@@ -9,6 +9,7 @@ set backup		" keep a backup file (restore to previous version)
 inoremap <C-U> <C-G>u<C-U>
 
 syntax on
+set mouse=a " full mouse support
 
 
 autocmd BufWritePre * %s/\s\+$//e
@@ -103,12 +104,12 @@ nnoremap <C-H> <C-W><C-H>
 inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
-inoremap < <><Left>
+"inoremap < <><Left>
 " prevent inserting extra reverse bracket character
 inoremap <expr> } CharacterMatches("}")
 inoremap <expr> ] CharacterMatches("]")
 inoremap <expr> ) CharacterMatches(")")
-inoremap <expr> > CharacterMatches(">")
+"inoremap <expr> > CharacterMatches(">")
 inoremap <expr> " IsQuote()
 
 fun! CurrentCharacter()
@@ -194,6 +195,17 @@ let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-6.0/lib/clang/6.0.0/i
 let g:deoplete#sources#go#gocode_binary = '/usr/bin/gocode'
 let g:deoplete#sources#rust#racer_binary = '/home/rick/.cargo/bin/racer'
 let g:deoplete#sources#rust#racer_source_path = '/home/rick/.cargo/registry/src/github.com-1ecc6299db9ec823'
+
+" remap tab for inserting completion and C-f for fish style insertion
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
+inoremap <expr> <C-f> pumvisible() ? "\<C-n><Space>" : "\<C-f>"
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function() abort
+  return deoplete#close_popup() . "\<CR>"
+endfunction
+
+
 let g:neomake_python_enabled_makes = ['pycodestyle', 'pydocstyle']
 let g:airline_theme='solarized'
 
@@ -201,6 +213,7 @@ call neomake#configure#automake('nw', 750)
 
 set termguicolors
 colorscheme NeoSolarized
+set background=dark
 
 let g:neosolarized_contrast = "normal"
 let g:neosolarized_visibility = "normal"
@@ -209,4 +222,3 @@ let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 0
 
-set background=dark
