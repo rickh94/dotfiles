@@ -140,7 +140,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 " flag bad whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set modeline
 
