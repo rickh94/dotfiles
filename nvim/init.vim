@@ -180,7 +180,7 @@ Plug 'gisraptor/vim-lilypond-integrator', {'for': 'lilypond'}
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
 Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'junegunn/vim-easy-align'
-Plug 'vim-scripts/vim-auto-save'
+"Plug 'vim-scripts/vim-auto-save'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'

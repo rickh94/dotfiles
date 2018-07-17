@@ -2,10 +2,9 @@ set -x GOROOT /usr/lib/go
 set -x GOPATH $HOME/go:/usr/lib/go
 set -x SSH_ASKPASS /usr/bin/ksshaskpass
 
-set -x VISUAL 'vim'
-set -x EDITOR 'vim'
+set -x VISUAL 'nvim'
+set -x EDITOR 'nvim'
 set -x PAGER 'less'
-set -x MAKEFLAGS '-j4'
 set -x TERM 'konsole-256color'
 
 fish_default_key_bindings
