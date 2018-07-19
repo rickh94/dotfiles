@@ -197,7 +197,7 @@ let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-6.0/lib/clang/6.0.0/i
 let g:deoplete#sources#go#gocode_binary = '/usr/bin/gocode'
 let g:deoplete#sources#rust#racer_binary = '/home/rick/.cargo/bin/racer'
 let g:deoplete#sources#rust#racer_source_path = '/home/rick/.cargo/registry/src/github.com-1ecc6299db9ec823'
-le4 g:deoplete#soruces#go#cgo = 0
+let g:deoplete#soruces#go#cgo = 0
 
 
 " remap tab for inserting completion and C-f for fish style insertion
