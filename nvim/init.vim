@@ -188,13 +188,15 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'KeitaNakamura/highlighter.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'peterhoeg/vim-qml'
-Plug 'zenbro/mirror.vim'
+"Plug 'zenbro/mirror.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'rhysd/vim-clang-format'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-6.0/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-6.0/lib/clang/6.0.0/include'
-let g:deoplete#sources#go#gocode_binary = '/usr/bin/gocode'
+let g:deoplete#sources#go#gocode_binary = '/home/rick/go/bin/gocode'
 let g:deoplete#sources#rust#racer_binary = '/home/rick/.cargo/bin/racer'
 let g:deoplete#sources#rust#racer_source_path = '/home/rick/.cargo/registry/src/github.com-1ecc6299db9ec823'
 
@@ -223,4 +225,20 @@ let g:neosolarized_vertSplitBgTrans = 1
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 0
+
+" go options
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+
+" c options
+let g:clang_format#auto_format = 1
 

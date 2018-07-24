@@ -34,3 +34,4 @@ htmlcov
 .idea
 .idea
 .pytest_cache
+*.o
