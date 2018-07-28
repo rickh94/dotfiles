@@ -59,14 +59,6 @@ syntax on
 set number
 
 
-" turn on rainbow brackets
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-      \ 'guifgs': ['purple', 'darkorange3', 'red', 'seagreen3', 'firebrick', 'lightcyan'],
-     \ 'ctermfgs': ['lightblue', 'red', 'lightyellow', 'lightcyan', 'lightmagenta'],
-     \ 'operators': '_,_',
-     \ 'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold']
-     \}
 "nerdcommenter options
 " Align line-wise comment delimiters flush left instead of following code
 " indentation
@@ -79,10 +71,6 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-
-" vim AutoSave config
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
 
 " Custom commands
 command Wly w | !lilypond %:r
@@ -175,22 +163,26 @@ Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
 Plug 'gisraptor/vim-lilypond-integrator', {'for': 'lilypond'}
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
 Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'junegunn/vim-easy-align'
-"Plug 'vim-scripts/vim-auto-save'
 Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
+"Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'KeitaNakamura/highlighter.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'peterhoeg/vim-qml'
 "Plug 'zenbro/mirror.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format', {'for': ['cpp', 'c', 'h']}
+"Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'bfrg/vim-cpp-modern', {'for': 'cpp'}
+Plug 'EdTsft/vim-qrc', {'for': 'qrc'}
+Plug 'Shougo/neoinclude.vim'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -243,4 +235,8 @@ let g:go_auto_type_info = 1
 
 " c options
 let g:clang_format#auto_format = 1
+let g:clang_format#style_options = {"SortIncludes": "false"}
 
+
+" turn on rainbow brackets
+let g:rainbow_active = 1
