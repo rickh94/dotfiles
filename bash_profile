@@ -15,3 +15,5 @@ do
 done
 
 export PATH
+
+export PATH="$HOME/.cargo/bin:$PATH"
