@@ -183,6 +183,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'bfrg/vim-cpp-modern', {'for': 'cpp'}
 Plug 'EdTsft/vim-qrc', {'for': 'qrc'}
 Plug 'Shougo/neoinclude.vim'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/deoplete-julia'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
