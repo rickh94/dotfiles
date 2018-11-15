@@ -25,6 +25,7 @@
     ~/.config/omf: config/omf
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.docker/config.json: docker-config.json
 
 - shell:
   - ['git submodule update --init --recursive']

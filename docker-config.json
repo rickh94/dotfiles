@@ -1,0 +1,12 @@
+{
+	"auths": {
+		"109389887518.dkr.ecr.us-east-1.amazonaws.com": {}
+	},
+	"HttpHeaders": {
+		"User-Agent": "Docker-Client/18.09.0-ce (linux)"
+	},
+	"credsStore": "pass",
+	"credHelpers": {
+		"109389887518.dkr.ecr.us-east-1.amazonaws.com": "pass"
+	}
+}
