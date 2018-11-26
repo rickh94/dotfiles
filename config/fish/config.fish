@@ -19,3 +19,10 @@ end
 
 
 # vim: se wrap:
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
