@@ -26,6 +26,8 @@
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.docker/config.json: docker-config.json
+    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/snippets.cson: atom/snippets.cson
 
 - shell:
   - ['git submodule update --init --recursive']
