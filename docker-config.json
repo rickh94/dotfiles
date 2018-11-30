@@ -3,7 +3,7 @@
 		"109389887518.dkr.ecr.us-east-1.amazonaws.com": {}
 	},
 	"HttpHeaders": {
-		"User-Agent": "Docker-Client/18.09.0-ce (linux)"
+		"User-Agent": "Docker-Client/18.09.0 (linux)"
 	},
 	"credsStore": "pass",
 	"credHelpers": {
