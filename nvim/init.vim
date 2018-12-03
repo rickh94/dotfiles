@@ -185,6 +185,7 @@ Plug 'EdTsft/vim-qrc', {'for': 'qrc'}
 Plug 'Shougo/neoinclude.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'JuliaEditorSupport/deoplete-julia'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -242,3 +243,8 @@ let g:clang_format#style_options = {"SortIncludes": "false"}
 
 " turn on rainbow brackets
 let g:rainbow_active = 1
+
+" terraform options
+let g:terraform_align = 1
+let g:terraform_fold_sections = 1
+let g:terraform_fmt_on_save = 1

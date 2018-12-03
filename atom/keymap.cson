@@ -32,3 +32,5 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 'atom-text-editor':
   'gg = G': 'atom-beautify:beautify-editor'
+'atom-text-editor[data-grammar="text html django"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'

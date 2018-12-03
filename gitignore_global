@@ -35,3 +35,7 @@ htmlcov
 .idea
 .pytest_cache
 *.o
+
+# terraform
+terraform.tfvars
+.vscode

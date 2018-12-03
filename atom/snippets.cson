@@ -53,3 +53,100 @@
           }
           });
           """
+  'Responsive Navbar':
+    'prefix': 'navbar-repsonsive'
+    'body': """
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">BRAND</a>
+    <button class="navbar-toggler" data-toggle="collapse"
+     data-target="#navbarCollapse">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarCollapse">
+       <ul class="navbar-nav">
+         <li class="nav-item px-2">
+           <a href="#" class="nav-link">LINK1</a>
+         </li>
+         <li class="nav-item px-2">
+           <a href="#" class="nav-link">LINK2</a>
+         </li>
+       </ul>
+     </div>
+  </div>
+</nav>
+  """
+  'Responsive navbar for django':
+    'prefix': 'navbar-django'
+    'body': """
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="{% url 'index' %}" class="navbar-brand">SITE TITLE</a>
+      <button class="navbar-toggler" data-toggle="collapse"
+      data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2">
+          <a href="{% url 'PAGE' %}"
+          class="nav-link {% block LINK1_active %}{% endblock%}">LINK1</a>
+        </li>
+        <li class="nav-item px-2">
+          <a href="{% url 'PAGE' %}"
+          class="nav-link {% block LINK2_active %}{% endblock %}">LINK2</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    """
+  'Django Html template':
+    'prefix': 'django-html'
+    'body': """
+<!doctype html>
+<html lang="en">
+<head>
+  <title>
+    {% block title %}
+    {% endblock %}
+  </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="{% url 'index' %}" class="navbar-brand">SITE TITLE</a>
+      <button class="navbar-toggler" data-toggle="collapse"
+      data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2">
+          <a href="{% url 'PAGE' %}"
+          class="nav-link {% block LINK1_active %}{% endblock%}">LINK1</a>
+        </li>
+        <li class="nav-item px-2">
+          <a href="{% url 'PAGE' %}"
+          class="nav-link {% block LINK2_active %}{% endblock %}">LINK2</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+    """
