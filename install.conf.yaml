@@ -28,6 +28,7 @@
     ~/.docker/config.json: docker-config.json
     ~/.atom/keymap.cson: atom/keymap.cson
     ~/.atom/snippets.cson: atom/snippets.cson
+    ~/.config/fontconfig/fonts.conf: fontconfig-fonts.conf
 
 - shell:
   - ['git submodule update --init --recursive']
