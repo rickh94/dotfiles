@@ -1,8 +1,5 @@
-package apt
 package config
-package errno
 package https://github.com/edc/bass
-package https://github.com/rickh94/fish-jrnl
 package https://github.com/rickh94/fish-snap
 package https://github.com/tuvistavie/fish-ssh-agent
 package hub
