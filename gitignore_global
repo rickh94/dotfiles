@@ -39,3 +39,4 @@ htmlcov
 # terraform
 terraform.tfvars
 .vscode
+*/node_modules
