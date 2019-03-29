@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # update dotfiles, passwords, and vim plugins
 prevdir=$(pwd)
 echo "Updating Dotfiles"
@@ -15,6 +15,5 @@ fi
 dotfiles -s
 vim -e -s -c PluginInstall! -c qa
 cd $prevdir
-source ~/.zshrc
 
 # vim: se ft=sh:
