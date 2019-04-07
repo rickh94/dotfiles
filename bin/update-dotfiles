@@ -1,8 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
 # update dotfiles, passwords, and vim plugins
 prevdir=$(pwd)
 echo "Updating Dotfiles"
-cd ~/Dotfiles
+cd ~/.dotfiles
 if [[ ! -z "$(git status -s)" ]]; then
   git add *
   git commit -s -m "update dotfiles $(date)
@@ -12,9 +12,6 @@ $(git status -s)"
 else
   git pull
 fi
-dotfiles -s
-vim -e -s -c PluginInstall! -c qa
 cd $prevdir
-source ~/.zshrc
 
 # vim: se ft=sh:
