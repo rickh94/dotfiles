@@ -44,3 +44,5 @@ terraform.tfvars
 node_modules
 node_modules/*
 env.yml
+yarn-error.log
+.serverless
