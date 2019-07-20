@@ -5,7 +5,6 @@ set -x SSH_ASKPASS /usr/bin/ksshaskpass
 set -x VISUAL 'nvim'
 set -x EDITOR 'nvim'
 set -x PAGER 'less'
-set -x TERM 'konsole-256color'
 
 fish_default_key_bindings
 
@@ -26,3 +25,6 @@ end
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /home/rick/.node_modules/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/rick/.config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /home/rick/.config/yarn/global/node_modules/tabtab/.completions/slss.fish
