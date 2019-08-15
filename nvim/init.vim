@@ -151,6 +151,7 @@ Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'}
 Plug 'zchee/deoplete-jedi', {'for': 'python'}
+Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
 Plug 'sebastianmarkow/deoplete-rust', {'for': 'rust'}
 Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
@@ -181,11 +182,11 @@ Plug 'rhysd/vim-clang-format', {'for': ['cpp', 'c', 'h']}
 Plug 'xolox/vim-misc'
 Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'bfrg/vim-cpp-modern', {'for': 'cpp'}
-Plug 'EdTsft/vim-qrc', {'for': 'qrc'}
 Plug 'Shougo/neoinclude.vim'
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'JuliaEditorSupport/deoplete-julia'
 Plug 'hashivim/vim-terraform'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -195,6 +196,10 @@ let g:deoplete#sources#go#gocode_binary = '/home/rick/go/bin/gocode'
 let g:deoplete#sources#rust#racer_binary = '/home/rick/.cargo/bin/racer'
 let g:deoplete#sources#rust#racer_source_path = '/home/rick/.cargo/registry/src/github.com-1ecc6299db9ec823'
 let g:deoplete#soruces#go#cgo = 0
+let g:deoplete#sources#ternjs#filetypes = [
+      \ 'jsx',
+      \ 'vue',
+      \ ]
 
 
 " remap tab for inserting completion and C-f for fish style insertion
