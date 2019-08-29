@@ -1,0 +1,16 @@
+# XONSH WIZARD START
+$AUTO_CD = '1'
+$AUTO_PUSHD = '1'
+$AUTO_SUGGEST_IN_COMPLETIONS = '1'
+$MOUSE_SUPPORT = False
+$FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE = True
+$COLOR_INPUT = True
+$XONSH_COLOR_STYLE = 'solarized-dark'
+#$XONSH_GITSTATUS_CLEAN = '{BACKGROUND_GREEN}{BLACK}\ue0b0{BLACK}'
+#$PROMPT = '{BACKGROUND_BLACK}{short_cwd}{gitstatus: {}}{NO_COLOR} '
+$PROMPT = '{BLUE}{short_cwd} {gitstatus: {} }{BLUE}{prompt_end} '
+$UPDATE_COMPLETIONS_ON_KEYPRESS = False
+$BASH_COMPLETIONS = ['/usr/share/bash-completion/bash_completion', '/usr/share/bash-completion/completions/']
+source-bash "echo loading xonsh foreign shell"
+xontrib load apt_tabcomplete coreutils docker_tabcomplete jedi whole_word_jumping z ssh_agent
+# XONSH WIZARD END

@@ -29,6 +29,7 @@
     ~/.atom/keymap.cson: atom/keymap.cson
     ~/.atom/snippets.cson: atom/snippets.cson
     ~/.config/fontconfig/fonts.conf: fontconfig-fonts.conf
+    ~/.xonshrc: xonshrc
 
 - shell:
   - ['git submodule update --init --recursive']
