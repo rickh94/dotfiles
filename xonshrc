@@ -13,4 +13,11 @@ $UPDATE_COMPLETIONS_ON_KEYPRESS = False
 $BASH_COMPLETIONS = ['/usr/share/bash-completion/bash_completion', '/usr/share/bash-completion/completions/']
 source-bash "echo loading xonsh foreign shell"
 xontrib load apt_tabcomplete coreutils docker_tabcomplete jedi whole_word_jumping z ssh_agent
+aliases['chmod'] = ['chmod', '-v']
+aliases['chown'] = ['chown', '-v']
+aliases['cp'] = ['cp', '-i']
+aliases['grep'] = 'rg'
+aliases['rm'] = ['rm', '-i']
+aliases['ls'] = 'exa'
+aliases['mkdir'] = ['mkdir', '-p']
 # XONSH WIZARD END
