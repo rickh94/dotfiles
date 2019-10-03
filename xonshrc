@@ -20,4 +20,5 @@ aliases['grep'] = 'rg'
 aliases['rm'] = ['rm', '-i']
 aliases['ls'] = 'exa'
 aliases['mkdir'] = ['mkdir', '-p']
+aliases['git'] = 'hub'
 # XONSH WIZARD END

@@ -1,9 +1,10 @@
 {
 	"auths": {
-		"109389887518.dkr.ecr.us-east-1.amazonaws.com": {}
+		"109389887518.dkr.ecr.us-east-1.amazonaws.com": {},
+		"https://index.docker.io/v1/": {}
 	},
 	"HttpHeaders": {
-		"User-Agent": "Docker-Client/18.09.0 (linux)"
+		"User-Agent": "Docker-Client/18.09.5 (linux)"
 	},
 	"credsStore": "pass",
 	"credHelpers": {
