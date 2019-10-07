@@ -38,7 +38,6 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/rick/flutter/bin\x1e/home/rick/\x2epyenv/bin
+SETUVAR fish_user_paths:/home/rick/flutter/bin\x1e/home/rick/\x2epyenv/bin\x1e/home/rick/\x2eyarn/bin\x1e/home/rick/\x2ejb\x2dscripts\x1e/home/rick/\x2epyenv/bin
 SETUVAR http_ecr_url:https\x3a//109389887518\x2edkr\x2eecr\x2eus\x2deast\x2d1\x2eamazonaws\x2ecom
-SETUVAR --export npm_config_prefix:/home/rick/\x2enode_modules
 SETUVAR theme_color_scheme:solarized\x2ddark
