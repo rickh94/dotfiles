@@ -26,6 +26,7 @@
     ~/.docker/config.json: docker-config.json
     ~/.config/fontconfig/fonts.conf: fontconfig-fonts.conf
     ~/.xonshrc: xonshrc
+    ~/.vuerc: vuerc
 
 - shell:
   - ['git submodule update --init --recursive']
