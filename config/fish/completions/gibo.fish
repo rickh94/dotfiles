@@ -35,7 +35,7 @@ function __gibo_completion_list
     if set -q GIBO_BOILERPLATES
         set gibo_home $GIBO_BOILERPLATES
     end
-    find "$gibo_home" -name "*.gitignore" -exec basename \{\} .gitignore \;
+    /bin/find "$gibo_home" -name "*.gitignore" -exec basename \{\} .gitignore \;
 end
 
 complete -c gibo -n "__gibo_wants_subcommand" -f -a "dump" -d 'Dump one or more boilerplates to STDOUT'
