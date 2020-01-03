@@ -46,3 +46,4 @@ node_modules/*
 env.yml
 yarn-error.log
 .serverless
+*-autosave.kra

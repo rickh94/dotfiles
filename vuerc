@@ -1,0 +1,57 @@
+{
+  "useTaobaoRegistry": false,
+  "packageManager": "npm",
+  "presets": {
+    "first-vue": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-eslint": {
+          "config": "prettier",
+          "lintOn": [
+            "save"
+          ]
+        },
+        "@vue/cli-plugin-unit-jest": {}
+      },
+      "router": true,
+      "routerHistoryMode": true,
+      "vuex": true
+    },
+    "basic": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-pwa": {},
+        "@vue/cli-plugin-eslint": {
+          "config": "airbnb",
+          "lintOn": [
+            "save",
+            "commit"
+          ]
+        },
+        "@vue/cli-plugin-unit-jest": {},
+        "@vue/cli-plugin-e2e-cypress": {}
+      }
+    },
+    "stateless-pwa": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-pwa": {},
+        "@vue/cli-plugin-router": {
+          "historyMode": true
+        },
+        "@vue/cli-plugin-eslint": {
+          "config": "airbnb",
+          "lintOn": [
+            "commit"
+          ]
+        },
+        "@vue/cli-plugin-unit-jest": {}
+      }
+    }
+  },
+  "latestVersion": "4.0.5",
+  "lastChecked": 1571969149000
+}

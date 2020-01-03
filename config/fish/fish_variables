@@ -3,6 +3,7 @@
 SETUVAR --export CGO_CFLAGS_ALLOW:\x2e\x2a
 SETUVAR --export CGO_CXXFLAGS_ALLOW:\x2e\x2a
 SETUVAR --export CGO_LDFLAGS_ALLOW:\x2e\x2a
+SETUVAR --export --path CHEAT_CONFIG_PATH:\x7e/\x2econfig/cheat/conf\x2eyml
 SETUVAR --export GOBIN:/home/rick/go/bin
 SETUVAR --export MAKEFLAGS:\x2dj16
 SETUVAR --export QT_DIR:/home/rick/Qt

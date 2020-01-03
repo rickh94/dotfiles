@@ -5,8 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.PyCharmCE2018.1/config/installed.txt: PyCharmCE2018.1/config/installed.txt
-    ~/.PyCharmCE2018.1/config/codestyles: PyCharmCE2018.1/config/codestyles
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.tmux.conf.local: tmux.conf.local
@@ -26,10 +24,10 @@
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.docker/config.json: docker-config.json
-    ~/.atom/keymap.cson: atom/keymap.cson
-    ~/.atom/snippets.cson: atom/snippets.cson
     ~/.config/fontconfig/fonts.conf: fontconfig-fonts.conf
     ~/.xonshrc: xonshrc
+    ~/.vuerc: vuerc
+    ~/.config/cheat/conf.yml: cheat.yml
 
 - shell:
   - ['git submodule update --init --recursive']
