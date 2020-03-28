@@ -28,6 +28,7 @@
     ~/.xonshrc: xonshrc
     ~/.vuerc: vuerc
     ~/.config/cheat/conf.yml: cheat.yml
+    ~/.config/i3/config: i3/config
 
 - shell:
   - ['git submodule update --init --recursive']
