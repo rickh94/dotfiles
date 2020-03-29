@@ -188,3 +188,5 @@ exec --no-startup-id flatpak run org.nextcloud.Nextcloud
 
 # program bindings
 bindsym $mod+Shift+F exec firefox
+bindsym $mod+Shift+N exec flatpak run org.nextcloud.Nextcloud
+bindsym $mod+Shift+B exec barrier
