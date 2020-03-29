@@ -29,6 +29,7 @@
     ~/.vuerc: vuerc
     ~/.config/cheat/conf.yml: cheat.yml
     ~/.config/i3/config: i3/config
+    ~/.config/kitty/kitty.conf: kitty.conf
 
 - shell:
   - ['git submodule update --init --recursive']
