@@ -185,3 +185,6 @@ exec --no-startup-id xss-lock -- slock
 exec --no-startup-id kitti3 -p top -s 1.0 0.4
 bindsym F12 nop kitti3
 exec --no-startup-id flatpak run org.nextcloud.Nextcloud
+
+# program bindings
+bindsym $mod+Shift+F exec firefox
