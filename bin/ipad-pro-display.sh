@@ -5,7 +5,7 @@ PRIMARYDISPLAY=""
 if [ "`hostname`" = "purcell" ]; then
   IPADDISPLAY="HDMI1"
   PRIMARYDISPLAY="eDP1"
-elif ["`hostname`" = "beethoven"]; then
+elif [ "`hostname`" = "beethoven" ]; then
   IPADDISPLAY="HDMI-A-0"
   PRIMARYDISPLAY="DisplayPort-0"
 else
