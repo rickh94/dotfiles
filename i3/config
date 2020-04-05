@@ -178,14 +178,24 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # backlight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+# desktop background
 exec --no-startup-id ~/.fehbg
+# trackpad gestures
 exec --no-startup-id libinput-gestures-setup start
+# screen locking
 exec --no-startup-id xss-lock -- slock
 
 # dropdown terminal
 exec --no-startup-id kitti3 -p top -s 1.0 0.4
 bindsym F12 nop kitti3
+# nextcloud
 exec --no-startup-id flatpak run org.nextcloud.Nextcloud
+# power manager
+exec --no-startup-id mate-power-manager
+# disable ipad pro display on login
+exec --no-startup-id /home/rick/bin/ipad-pro-display-startup.sh
+# kde connect indicator
+exec --no-startup-id kdeconnect-indicator
 
 # program bindings
 bindsym $mod+Shift+F exec firefox
