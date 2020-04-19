@@ -16,8 +16,10 @@ if [ -n "`xrandr | grep ipad_pro | grep '*'`" ]; then
   xrandr --output $IPADDISPLAY --off
   xrandr --delmode $IPADDISPLAY ipad_pro
   xrandr --rmmode ipad_pro
+  $HOME/.config/polybar/launch.sh
 else
   xrandr --newmode "ipad_pro"   115.50  1368 1448 1592 1816  1024 1027 1037 1063 -hsync +vsync
   xrandr --addmode $IPADDISPLAY ipad_pro
   xrandr --output $IPADDISPLAY --mode ipad_pro --left-of $PRIMARYDISPLAY
+  $HOME/.config/polybar/launch.sh
 fi
