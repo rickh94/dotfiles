@@ -166,9 +166,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 # Pulse Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -191,11 +191,15 @@ bindsym F12 nop kitti3
 # nextcloud
 exec --no-startup-id flatpak run org.nextcloud.Nextcloud
 # power manager
-exec --no-startup-id mate-power-manager
+exec --no-startup-id xfce4-power-manager
 # disable ipad pro display on login
 exec --no-startup-id /home/rick/bin/ipad-pro-display-startup.sh
 # kde connect indicator
 exec --no-startup-id kdeconnect-indicator
+# jetbrains toolbox
+exec --no-startup-id /home/rick/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # program bindings
 bindsym $mod+Shift+F exec firefox
