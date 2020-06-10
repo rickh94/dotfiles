@@ -9,7 +9,6 @@ fish_default_key_bindings
 
 
 
-# vim: se wrap:
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -23,6 +22,9 @@ fish_default_key_bindings
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#eval /home/rick/.pyenv/versions/anaconda3-2019.03/bin/conda "shell.fish" "hook" $argv | source
+#eval /home/rick/.pyenv/versions/anaconda3-2019.10/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+#
+status --is-interactive; and source (pyenv init -|psub)
 
+# vim: se wrap:
