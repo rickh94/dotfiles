@@ -141,4 +141,5 @@ unset __conda_setup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-export PATH=/home/rick/.pyenv/bin:/home/rick/.pyenv/shims:/home/rick/go/bin:$PATH
+eval "$(pyenv init -)"
+export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$HOME/go/bin:$HOME/.node_modules/bin:$PATH

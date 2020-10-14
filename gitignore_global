@@ -47,3 +47,8 @@ env.yml
 yarn-error.log
 .serverless
 *-autosave.kra
+justpy.env
+
+target/
+debug/
+build/
