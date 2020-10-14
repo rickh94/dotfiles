@@ -5,6 +5,7 @@ package foreign-env
 package https://github.com/rickh94/fish-snap
 package https://github.com/tuvistavie/fish-ssh-agent
 package hub
+package nvm
 package tab
 theme bobthefish
 theme default

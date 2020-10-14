@@ -31,8 +31,6 @@ coverage.xml
 htmlcov
 
 # intellij idea files
-.idea
-.idea
 .pytest_cache
 *.o
 

@@ -47,3 +47,4 @@ SETUVAR --export fish_user_paths:/home/rick/flutter/bin\x1e/home/rick/\x2epyenv/
 SETUVAR http_ecr_url:https\x3a//109389887518\x2edkr\x2eecr\x2eus\x2deast\x2d1\x2eamazonaws\x2ecom
 SETUVAR --export tddir:/home/rick/repositories/smlib/backend/testdata
 SETUVAR theme_color_scheme:solarized\x2ddark
+SETUVAR theme_display_virtualenv:no
