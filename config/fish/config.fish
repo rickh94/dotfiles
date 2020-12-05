@@ -28,3 +28,7 @@ fish_default_key_bindings
 status --is-interactive; and source (pyenv init -|psub)
 
 # vim: se wrap:
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true

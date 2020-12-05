@@ -50,3 +50,4 @@ justpy.env
 target/
 debug/
 build/
+.deta

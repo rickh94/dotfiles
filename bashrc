@@ -143,3 +143,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 eval "$(pyenv init -)"
 export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$HOME/go/bin:$HOME/.node_modules/bin:$PATH
+export PATH="/home/rick/.deta/bin:$PATH"
