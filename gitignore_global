@@ -51,3 +51,4 @@ target/
 debug/
 build/
 .deta
+.dynamodb

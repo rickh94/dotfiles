@@ -32,3 +32,7 @@ status --is-interactive; and source (pyenv init -|psub)
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
+
+# Wasmer
+export WASMER_DIR="/home/rick/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
