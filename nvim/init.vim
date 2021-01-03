@@ -146,48 +146,48 @@ function! BuildComposer(info)
 	endif
 endfunction
 
-call plug#begin()
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'}
-Plug 'zchee/deoplete-jedi', {'for': 'python'}
-Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
-Plug 'sebastianmarkow/deoplete-rust', {'for': 'rust'}
-Plug 'neomake/neomake'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'euclio/vim-markdown-composer', {'for': 'markdown', 'do': function('BuildComposer') }
-Plug 'iCyMind/NeoSolarized'
-Plug 'airblade/vim-gitgutter'
-Plug 'luochen1990/rainbow'
-Plug 'scrooloose/nerdcommenter'
-Plug 'rust-lang/rust.vim', {'for': 'rust'}
-Plug 'easymotion/vim-easymotion'
-Plug 'gisraptor/vim-lilypond-integrator', {'for': 'lilypond'}
-Plug 'lepture/vim-jinja', {'for': 'jinja'}
-Plug 'dag/vim-fish', {'for': 'fish'}
-Plug 'junegunn/vim-easy-align'
-Plug 'fatih/vim-go', {'for': 'go'}
+"call plug#begin()
+"Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+"Plug 'zchee/deoplete-clang'
+"Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'}
+"Plug 'zchee/deoplete-jedi', {'for': 'python'}
+"Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
+"Plug 'sebastianmarkow/deoplete-rust', {'for': 'rust'}
+"Plug 'neomake/neomake'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'fatih/vim-go', {'for': 'go'}
+"Plug 'euclio/vim-markdown-composer', {'for': 'markdown', 'do': function('BuildComposer') }
+"Plug 'iCyMind/NeoSolarized'
+"Plug 'airblade/vim-gitgutter'
+"Plug 'luochen1990/rainbow'
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'rust-lang/rust.vim', {'for': 'rust'}
+"Plug 'easymotion/vim-easymotion'
+"Plug 'gisraptor/vim-lilypond-integrator', {'for': 'lilypond'}
+"Plug 'lepture/vim-jinja', {'for': 'jinja'}
+"Plug 'dag/vim-fish', {'for': 'fish'}
+"Plug 'junegunn/vim-easy-align'
+"Plug 'fatih/vim-go', {'for': 'go'}
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 "Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'KeitaNakamura/highlighter.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'peterhoeg/vim-qml'
+"Plug 'KeitaNakamura/highlighter.nvim', {'do': ':UpdateRemotePlugins'}
+"Plug 'peterhoeg/vim-qml'
 "Plug 'zenbro/mirror.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'rhysd/vim-clang-format', {'for': ['cpp', 'c', 'h']}
+"Plug 'scrooloose/nerdtree'
+"Plug 'rhysd/vim-clang-format', {'for': ['cpp', 'c', 'h']}
 "Plug 'xolox/vim-easytags'
-Plug 'xolox/vim-misc'
-Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'xolox/vim-misc'
+"Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'bfrg/vim-cpp-modern', {'for': 'cpp'}
-Plug 'Shougo/neoinclude.vim'
-Plug 'hashivim/vim-terraform'
-Plug 'mattn/emmet-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-call plug#end()
+"Plug 'Shougo/neoinclude.vim'
+"Plug 'hashivim/vim-terraform'
+"Plug 'mattn/emmet-vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-6.0/lib/libclang.so'
