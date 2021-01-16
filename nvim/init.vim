@@ -215,10 +215,10 @@ endfunction
 let g:neomake_python_enabled_makes = ['pycodestyle', 'pydocstyle']
 let g:airline_theme='solarized'
 
-call neomake#configure#automake('nw', 750)
+"call neomake#configure#automake('nw', 750)
 
 set termguicolors
-colorscheme NeoSolarized
+"colorscheme NeoSolarized
 set background=dark
 
 let g:neosolarized_contrast = "normal"

@@ -25,7 +25,7 @@ fish_default_key_bindings
 #eval /home/rick/.pyenv/versions/anaconda3-2019.10/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 #
-status --is-interactive; and source (pyenv init -|psub)
+#status --is-interactive; and source (pyenv init -|psub)
 
 # vim: se wrap:
 
