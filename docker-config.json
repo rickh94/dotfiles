@@ -9,5 +9,6 @@
 	"credsStore": "pass",
 	"credHelpers": {
 		"109389887518.dkr.ecr.us-east-1.amazonaws.com": "pass"
-	}
+	},
+  "experimental": "enabled"
 }

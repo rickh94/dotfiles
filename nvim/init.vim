@@ -206,10 +206,6 @@ let g:deoplete#sources#ternjs#filetypes = [
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 inoremap <expr> <C-f> pumvisible() ? "\<C-n><Space>" : "\<C-f>"
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function() abort
-  return deoplete#close_popup() . "\<CR>"
-endfunction
 
 
 let g:neomake_python_enabled_makes = ['pycodestyle', 'pydocstyle']
